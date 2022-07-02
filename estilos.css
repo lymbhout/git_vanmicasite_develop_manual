@@ -212,6 +212,17 @@ header{
 
 /* -----------gridHome----------- */
 
+.gridFormularioPublicidad{
+    display: grid;
+    grid-template-columns: auto 2fr;
+}
+.gridPLinks{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 20px 20px;
+
+}
 /* -------------main de home index------------- */
 main{
     padding: 0 100px;
