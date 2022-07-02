@@ -221,8 +221,13 @@ header{
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(2,1fr);
     gap: 20px 20px;
-
 }
+.gridBlog{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    column-gap: 10px;
+}
+
 /* -------------main de home index------------- */
 main{
     padding: 0 100px;
@@ -297,7 +302,7 @@ hr{
 
 /* img producto con enlaces */
 .galeriaProducto__links{
-    padding:70px;
+    padding:20px 5px;
 
 }
 .galeriaProducto__links a img{
@@ -316,7 +321,7 @@ margin-top: 40px;
 
 /* articulos blog img */
 #blogImg{
-    width: 360px;
+    width: 300px;
 }
 
 
