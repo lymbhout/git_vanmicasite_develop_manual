@@ -1,0 +1,511 @@
+ /* all html */
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Roboto', sans-serif;
+    list-style:none;
+}
+header a{
+    text-decoration: none;
+    color: aliceblue;
+}
+/*------- grid body--------  */
+.gridBody{
+    display: grid;
+    grid-template-rows: 0.5fr auto 1fr;
+}
+/* ----------grid boddy carrito------- */
+.gridBodyCarrito{
+    display: grid;
+    grid-template-rows: 0.1fr auto 1fr;
+}
+
+
+
+        /*  ---------header  ---------*/
+
+        /* --------grid header-------- */
+.gridHeader{
+    display: grid;
+    grid-template-rows: repeat(5,auto);
+
+}
+
+header{
+    background-color: #102026;
+}
+         /* header superior */
+.header__navSuperiro{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.header__navsuperior__li{
+    
+    margin: 0px 20px;  
+}
+           /* div h3 */
+.header__divSuperior{
+    background-color:#F20505;
+    padding: 5px;
+    
+    
+    
+}
+.divSuperior__Titulo{
+    margin: auto;
+    width: fit-content;
+    color: white;
+}
+
+         /* header medio */
+
+             /* logo */
+.headerLogo{
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+
+}
+.header__logo__img{
+    margin-right: 270px;
+    padding: 20px; 
+    width: 300px;
+}
+
+             /* barra y boton */
+.barraBusquedaBoton{
+    width: fit-content;
+    margin: auto;
+}
+.barraBusquedaBoton input{
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 2px;
+    margin: 10px;
+
+    background-color: whitesmoke;
+}
+#busqueda{
+    width: 300px;
+    height: 50px;
+}
+#enviar{
+    width: 100px;
+    height: 50px;
+    background-color:#0476D9;
+    color: aliceblue;
+}
+             /* carrito */
+.carrito{
+    padding:50px 0;
+    margin: 50px 10px 0px 0px; 
+    width: 20%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.carrito p{
+    font-size: 30px;
+}
+.carrito__a img{
+    width: 100px;
+}
+
+              /* header inferior */
+.header__navInferior{
+    width: fit-content;
+    margin: auto;
+}
+.logoTipo{
+    width: 20px;
+    padding: 0px 10px;
+}
+.nav__inferior__li{
+    display: inline-block;
+    margin: 30px;
+}
+
+
+/* -------------footer -------------*/
+/* ---------grid footer--------- */
+.gridFooter{
+    display: grid;
+    grid-template-rows: auto 1.5fr 0.4fr;
+}
+    /* articulo informativa  */
+.articulos{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+}
+.informativa{
+    background-color:#102026;
+} 
+.articulo{
+    padding: 20px;
+}
+.enviosLogo{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    height: 200px;
+    text-align: center;
+
+    color: aliceblue;
+}
+
+.articulos__img{
+    width: 150px;
+    margin: auto; 
+}
+.enviosLogo h3{
+    padding: 10px;
+    font-size: 15px;
+}
+
+    /*articulo termino y copi  */
+.informacion{
+    background-color: #1F3441;
+}
+.informacionContenedor{
+    display: grid;
+    grid-template-columns: repeat(3,33%) ;
+    grid-column-gap: 5px;
+}
+.terminos{
+    text-align:center;
+    padding: 20px 5px ;
+    font-size: 14px;
+    color: aliceblue;
+}
+.horarios{
+    text-align:center;
+    padding: 20px 0px ;
+    font-size: 14px;
+    border-left: 1px;
+    color: aliceblue;
+    border-left-color: aliceblue;
+}
+.redesSociales{
+    color: aliceblue;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.redesSociales img{
+    width: 70px;
+}
+.copy{ /* copyright */
+    background-color:#102026 ;
+    color: aliceblue;
+}
+.copy p{
+    width: fit-content;
+    margin: auto;
+}
+
+
+
+
+/* -----------gridHome----------- */
+
+/* -------------main de home index------------- */
+main{
+    padding: 0 100px;
+}
+main   a{
+    text-decoration:none;
+}
+
+
+    /* formulario */
+.formularioUnico{
+    padding: 30px;
+}
+hr{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 30%;
+    border-color:#0476D9;
+}
+.formularioUnico__div img{
+    width: 50px;
+
+}
+.formularioUnico__div h3{
+    font-size: 15px;
+
+}
+
+    /* frmulario selector --> */
+
+.formularioSelect select {
+    display: block;
+}
+
+/* boton formulario */
+.botonBuscarSuperior a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.botonBuscarSuperior a img{
+    width: 20px;
+}
+.botonBuscarSuperior{
+    background-color: #0476D9;
+    width: 28%;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* img publicitario */
+.publicidadSuperior img{
+    width: 300px;   
+}
+
+/* galeria de producto */
+.galeriaProducto__h3 h3{
+    text-align: center;
+    font-size: 30px;
+    color: #0476D9;
+}
+.productosImg__nav ul {
+    margin-top:50px ;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style:none;
+}
+
+/* img producto con enlaces */
+.galeriaProducto__links{
+    padding:70px;
+
+}
+.galeriaProducto__links a img{
+    width: 130px;
+    height: 130px;
+}
+
+
+
+/* Blog Vanmica */
+.blogVanmica__div h2{
+text-align: center;
+color: #0476D9;
+margin-top: 40px;
+}
+
+/* articulos blog img */
+#blogImg{
+    width: 360px;
+}
+
+
+/* publicidadd inferior */
+.publicidadInferior div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.publicidadInferior img{
+    width: 140px;
+}
+.publicidadInferior hr {
+width: 100%;
+border-color: #1F3441;
+margin-bottom:10px ;
+margin-top: 20px;
+}
+
+
+
+
+    /* ---------main blog ---------*/
+
+.blog__titulo{
+    text-align: center;
+    padding: 10px;
+    margin: 50px;
+}
+
+.blog__Div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog__img{
+order: 2;
+}
+
+.blog__subtitulo{
+    order: 1;
+}
+.blog__subtitulo h2 a{
+    color: #0476D9;
+}
+.blog__subtitulo h2{
+    margin: 80px 0 20px 0;
+}
+.blog__pYa{
+    order: 3;
+}
+.blog__pYa div{
+    padding: 10px 20px;
+    border: 1px solid #0476D9 ;
+    border-radius: 5px;
+    margin: 10px;
+    width: 100px;
+    
+}
+.blog__pYa div a{
+    color: #0476D9;
+    font-size: 20px;
+}
+
+
+/*------------- main quienes somos -------------*/
+
+/* Empresa */
+.empresaSection {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 50px 0;
+}
+
+
+.divEmpresa h3{
+    text-align: center;
+    padding: 30px;
+    font-size: 1.7em;
+    margin: 10px 0;
+}
+
+.divEmpresaImg img{
+    width: 600px;
+}
+
+/* Equipo */
+.equipoSection{
+    margin: 50px 0;
+}
+.divEquipo h3{
+    text-align: center;
+    font-size: 30px;
+}
+.equipoArticuloImg{
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0;
+}
+.equipoArticuloImg img{
+    width: 150px;
+    margin: 15px;
+}
+
+.segundoE{
+    flex-direction: row-reverse;
+}
+
+/* ---------------main carrito--------------- */
+
+.carrito__article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carritoLogo a img{
+    width: 200px;
+}
+.carrito__img{
+    width: fit-content;
+    margin: auto;
+}
+.carrito__img img{
+    width: 400px;
+}
+.carrito__h1{
+    font-size: 20px;
+    padding: 20px 0;
+}
+.carrito__botton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 60px 0;
+}
+
+/* -----------main productos----------- */
+               /* productos seach */
+.productos__divForm{
+    display: flex;
+    flex-direction: row;
+    border: 1px rgb(128, 128, 128) solid ;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 30px;
+    justify-content: center;
+}
+.productos__divForm img{
+    width: 50px;
+    margin: 0px 20px 20px 10px;
+    
+}
+.productos__divForm h3{
+    color: #0476D9;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.productos__divForm2{
+    display: flex;
+    flex-direction: row;
+    border: 1px rgb(128, 128, 128) solid ;
+    border-radius: 5px;
+    padding: 3 0px 20px 20px 20px;
+    margin: 30px;
+    justify-content: center;
+    width: fit-content;
+}
+.productos__divForm2 img{
+    width: 50px;
+    margin: 10px 20px 20px 10px;
+}
+.productos__divForm2 a{
+    margin: 0 30px;
+}
+.productos__divForm2 a img{
+    margin: 10px;
+}
+.productos__divForm2 h3{
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* producto imgs */
+/* .productosUl{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 50px;
+    margin-bottom: 20px;
+    border-bottom: #0476D9 solid 1px;
+} */
+.productosPImg{
+    padding: 0px 30px;
+}
+.productosP__article div img{
+    width: 200px;
+}
+.productosP__article p{
+    text-align: center;
+}
+

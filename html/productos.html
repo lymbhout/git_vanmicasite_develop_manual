@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- estilos css -->
+  <link rel="stylesheet" href="../estilos.css">
+  <!-- estilos letras -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+  <title>Vanmica Productos</title>
+</head>
+
+<body>
+        <!--encabezado-->
+  <div class="gridBody">
+    <header class="gridHeader">
+      <nav id="headerNavSuperior"> <!-- nav superior-->
+        <ul class="header__navSuperiro">
+          <li class="header__navsuperior__li"><a href="../index.html">Vende con nosotros</a></li>
+          <li class="header__navsuperior__li"><a href="quienessomos.html">Quienes somos</a></li>
+          <li class="header__navsuperior__li"><a href="blog.html">Blog</a></li>
+          <li class="header__navsuperior__li"><a href="../index.html">Iniciar sesion</a></li>
+        </ul>
+      </nav>
+      <div class="header__divSuperior"> <!-- Publicidad envio -->
+        <h3 class="divSuperior__Titulo">Precio de envio 2.99 $$</h3>
+      </div>
+      <section class="headerLogo"> <!-- logo y carrito-->
+        <a class="header__logo__a" href="../index.html"><img src="../imgs/prueba.jpg" alt="Logo" class="header__logo__img"></a>
+        <section class="carrito"><!-- carrito -->
+          <a href="carrito.html" class="carrito__a"><img src="../imgs/prueba.jpg"  alt="carrito" class="carrito__img">0 Productos</a>
+          <p class="carrito__p">0,00$</p>
+        </section>
+      </section>
+      <section class=""> <!--barra de busqueda y boton-->
+        <form class="barraBusquedaBoton">
+          <label for="busqueda"></label>
+          <input type="search" placeholder="Introdusca el numero o el nombre de la pieza" id="busqueda">
+          <label for="enviar"></label>
+          <input type="submit" id="enviar" value="Buscar">
+        </form>
+      </section>
+      <section> <!-- profuctos nav inferior -->
+        <nav class="headerNavInferior"> <!--navegador inferior-->
+          <ul class="header__navInferior">
+            <li class="nav__inferior__li"><a href="#">Neumaticos</a><img src="../imgs/prueba.jpg" alt="Logo" class="logoTipo"></li>
+            <li class="nav__inferior__li"><a href="#">Aceites</a><img src="../imgs/prueba.jpg" alt="Logo" class="logoTipo"></li>
+            <li class="nav__inferior__li"><a href="#">Accesorios de auto</a><img src="../imgs/prueba.jpg" alt="Logo" class="logoTipo"></li>
+            <li class="nav__inferior__li"><a href="#">Electrico</a><img src="../imgs/prueba.jpg" alt="Logo" class="logoTipo"></li>
+            <li class="nav__inferior__li"><a href="#">Refrigeracion</a><img src="../imgs/prueba.jpg" alt="Logo" class="logoTipo"></li>
+            <li class="nav__inferior__li"><a href="#">Filtros</a><img src="../imgs/prueba.jpg" alt="Logo" class="logoTipo"></li>
+            <li class="nav__inferior__li"><a href="#">frenos</a><img src="../imgs/prueba.jpg" alt="Logo" class="logoTipo"></li>
+          </ul>
+        </nav>
+      </section>
+    </header> 
+
+
+        <!-- Cuerpo -->
+    <main>  
+    <section class="prductosSearch">
+      <div class="productos__divForm">
+        <img src="../imgs/prueba.jpg" alt="icono">
+        <h3>Vanmica Catalogo de Repuestos Originales</h3>
+      </div>
+      <div class="productos__divForm2">   <!-- formulario -->
+        <img src="../imgs/prueba.jpg" alt="logo carro">
+        <h3>Elige coche</h3>
+        <a href=""><img src="../imgs/prueba.jpg" alt="icono"></a>
+      </div>
+      <div class="formularioSelect"> 
+        <label for="marca">1</label>
+          <select name="carro" id="marca">
+            <option value="Elige una marca">Elija una marca</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+        <label for="modelo">2</label>
+          <select name="modelos" id="modelo">
+            <option value="Elige un modelo">Elija un modelo</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+        <label for="año">3</label>
+          <select name="año_del_carro" id="año">
+            <option value="Elige el año">Elija el año</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+      </div>
+    </section>
+
+    <section>  <!-- Productos -->
+      <ul class="productosUl">
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Neumáticos y productos relacionados"></div>
+            <p>Neumáticos y productos relacionados</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Aceites y líquidos"></div>
+            <p>Aceites y líquidos</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Frenos"></div>
+            <p>Frenos</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Filtros"></div>
+            <p>Filtros</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Suspensión"></div>
+            <p>Suspensión</p>
+          </article>
+        </li>
+      </ul>
+      
+      <ul class="productosUl">
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Sistema eléctrico"></div>
+            <p>Sistema eléctrico</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Correas, cadenas, rodillos"></div>
+            <p>Correas, cadenas, rodillos</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Sistema de refrigeración de motor"></div>
+            <p>Sistema de refrigeración de motor</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Carrocería"></div>
+            <p>Carrocería</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Dirección"></div>
+            <p>Dirección</p>
+          </article>
+        </li>
+      </ul>
+      
+      <ul class="productosUl">
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Neumáticos y productos relacionados"></div>
+            <p>Neumáticos y productos relacionados</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Embrague"></div>
+            <p>Embrague</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Iluminación"></div>
+            <p>Iluminación</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Sujeciones"></div>
+            <p>Sujeciones</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Sensores, relés, unidades de control"></div>
+            <p>Sensores, relés, unidades de control</p>
+          </article>
+        </li>
+      </ul>
+      
+      <ul class="productosUl">
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Palier y junta homocinética"></div>
+            <p>Palier y junta homocinética</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Kits de reparación"></div>
+            <p>Kits de reparación</p>
+          </article>
+        </li>
+        <li class="productosPImg">
+          <article class="productosP__article">
+            <div><img src="../imgs/prueba.jpg" alt="Erramientas y Equipos"></div>
+            <p>Erramientas y Equipos</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+    </main>
+  
+        <!-- pie de pagina -->
+    <footer class="gridFooter">
+      <section class="informativa"> <!-- Informativa -->
+        <ul class="articulos">
+          <li>
+            <article class="articulo">
+              <div class="articulo__envios enviosLogo">
+                <img  class="articulos__img" src="../imgs/prueba.jpg"  alt="imagen">
+                <h3 class="articulos__envio__h3">Envios Nacionales</h3>
+                <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, recusandae.</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="articulo">
+              <div class="articulo__pago enviosLogo">
+                <img class="articulos__img" src="../imgs/prueba.jpg"  alt="imagen">
+                <h3>Opciones de Pago</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, recusandae.</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="articulo ">
+              <div class="articulo__compra enviosLogo">
+                <img class="articulos__img" src="../imgs/prueba.jpg"  alt="imagen">
+                <h3>Compra Con Confianza</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, recusandae.</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="articulo ">
+              <div class="articulo__productos enviosLogo">
+                <img class="articulos__img" src="../imgs/prueba.jpg"  alt="imagen">
+                <h3>Amplia gama de productos</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, recusandae.</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <section class="informacion"> <!-- Informacion -->
+        <article class="informacionContenedor">
+          <div class="terminos">
+            <p>Está prohibida la copia de los datos aquí presentados, en particular la base de datos completa. Igualmente, se prohíbe la duplicación o difusión de los datos o de la base de datos completa y/o encomendar a terceros la realización de tales actividades, sin el consentimiento previo de TecDoc. Cualquier infracción constituye una violación de los derechos de propiedad intelectual y será objeto de acciones judiciales.</p>
+          </div>
+          <div class="horarios">
+            <p>Horario del servicio de atención al cliente Para :Venezuela</p>
+            <p>De lunes a viernes de 8:00 a 23:00 </p>
+            <p>Sábado y domingo de 8:00 a 18:00 h</p>
+            <p> cel: 04126390326 | 02123441601 | 04126127903</p>
+          </div>
+          <div class="redesSociales">
+            <a href=""><img src="../imgs/prueba.jpg" alt="facebook"></a>
+            <a href=""><img src="../imgs/prueba.jpg" alt="instagram"></a>
+            <a href=""><img src="../imgs/prueba.jpg" alt="youtube"></a>
+            <p>© 2022 www.vanmica.com: VANMICA Tienda online</p>
+          </div>
+        </article>
+      </section>
+      <div class="copy">
+        <p>© 2022 Vanmica .c.a Todos los derechos reservados | RIF: J-0000000000</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
