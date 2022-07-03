@@ -450,7 +450,6 @@ order: 2;
 }
 
 /* ---------------main carrito--------------- */
-/* ------------mediaqueri------------ */
 .carrito__article{
     display: flex;
     flex-direction: column;
