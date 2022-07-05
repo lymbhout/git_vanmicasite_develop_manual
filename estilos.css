@@ -287,8 +287,28 @@ hr{
 }
 
 /* img publicitario */
-.publicidadSuperior img{
-    width: 300px;   
+.publicidadSuperior {
+    width: 620px;
+    height: 400px;
+    margin: 15px auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: carrucel_manual 20s infinite;
+}
+@keyframes carrucel_manual {
+    0%{
+        background-image: url(./imgvanmicasite/9d2149602afa1bd36e7059ecf869fcf3.jpg);
+    }
+    30.3%{
+        background-image: url(./imgs/wave-haikei.png);
+    }
+    60.3%{
+        background-image: url(./imgvanmicasite/imagesgg.jpg);
+    }
+    90.3%{
+        background-image: url(./imgs/prueba.jpg);
+    }
+
 }
 
 /* galeria de producto */
