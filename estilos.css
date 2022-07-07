@@ -22,21 +22,27 @@ header a{
         /*  ---------header  ---------*/
 
         /* --------grid header-------- */
-.gridHeader{
+/* .gridHeader{
     display: grid;
     grid-template-rows: repeat(5,auto);
-}
+} */
 header{
     background-color: #102026;
+    width: 100%;
 }
          /* header superior */
+#headerNavSuperior{
+width: 100%;
+}
 .header__navSuperiro{
     display: flex;
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: end;
+    width: 100%;
 }
-.header__navsuperior__li{
-    margin: 0px 20px; 
+.header__navsuperior__li {
+    margin: 0px 15px; 
 }
            /* div h3 */
 .header__divSuperior{
@@ -47,7 +53,7 @@ header{
     margin: auto;
     width:fit-content;
     color: white;
-
+    font-size: 1em;
 }
 
 
@@ -55,11 +61,10 @@ header{
 
              /* logo */
 .gridLogoCarrito{
-    /* display: flex;
+    display: flex;
     flex-direction: row;
-    justify-content:end; */
-    display: grid;
-    grid-template-columns:80% 20% ;
+    justify-content:end; 
+
 }
 .headerLogo{
     width:10%;
@@ -132,20 +137,20 @@ header{
     .header__navSuperiro{
         justify-content:start;
         font-size: 1em; 
-    }
+    } 
     .header__divSuperior{
-        width: 750px;
+        width: 800px;
         font-size: 1em;
         text-align: center;
     } 
     /* header medio */ 
     .gridLogoCarrito{
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 30% 20%;
         justify-items:left;
     }
     .header__logo__img{
         width: 200px;
-        padding: 10px;
+        padding: 0px;
     }
     .carrito{
         padding:70px 0px;
@@ -162,6 +167,101 @@ header{
         width: 100px;
     }
 } 
+@media screen and (max-width: 450px) {
+    .gridHeader{
+        width:450px;
+    }
+    .header__navSuperiro{
+        justify-content:start;
+        font-size: 0.9em;
+    }
+    .header__navsuperior__li{
+        margin: 5px 5px; 
+    }
+    .header__divSuperior{
+        width: 440px;
+        font-size: 1em;
+        text-align: center;
+    } 
+
+    /* .headerLogo{
+        width:100%;
+    } */
+}
+
+@media screen and (max-width:320px) {
+    .gridHeader{
+        width:320px;
+    }
+    .header__navSuperiro{
+        justify-content:start;
+        font-size: 0.7em;
+    }
+    .header__divSuperior{
+        width: 310px;
+        font-size: 1em;
+    }
+    /* logo @media */
+    .header__logo__img{
+        width:150px;
+        padding-left: 10px;
+    } 
+    .headerLogo{
+        width:100%;
+    }
+    /* carrito @media */
+    .carrito{
+        padding:20px 0px;
+    }
+    .carrito p{
+        font-size: 1em;
+        margin: 0px;
+    }
+    .carrito__a img{
+        width: 50px;
+    }
+                 /* barra y boton @media */
+.barraBusquedaBoton{
+    width: 320px;
+}
+.barraBusquedaBoton input{
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 2px;
+    margin: 10px;
+
+    background-color: whitesmoke;
+}
+#busqueda{
+    width: 250px;
+    height: 50px;
+}
+#enviar{
+    width: 100px;
+    height: 50px;
+    margin-left:70px ;
+    background-color:#0476D9;
+    color: aliceblue;
+}
+/* nav inferior @media */
+.header__navInferior{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    /* width: fit-content;
+    margin: auto; */
+}
+.logoTipo{
+    width: 20px;
+    padding: 0px 5px;
+}
+.nav__inferior__li a {
+font-size: 0.8em;
+}
+
+}
 
 
 /* -------------footer -------------*/
