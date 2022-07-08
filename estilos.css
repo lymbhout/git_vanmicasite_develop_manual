@@ -204,18 +204,18 @@ width: 100%;
     /* logo @media */
     .header__logo__img{
         width:150px;
-        padding-left: 10px;
+        padding: 10px;
     } 
     .headerLogo{
-        width:100%;
+        width:fit-content;
     }
     /* carrito @media */
     .carrito{
         padding:20px 0px;
+        font-size: 0.5em;
     }
     .carrito p{
-        font-size: 1em;
-        margin: 0px;
+    display: none;
     }
     .carrito__a img{
         width: 50px;
@@ -230,17 +230,16 @@ width: 100%;
     border-radius: 5px;
     padding: 2px;
     margin: 10px;
-
     background-color: whitesmoke;
 }
 #busqueda{
     width: 250px;
     height: 50px;
+    font-size: 0.7em;
 }
 #enviar{
-    width: 100px;
+    width: 250px;
     height: 50px;
-    margin-left:70px ;
     background-color:#0476D9;
     color: aliceblue;
 }
@@ -258,9 +257,11 @@ width: 100%;
     padding: 0px 5px;
 }
 .nav__inferior__li a {
-font-size: 0.8em;
+font-size: 0.9em;
 }
-
+.nav__inferior__li{
+    margin: 7px;
+}
 }
 
 
