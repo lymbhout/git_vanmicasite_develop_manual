@@ -422,7 +422,6 @@ hr{
     90.3%{
         background-image: url(./imgs/prueba.jpg);
     }
-
 }
 
 /* galeria de producto */
@@ -457,13 +456,10 @@ text-align: center;
 color: #0476D9;
 margin-top: 40px;
 }
-
 /* articulos blog img */
 #blogImg{
     width: 290px;
 }
-
-
 /* publicidadd inferior */
 .publicidadInferior div{
     display: flex;
@@ -484,13 +480,19 @@ margin-top: 20px;
     main{
         padding: 0;
     }
-    .formularioUnico{
-        grid-column: 1/-1;
-        padding: 10px 0;
+    .gridFormularioPublicidad{
+        grid-template-columns: 1fr ;
+        gap: 10px 0;
     }
+    .formularioUnico{
+        padding: 10px 0;
+    } 
     .botonBuscarSuperior{
         width: 50%;
         padding: 15px;
+        margin: auto;
+    }
+    .botonBuscarSuperior a{
         margin: auto;
     }
     .publicidadSuperior{
