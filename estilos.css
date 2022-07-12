@@ -457,13 +457,10 @@ text-align: center;
 color: #0476D9;
 margin-top: 40px;
 }
-
 /* articulos blog img */
 #blogImg{
     width: 290px;
 }
-
-
 /* publicidadd inferior */
 .publicidadInferior div{
     display: flex;
