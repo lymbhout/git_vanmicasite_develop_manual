@@ -1,8 +1,8 @@
  /* all html */
-*{
-    padding: 0%;
-    margin: 0%;
+ * {
     font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
     list-style:none;
 }
 /*------- grid body--------  */
@@ -13,6 +13,9 @@
 /*  ---------header  ---------*/
 
 /* --------grid header-------- */
+*, ::after, ::before {
+    box-sizing:content-box;
+}
 .gridHeader{
     display: grid;
     grid-template-rows: repeat(5,auto);
@@ -29,6 +32,9 @@ header a{
          /* header superior */
 #headerNavSuperior{
 width: 100%;
+}
+ul{
+    padding: 0;
 }
 .header__navSuperiro{
     display: flex;
@@ -59,16 +65,12 @@ transition: all 0.5s;
     color: white;
     font-size: 1em;
 }
-
-
          /* header medio */
-
              /* logo */
 .gridLogoCarrito{
     display: flex;
     flex-direction: row;
     justify-content:end; 
-
 }
 .headerLogo{
     width:10%;
@@ -79,7 +81,6 @@ transition: all 0.5s;
     padding: 20px; 
     width: 300px;
 }
-
 /* carrito */
 .carrito{
 padding:70px 20px;
@@ -118,7 +119,6 @@ width: 100px;
     background-color:#0476D9;
     color: aliceblue;
 }
-
               /* header inferior */
 .header__navInferior{
     width: fit-content;
@@ -193,14 +193,14 @@ transition: all 0.5s;
     width: 250px;
     height: 50px;
     font-size: 0.7em;
-    margin:  10px 35px;
+    margin:  10px 30px;
 }
 #enviar{
     width: 250px;
     height: 50px;
     background-color:#0476D9;
     color: aliceblue;
-    margin: 10px 35px;
+    margin: 10px 30px;
 }
 /* nav inferior @media */
 .header__navInferior{
@@ -220,8 +220,6 @@ font-size: 0.9em;
     margin: 7px;
 }
 }
-
-
 /* -------------footer -------------*/
 /* ---------grid footer--------- */
 .gridFooter{
@@ -337,6 +335,9 @@ font-size: 0.9em;
 .gridFormularioPublicidad{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 10px;
+    gap: 10px;
+
 }
 .gridPLinks{
     display: grid;
@@ -401,30 +402,11 @@ hr{
 }
 
 /* img publicitario */
-.publicidadSuperior {
-    width: 620px;
-    height: 400px;
-    margin: 15px auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    animation: carrucel_manual 20s infinite;
+#carouselExampleControls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-@keyframes carrucel_manual {
-    0%{
-        background-image: url(./imgvanmicasite/9d2149602afa1bd36e7059ecf869fcf3.jpg);
-    }
-    30.3%{
-        background-image: url(./imgs/wave-haikei.png);
-    }
-    60.3%{
-        background-image: url(./imgvanmicasite/imagesgg.jpg);
-    }
-    90.3%{
-        background-image: url(./imgs/prueba.jpg);
-    }
-
-}
-
 /* galeria de producto */
 .galeriaProducto__h3 h3{
     text-align: center;
@@ -481,8 +463,11 @@ margin-top: 20px;
     main{
         padding: 0;
     }
+    .gridFormularioPublicidad{
+        grid-template-columns: 1fr;
+        gap: 10px 0;
+    }
     .formularioUnico{
-        grid-column: 1/-1;
         padding: 10px 0;
     }
     .botonBuscarSuperior{
@@ -562,8 +547,8 @@ order: 2;
     font-size: 17px;
     border: 1px solid #0476D9 ;
     border-radius: 5px;
-    padding: 10px 20px;
-    width: 100px;
+    padding: 10px 10px;
+    width: 120px;
     margin: 10px;
     transition: all 1s;
 }
