@@ -42,6 +42,7 @@ ul{
     flex-direction: row;
     justify-content: end;
     width: 100%;
+    margin: 0;
 }
 .header__navsuperior__li {
     margin: 0px 15px; 
@@ -58,6 +59,10 @@ transition: all 0.5s;
 .header__divSuperior{
     background-color:#F20505;
     padding: 5px;
+}
+.header__divSuperior h3{
+font-weight: bold;
+line-height: normal;
 }
 .divSuperior__Titulo{
     margin: auto;
@@ -120,7 +125,7 @@ width: 100px;
     color: aliceblue;
 }
               /* header inferior */
-.header__navInferior{
+/* .header__navInferior{
     width: fit-content;
     margin: auto;
 }
@@ -138,8 +143,25 @@ transition: all 0.5s;
 }
 .nav__inferior__li a:hover{
     color:#F20505;
-    }
-
+    } */
+.navbar-nav{
+    margin: auto;
+}
+.nav-item{
+    padding: 10px;
+    margin: 0 10px;
+}
+.logoTipo{
+    width: 20px;
+    padding: 0px 10px;
+}
+.nav-item a{
+    color:rgb(158, 158, 158) ;
+    transition: all 0.5s;
+}
+.nav-item a:hover{
+    color:#F20505;
+}
 /* -----------@MEDIA header----------- */
 /* header superior */
 
@@ -359,15 +381,13 @@ main{
 main   a{
     text-decoration:none;
 }
-    /* formulario */
+
+
+/* formulario */
 .formularioUnico{
-    padding: 30px;
-}
-hr{
-    margin-top: 50px;
-    margin-bottom: 30px;
-    width: 30%;
-    border-color:#0476D9;
+    padding: 15px;
+    border-top:solid 2px #0476D9;
+    background-color: whitesmoke;
 }
 .formularioUnico__div img{
     width: 50px;
@@ -439,9 +459,25 @@ text-align: center;
 color: #0476D9;
 margin-top: 40px;
 }
+.blogVanmica__div {
+padding: 30px;
+}
 /* articulos blog img */
-#blogImg{
-    width: 290px;
+.card-blog1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card {
+    overflow:hidden;
+}
+.card img{
+    width: 100%;
+    transition: all 1s;
+}
+.card img:hover{
+    transform: scale(1.1);
 }
 /* publicidadd inferior */
 .publicidadInferior div{
@@ -452,11 +488,12 @@ margin-top: 40px;
 .publicidadInferior img{
     width: 140px;
 }
-.publicidadInferior hr {
+.publicidadInferior div{
 width: 100%;
-border-color: #1F3441;
-margin-bottom:10px ;
-margin-top: 20px;
+border-top: solid 1px #102026;
+border-bottom: solid 1px #102026;
+margin: 10px 0;
+padding: 10px 0;
 }
 /* index @media */
 @media screen and (max-width:320px) {
@@ -595,6 +632,8 @@ order: 2;
     display:flex;
     flex-direction: row;
     width: 100%;
+    background-color: whitesmoke;
+    margin: 15px 0;
 }
 
 
@@ -606,6 +645,7 @@ order: 2;
 }
 .divEmpresa p{
     padding: 20px 20px;
+    text-align:justify;
 }
 
 .divEmpresaImg img{
@@ -626,6 +666,8 @@ order: 2;
     display: flex;
     flex-direction: row;
     margin: 50px 0;
+    background-color:whitesmoke;
+    text-align:justify;
 }
 .equipoArticuloImg img{
     width: 150px;

@@ -47,8 +47,8 @@
           <input type="submit" id="enviar" value="Buscar">
         </form>
       </section>
-      <section> <!-- profuctos nav inferior -->
-        <nav class="headerNavInferior"> <!--navegador inferior-->
+      <section> <!-- profuctos nav inferior --> <!--navegador inferior-->
+        <!-- <nav class="headerNavInferior"> 
           <ul class="header__navInferior">
             <li class="nav__inferior__li"><a href="./html/productos.html">Neumaticos</a><img src="./imgs/prueba.jpg" alt="Logo" class="logoTipo"></li>
             <li class="nav__inferior__li"><a href="./html/productos.html">Aceites</a><img src="./imgs/prueba.jpg" alt="Logo" class="logoTipo"></li>
@@ -58,6 +58,38 @@
             <li class="nav__inferior__li"><a href="./html/productos.html">Filtros</a><img src="./imgs/prueba.jpg" alt="Logo" class="logoTipo"></li>
             <li class="nav__inferior__li"><a href="./html/productos.html">frenos</a><img src="./imgs/prueba.jpg" alt="Logo" class="logoTipo"></li>
           </ul>
+        </nav> -->
+        <nav class="navbar navbar-expand-lg bg">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="./html/productos.html">Neumaticos <img src="./imgs/prueba.jpg" alt="" class="logoTipo"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./html/productos.html">Aceites <img src="./imgs/prueba.jpg" alt="" class="logoTipo"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./html/productos.html">Refrigeracion <img src="./imgs/prueba.jpg" alt="" class="logoTipo"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./html/productos.html">Filtros <img src="./imgs/prueba.jpg" alt="" class="logoTipo"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./html/productos.html">frenos <img src="./imgs/prueba.jpg" alt="" class="logoTipo"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./html/productos.html">Accesorios de auto <img src="./imgs/prueba.jpg" alt="" class="logoTipo"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="./html/productos.html">Electrico <img src="./imgs/prueba.jpg" alt="" class="logoTipo"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </section>
     </header> 
@@ -66,7 +98,6 @@
       <div class="gridFormularioPublicidad"> <!-- grid de formulario y publicidad -->
         <section class="formularioUnico gridFormulario" > <!--formulario-->
           <div class="formularioUnico__div">
-            <hr>
             <img src="imgs/prueba.jpg" alt="logo carro">
             <h3>Seleccione su coche para buscar pieza de recambio</h3>
           </div>
@@ -143,7 +174,7 @@
         
           <a href="./html/productos.html"><img src="imgs/prueba.jpg" alt="Pastillas de frenos" >Pastillas de frenos</a>
           <a href="./html/productos.html"><img src="imgs/prueba.jpg" alt="Filtro de aceite" >Filtro de aceite</a>
-          <a href="./html/productos.html"><img src="imgs/prueba.jpg" alt="Filtro d polen" >Filtro d polen</a>
+          <a href="./html/productos.html"><img src="imgs/prueba.jpg" alt="Filtro d polen" >Filtro de polen</a>
           <a href="./html/productos.html"><img src="imgs/prueba.jpg" alt="Escobillas Lim height="100px">Escobillas Limpiaparabrisas</a>
           <a href="./html/productos.html"><img src="imgs/prueba.jpg" alt="Amortiguadores" >Amortiguadores</a>
           <a href="./html/productos.html"><img src="imgs/prueba.jpg" alt="Bujia" >Bujia</a>
@@ -153,66 +184,40 @@
           <a href="./html/productos.html"><img src="imgs/prueba.jpg" alt="Supencion" >Supencion</a>
         </div>
       </section>
-      <section class="blogVanmica "> <!-- Blog Vanmica -->
-        <div class="blogVanmica__div">
-          <h2>Nuestro Blog</h2>
-          <a href="./html/blog.html">Leer mas</a>
+      <!-- Blog Vanmica -->
+      <div class="blogVanmica__div">
+        <h2>Nuestro Blog</h2>
+        <a href="./html/blog.html">Leer mas</a>
+      </div>
+      <div class="card-blog1">
+        <div class="card" style="width: 25rem;">
+          <div>
+            <a href=""><img src="./imgs/prueba.jpg" class="card-img-top" alt="blog img"></a>
+          </div>
+          <div class="card-body">
+            <a href="./html/blog.html"><h5 class="card-title">¿Qué es un kit de tiempo para carros?</h5></a>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
         </div>
-        <ul class="blogVanmica_ulSuperior gridBlog">
-          <li class="blogVanmica_li_uno">
-            <article>
-              <div>
-                <a href="./html/blog.html"><img src="imgs/prueba.jpg"   alt="¿Qué es un kit de tiempo para carros?" id="blogImg"></a>
-              </div>
-              <div class="divH">
-                <div>
-                  <h2><a href="./html/blog.html" >¿Qué es un kit de tiempo para carros? </a></h2>
-                </div>
-                <div>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, voluptas.</p>
-                  <a href="./html/blog.html">Leer mas</a>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li class="blogVanmica_li_dos">
-            <article>
-              <div>
-                <a href="./html/blog.html"><img src="imgs/prueba.jpg"   alt="En Venezuela sí hay soluciones confiables para los repuestos de tu carro" id="blogImg"></a>
-              </div>
-              <div  class="divH">
-                <div>
-                  <h2><a href="./html/blog.html"  >En Venezuela sí hay soluciones confiables para los repuestos de tu carro</a></h2>
-                </div>
-                <div>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, voluptas.</p>
-                  <a href="./html/blog.html">Leer mas</a>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li class="blogVanmica_li_tres">
-            <article>
-              <div>
-                <a href="./html/blog.html"><img src="imgs/prueba.jpg"   alt="Compra repuestos para carros en Vanmica" id="blogImg"></a>
-              </div>
-              <div  class="divH">
-                <div>
-                  <h2><a href="./html/blog.html">Compra repuestos para carros en Vanmica</a></h2>
-                </div>
-                <div>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, voluptas.</p>
-                  <a href="./html/blog.html">Leer mas</a>
-                </div>
-              </div>
-            
-            </article>
-          </li>
-        </ul>
-      </section>
-
+        <div class="card" style="width: 25rem;">
+          <a href=""><img src="./imgs/prueba.jpg" class="card-img-top " alt="blog img"></a>
+          <div class="card-body">
+            <a href="./html/blog.html"><h5 class="card-title">En Venezuela sí hay soluciones confiables para los repuestos de tu carro</h5></a>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card" style="width: 25rem;">
+          <a href=""><img src="./imgs/prueba.jpg" class="card-img-top" alt="blog img"></a>
+          <div class="card-body">
+            <a href="./html/blog.html"><h5 class="card-title">Compra repuestos para carros en Vanmica</h5></a>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
       <section class="publicidadInferior"> <!-- Pubicidad -->
-        <hr>
         <div>
           <img src="./imgs/prueba.jpg" alt="empresaRepuestoLogo">
           <img src="./imgs/prueba.jpg" alt="empresaRepuestoLogo">
@@ -220,10 +225,8 @@
           <img src="./imgs/prueba.jpg" alt="empresaRepuestoLogo">
           <img src="./imgs/prueba.jpg" alt="empresaRepuestoLogo">
         </div>
-        <hr>
       </section>    
     </main>
-              
           <!-- Pie de agina -->
     <footer class="gridFooter">
       <section class="informativa"> <!-- Informativa -->
@@ -291,7 +294,7 @@
     </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script> 
 </body>
 </html>
 
