@@ -246,7 +246,6 @@ font-size: 0.9em;
     justify-content:space-around;
     height: 200px;
     text-align: center;
-
     color: aliceblue;
 }
 
@@ -303,7 +302,23 @@ font-size: 0.9em;
     width: fit-content;
     margin: auto;
 }
+/* bootstrap */
+#carouselExampleCaptions{
+    display: none;
+}
 /* ----------@media footer---------- */
+@media screen and (max-width:850px){
+    .informativa ul{
+        display: none;
+    }
+    #carouselExampleCaptions{
+        display:block;
+        margin-top: 10px;
+    }
+    .carousel-indicators {
+        bottom:-20px ;
+    }
+}
 @media screen and (max-width:320px){
     .gridFooter{
         width: 320px;
@@ -575,7 +590,6 @@ order: 2;
     color:aliceblue;
     z-index: 3;
     background-color: #0476D9;
-
 }
 
 /* @media blog */
@@ -653,6 +667,10 @@ order: 2;
 .segundoE{
     flex-direction: row-reverse;
 }
+/* bootstrap */
+#carouselExampleControls{
+    display: none;
+}
 @media (max-width : 1024px) {
     .empresaSection{
         flex-wrap: wrap-reverse;
@@ -664,6 +682,16 @@ order: 2;
     display: flex;
     flex-direction: column;
     margin: 50px 0;
+}
+.equipoArticuloImg img{
+    width: 50%;
+} 
+.equipoSection ul{
+    display: none;
+}
+/* bootstrap */
+#carouselExampleControls{
+    display: block;
 }
 }
 @media (max-width:320px) {
