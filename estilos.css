@@ -1,8 +1,8 @@
  /* all html */
-*{
-    padding: 0%;
-    margin: 0%;
+ * {
     font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
     list-style:none;
 }
 /*------- grid body--------  */
@@ -13,6 +13,9 @@
 /*  ---------header  ---------*/
 
 /* --------grid header-------- */
+*, ::after, ::before {
+    box-sizing:content-box;
+}
 .gridHeader{
     display: grid;
     grid-template-rows: repeat(5,auto);
@@ -30,12 +33,16 @@ header a{
 #headerNavSuperior{
 width: 100%;
 }
+ul{
+    padding: 0;
+}
 .header__navSuperiro{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: end;
     width: 100%;
+    margin: 0;
 }
 .header__navsuperior__li {
     margin: 0px 15px; 
@@ -53,22 +60,22 @@ transition: all 0.5s;
     background-color:#F20505;
     padding: 5px;
 }
+.header__divSuperior h3{
+font-weight: bold;
+line-height: normal;
+}
 .divSuperior__Titulo{
     margin: auto;
     width:fit-content;
     color: white;
     font-size: 1em;
 }
-
-
          /* header medio */
-
              /* logo */
 .gridLogoCarrito{
     display: flex;
     flex-direction: row;
     justify-content:end; 
-
 }
 .headerLogo{
     width:10%;
@@ -79,7 +86,6 @@ transition: all 0.5s;
     padding: 20px; 
     width: 300px;
 }
-
 /* carrito */
 .carrito{
 padding:70px 20px;
@@ -118,28 +124,25 @@ width: 100px;
     background-color:#0476D9;
     color: aliceblue;
 }
-
               /* header inferior */
-.header__navInferior{
-    width: fit-content;
+.navbar-nav{
     margin: auto;
+}
+.nav-item{
+    padding: 10px;
+    margin: 0 10px;
 }
 .logoTipo{
     width: 20px;
     padding: 0px 10px;
 }
-.nav__inferior__li{
-    display: inline-block;
-    margin: 30px;
+.nav-item a{
+    color:rgb(158, 158, 158) ;
+    transition: all 0.5s;
 }
-.nav__inferior__li a{
-color: rgb(158, 158, 158);
-transition: all 0.5s;
-}
-.nav__inferior__li a:hover{
+.nav-item a:hover{
     color:#F20505;
-    }
-
+}
 /* -----------@MEDIA header----------- */
 /* header superior */
 
@@ -193,14 +196,14 @@ transition: all 0.5s;
     width: 250px;
     height: 50px;
     font-size: 0.7em;
-    margin:  10px 35px;
+    margin:  10px 30px;
 }
 #enviar{
     width: 250px;
     height: 50px;
     background-color:#0476D9;
     color: aliceblue;
-    margin: 10px 35px;
+    margin: 10px 30px;
 }
 /* nav inferior @media */
 .header__navInferior{
@@ -220,8 +223,6 @@ font-size: 0.9em;
     margin: 7px;
 }
 }
-
-
 /* -------------footer -------------*/
 /* ---------grid footer--------- */
 .gridFooter{
@@ -245,7 +246,6 @@ font-size: 0.9em;
     justify-content:space-around;
     height: 200px;
     text-align: center;
-
     color: aliceblue;
 }
 
@@ -302,7 +302,23 @@ font-size: 0.9em;
     width: fit-content;
     margin: auto;
 }
+/* bootstrap */
+#carouselExampleCaptions{
+    display: none;
+}
 /* ----------@media footer---------- */
+@media screen and (max-width:850px){
+    .informativa ul{
+        display: none;
+    }
+    #carouselExampleCaptions{
+        display:block;
+        margin-top: 10px;
+    }
+    .carousel-indicators {
+        bottom:-20px ;
+    }
+}
 @media screen and (max-width:320px){
     .gridFooter{
         width: 320px;
@@ -337,11 +353,14 @@ font-size: 0.9em;
 .gridFormularioPublicidad{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 10px;
+    gap: 10px;
+
 }
 .gridPLinks{
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-auto-rows: 1fr;
     gap: 10px 10px;
 }
 .gridBlog{
@@ -358,15 +377,13 @@ main{
 main   a{
     text-decoration:none;
 }
-    /* formulario */
+
+
+/* formulario */
 .formularioUnico{
-    padding: 30px;
-}
-hr{
-    margin-top: 50px;
-    margin-bottom: 30px;
-    width: 30%;
-    border-color:#0476D9;
+    padding: 15px;
+    border-top:solid 2px #0476D9;
+    background-color: whitesmoke;
 }
 .formularioUnico__div img{
     width: 50px;
@@ -401,29 +418,11 @@ hr{
 }
 
 /* img publicitario */
-.publicidadSuperior {
-    width: 620px;
-    height: 400px;
-    margin: 15px auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    animation: carrucel_manual 20s infinite;
+#carouselExampleControls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-@keyframes carrucel_manual {
-    0%{
-        background-image: url(./imgvanmicasite/9d2149602afa1bd36e7059ecf869fcf3.jpg);
-    }
-    30.3%{
-        background-image: url(./imgs/wave-haikei.png);
-    }
-    60.3%{
-        background-image: url(./imgvanmicasite/imagesgg.jpg);
-    }
-    90.3%{
-        background-image: url(./imgs/prueba.jpg);
-    }
-}
-
 /* galeria de producto */
 .galeriaProducto__h3 h3{
     text-align: center;
@@ -456,9 +455,25 @@ text-align: center;
 color: #0476D9;
 margin-top: 40px;
 }
+.blogVanmica__div {
+padding: 30px;
+}
 /* articulos blog img */
-#blogImg{
-    width: 290px;
+.card-blog1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card {
+    overflow:hidden;
+}
+.card img{
+    width: 100%;
+    transition: all 1s;
+}
+.card img:hover{
+    transform: scale(1.1);
 }
 /* publicidadd inferior */
 .publicidadInferior div{
@@ -469,11 +484,12 @@ margin-top: 40px;
 .publicidadInferior img{
     width: 140px;
 }
-.publicidadInferior hr {
+.publicidadInferior div{
 width: 100%;
-border-color: #1F3441;
-margin-bottom:10px ;
-margin-top: 20px;
+border-top: solid 1px #102026;
+border-bottom: solid 1px #102026;
+margin: 10px 0;
+padding: 10px 0;
 }
 /* index @media */
 @media screen and (max-width:320px) {
@@ -481,8 +497,11 @@ margin-top: 20px;
         padding: 0;
     }
     .gridFormularioPublicidad{
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr;
         gap: 10px 0;
+    }
+    .formularioUnico{
+        padding: 10px 0;
     }
     .formularioUnico{
         padding: 10px 0;
@@ -530,25 +549,20 @@ margin-top: 20px;
         display: none;
     }
 }
-
     /* ---------main blog ---------*/
-
 .blog__titulo{
     text-align: center;
     padding: 10px;
     margin: 50px;
 }
-
 .blog__Div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .blog__img{
 order: 2;
 }
-
 .blog__subtitulo{
     order: 1;
 }
@@ -567,8 +581,8 @@ order: 2;
     font-size: 17px;
     border: 1px solid #0476D9 ;
     border-radius: 5px;
-    padding: 10px 20px;
-    width: 100px;
+    padding: 10px;
+    width: 90px;
     margin: 10px;
     transition: all 1s;
 }
@@ -577,8 +591,8 @@ order: 2;
     color:aliceblue;
     z-index: 3;
     background-color: #0476D9;
-
 }
+
 /* @media blog */
 @media screen and (max-width:320px) {
     .blog__img a img{
@@ -615,9 +629,12 @@ order: 2;
     display:flex;
     flex-direction: row;
     width: 100%;
+    background-color: whitesmoke;
+    margin: 15px 0;
 }
-
-
+.divEmpresa{
+    max-width: 50%;
+}
 .divEmpresa h3{
     text-align: center;
     padding: 30px;
@@ -626,14 +643,8 @@ order: 2;
 }
 .divEmpresa p{
     padding: 20px 20px;
+    text-align:justify;
 }
-
-.divEmpresaImg img{
-    width: 500px;
-    padding: 10px 40px;
-    margin: auto;
-}
-
 /* Equipo */
 .equipoSection{
     margin: 50px 0;
@@ -646,24 +657,45 @@ order: 2;
     display: flex;
     flex-direction: row;
     margin: 50px 0;
+    background-color:whitesmoke;
+    text-align:justify;
 }
 .equipoArticuloImg img{
-    width: 150px;
-    margin: 15px;
-}
+    width: 20%;
+    padding: 15px;
+    margin: auto;
+} 
 .segundoE{
     flex-direction: row-reverse;
+}
+/* bootstrap */
+#carouselExampleControls{
+    display: none;
 }
 @media (max-width : 1024px) {
     .empresaSection{
         flex-wrap: wrap-reverse;
 }
+.divEmpresa{
+    max-width: 100%;
+}
+.equipoArticuloImg{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+}
+.equipoArticuloImg img{
+    width: 50%;
+} 
+.equipoSection ul{
+    display: none;
+}
+/* bootstrap */
+#carouselExampleControls{
+    display: block;
+}
 }
 @media (max-width:320px) {
-    .divEmpresaImg img{
-        width: 320px;
-        padding: 10px 0px;
-    }
     .divEmpresa p{
         padding: 0px 0px;
         font-size: 0.9em;
@@ -677,7 +709,6 @@ order: 2;
         width: 150x;
         padding: 10px;
         margin: auto;
-
     }
 }
 /* ---------------main carrito--------------- */
@@ -834,12 +865,15 @@ order: 2;
 
 /* ----------producto imgs---------- */
 /* ----------grid productos -------*/
-.gridUl{
-    display: grid;
-    grid-template-columns:repeat(5,1fr); 
-    gap: 20px 20px;
+.productosPImg{
     border-bottom:solid #0476D9 1px ;
     padding: 30px 0px;
+}
+.gridULContainer{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+        grid-auto-rows: 1fr;
+        gap: 10px 10px;
 }
 .productosP__article div img{
     width: 180px;
