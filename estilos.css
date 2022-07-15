@@ -304,7 +304,7 @@ font-size: 0.9em;
 }
 /* bootstrap */
 #carouselExampleCaptions{
-    display: none;
+    display:none;
 }
 /* ----------@media footer---------- */
 @media screen and (max-width:850px){
@@ -330,7 +330,6 @@ font-size: 0.9em;
     .articulos li{
         padding: 10px;
     }
-
     .informacionContenedor{
         display: flex;
         flex-direction: row;
@@ -355,7 +354,6 @@ font-size: 0.9em;
     grid-template-columns: 1fr 1fr;
     margin: 10px;
     gap: 10px;
-
 }
 .gridPLinks{
     display: grid;
@@ -377,8 +375,6 @@ main{
 main   a{
     text-decoration:none;
 }
-
-
 /* formulario */
 .formularioUnico{
     padding: 15px;
@@ -418,12 +414,8 @@ main   a{
 }
 
 /* img publicitario */
-#carouselExampleControls{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-/* galeria de producto */
+
+/* nav galeria de producto */
 .galeriaProducto__h3 h3{
     text-align: center;
     padding: 10px 0;
@@ -441,14 +433,13 @@ main   a{
 
 /* img producto con enlaces */
 .galeriaProducto__links a{
-width: 150px;
-text-align: center;
+    width: 150px;
+    text-align: center;
+    margin: auto;
 }
 .galeriaProducto__links a img{
     width: 150px;
-    margin: auto;
 }
-
 /* Blog Vanmica */
 .blogVanmica__div h2{
 text-align: center;
@@ -491,14 +482,22 @@ border-bottom: solid 1px #102026;
 margin: 10px 0;
 padding: 10px 0;
 }
+/* footer */
+/* #carouselExampleCaptions{
+    display: none;
+} */
 /* index @media */
+@media screen and (max-width:1020px) {
+    .gridFormularioPublicidad{
+        display: grid;
+        grid-template-columns: 1fr ;
+        margin: 10px;
+        gap: 10px;
+    }
+}
 @media screen and (max-width:320px) {
     main{
         padding: 0;
-    }
-    .gridFormularioPublicidad{
-        grid-template-columns: 1fr;
-        gap: 10px 0;
     }
     .formularioUnico{
         padding: 10px 0;
