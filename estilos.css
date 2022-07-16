@@ -471,17 +471,17 @@ padding: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    border-top: solid 1px #102026;
+    border-bottom: solid 1px #102026;
+    margin: 10px 0;
+    padding: 10px 0;
 }
 .publicidadInferior img{
     width: 140px;
 }
-.publicidadInferior div{
-width: 100%;
-border-top: solid 1px #102026;
-border-bottom: solid 1px #102026;
-margin: 10px 0;
-padding: 10px 0;
-}
+
 /* index @media */
 @media screen and (max-width:1020px) {
     .gridFormularioPublicidad{
@@ -538,25 +538,23 @@ padding: 10px 0;
         display: none;
     }
 }
-
     /* ---------main blog ---------*/
-
 .blog__titulo{
     text-align: center;
     padding: 10px;
     margin: 50px;
 }
-
 .blog__Div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    max-width: 60%;
+    margin: auto;
 }
-
 .blog__img{
 order: 2;
+width: fit-content;
+margin: auto;
 }
-
 .blog__subtitulo{
     order: 1;
 }
@@ -565,9 +563,12 @@ order: 2;
 }
 .blog__subtitulo h2{
     margin: 80px 0 20px 0;
+    width: fit-content;
+    margin: auto;
 }
 .blog__pYa{
     order: 3;
+    text-align:justify;
 }
 .blog__pYa div a{
     display: block;
@@ -586,8 +587,12 @@ order: 2;
     z-index: 3;
     background-color: #0476D9;
 }
-
 /* @media blog */
+@media screen and (max-width:800px) {
+    .blog__Div {
+        min-width: 90%;
+    }
+}
 @media screen and (max-width:320px) {
     .blog__img a img{
         width: 320px;
@@ -625,9 +630,11 @@ order: 2;
     width: 100%;
     background-color: whitesmoke;
     margin: 15px 0;
+    align-items: center;
 }
 .divEmpresa{
     max-width: 50%;
+    margin-right: 20px;
 }
 .divEmpresa h3{
     text-align: center;
@@ -672,6 +679,7 @@ order: 2;
 }
 .divEmpresa{
     max-width: 100%;
+    margin: 0;
 }
 .equipoArticuloImg{
     display: flex;
@@ -859,6 +867,7 @@ order: 2;
 
 /* ----------producto imgs---------- */
 /* ----------grid productos -------*/
+/* animacion border botton-left */
 .productosP__article {
     display: inline-block;
 }
