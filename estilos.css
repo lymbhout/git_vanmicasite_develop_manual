@@ -32,6 +32,7 @@ header a{
          /* header superior */
 #headerNavSuperior{
 width: 100%;
+height: auto;
 }
 ul{
     padding: 0;
@@ -41,15 +42,13 @@ ul{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: end;
-    width: 100%;
-    margin: 0;
 }
 .header__navsuperior__li {
     margin: 0px 15px; 
 }
 .header__navsuperior__li a{
     color: rgb(158, 158, 158);
-transition: all 0.5s;
+    transition: all 0.5s;
 }
 .header__navsuperior__li a:hover{
     color:aliceblue;
@@ -58,11 +57,12 @@ transition: all 0.5s;
            /* div h3 */
 .header__divSuperior{
     background-color:#F20505;
-    padding: 5px;
+    width: 100%;
 }
 .header__divSuperior h3{
 font-weight: bold;
 line-height: normal;
+padding: 5px;
 }
 .divSuperior__Titulo{
     margin: auto;
@@ -75,16 +75,14 @@ line-height: normal;
 .gridLogoCarrito{
     display: flex;
     flex-direction: row;
-    justify-content:end; 
+    justify-content:center; 
 }
 .headerLogo{
-    width:10%;
+    width: 100%;
     margin: auto;
 }
 .header__logo__img{
-    margin:auto;
-    padding: 20px; 
-    width: 300px;
+    width: 30%;
 }
 /* carrito */
 .carrito{
@@ -145,7 +143,17 @@ width: 100px;
 }
 /* -----------@MEDIA header----------- */
 /* header superior */
-
+@media screen and (max-width:765px){
+    .header__navSuperiro{
+        justify-content: start;
+    }
+    .barraborrar{
+        display: none;
+    }
+    .carrito p{
+        display: none;
+        }
+}
 @media screen and (max-width:320px) {
     .gridHeader{
         width:320px;
@@ -155,10 +163,6 @@ width: 100px;
         justify-content:start;
         flex-wrap: nowrap;
         font-size: 0.8em;
-    }
-    .header__divSuperior{
-        width: 310px;
-        font-size: 1em;
     }
     /* logo @media */
     .header__logo__img{
@@ -273,30 +277,36 @@ font-size: 0.9em;
     text-align:center;
     padding: 20px 5px ;
     font-size: 14px;
-    color: aliceblue;
+    color: rgb(158, 158, 158);
 }
 .horarios{
     text-align:center;
     padding: 20px 0px ;
     font-size: 14px;
     border-left: 1px;
-    color: aliceblue;
-    border-left-color: aliceblue;
+    color: rgb(158, 158, 158);
+    border-left-color: rgb(158, 158, 158);
 }
 .redesSociales{
-    color: aliceblue;
+    color: rgb(158, 158, 158);
     font-size: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    width: 80%;
 }
 .redesSociales img{
-    width: 70px;
+    width: 45px;
+    padding: 5px;
+    transition: all 400ms;
+}
+.redesSociales img:hover{
+    transform: scale(1.1);
 }
 .copy{ /* copyright */
     background-color:#102026 ;
-    color: aliceblue;
+    color: rgb(158, 158, 158);
 }
 .copy p{
     width: fit-content;
@@ -590,7 +600,20 @@ margin: auto;
 /* @media blog */
 @media screen and (max-width:800px) {
     .blog__Div {
-        min-width: 90%;
+        min-width: 100%;
+    }
+    .blog ul{
+    width: 90%;
+    }
+    .blog__Div {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    main{
+        padding: 0;
     }
 }
 @media screen and (max-width:320px) {
@@ -723,11 +746,12 @@ margin: auto;
     width: 200px;
 }
 .carrito__img{
-    width:700px;
+    width:100%;
 }
 .carrito__img img{
-    width: 50%;
-    padding:0px 175px ;
+    max-width: 50%;
+    display: block;
+    margin: auto;
 
 }
 .carrito__h1{
@@ -739,6 +763,7 @@ margin: auto;
     flex-direction: row;
     justify-content: space-evenly;
     margin: 60px 0;
+    flex-wrap: wrap;
 }
 .botonCarrito a h2 {
     display: block;

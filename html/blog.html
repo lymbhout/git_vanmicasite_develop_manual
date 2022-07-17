@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
+  <!-- aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- estilos css -->
   <link rel="stylesheet" href="../estilos.css">
   <!-- estilos letras -->
@@ -32,14 +34,14 @@
       </div>
       <div class="gridLogoCarrito">
         <section class="headerLogo"> <!-- logo y carrito-->
-          <a class="header__logo__a" href="../index.html"><img src="../imgs/prueba.jpg" alt="Logo" class="header__logo__img"></a>
+          <a class="header__logo__a" href="../index.html"><img src="../imgs/prueba.jpg"  alt="Logo" class="header__logo__img"></a>
         </section>
         <section class="carrito"><!-- carrito -->
-          <a href="carrito.html" class="carrito__a"><img src="../imgs/prueba.jpg"  alt="carrito" class="carrito__img">0 Productos</a>
+          <a href="carrito.html" class="carrito__a"><img src="../imgs/prueba.jpg" class="img-fluid" alt="carrito" class="carrito__img">0 Productos</a>
           <p class="carrito__p">0,00$</p>
         </section>
       </div>
-      <section class=""> <!--barra de busqueda y boton-->
+      <section class="barraborrar"> <!--barra de busqueda y boton-->
         <form class="barraBusquedaBoton">
           <label for="busqueda"></label>
           <input type="search" placeholder="Introdusca el numero o el nombre de la pieza" id="busqueda">
@@ -90,7 +92,7 @@
         </div>
         <ul>
           <li> <!-- A1 -->
-            <article class="blog__article">
+            <article class="blog__article" data-aos="fade-left">
               <div class="blog__Div shadow-lg p-3 mb-5 bg-body rounded ">
                 <div class="blog__img" >
                   <a href=""><img src="../imgs/prueba.jpg" class="img-fluid"  alt="¿Qué es un kit de tiempo para carros?"></a>
@@ -109,7 +111,7 @@
             </article>
           </li>
           <li><!-- A2 -->
-            <article class="blog__article ">
+            <article class="blog__article" data-aos="fade-left">
               <div class="blog__Div shadow-lg p-3 mb-5 bg-body rounded">
                 <div class="blog__img" >
                   <a href="#"><img src="../imgs/prueba.jpg" class="img-fluid"  alt="En Venezuela sí hay soluciones confiables para los repuestos de tu carro"></a>
@@ -128,7 +130,7 @@
             </article>
           </li>
           <li><!-- A3 -->
-            <article class="blog__article ">
+            <article class="blog__article " data-aos="fade-left">
               <div  class="blog__Div shadow-lg p-3 mb-5 bg-body rounded">
                 <div class="blog__img" >
                   <a href="#"><img src="../imgs/prueba.jpg"  class="img-fluid" alt="Compra repuestos para carros en Vanmica"></a>
@@ -148,7 +150,7 @@
             </article>
           </li>
           <li><!-- A4 -->
-            <article class="blog__article ">
+            <article class="blog__article " data-aos="fade-left">
               <div class="blog__Div shadow-lg p-3 mb-5 bg-body rounded">
                 <div class="blog__img" >
                   <a href="#"><img src="../imgs/prueba.jpg" class="img-fluid" alt="Compra repuestos para carros en Vanmica"></a>
@@ -168,7 +170,7 @@
               </article>
             </li>
           <li><!-- A5 -->
-            <article class="blog__article ">
+            <article class="blog__article " data-aos="fade-left">
               <div class="blog__Div shadow-lg p-3 mb-5 bg-body rounded">
                 <div class="blog__img" >
                   <a href="#"><img src="../imgs/prueba.jpg" class="img-fluid" alt="Compra repuestos para carros en Vanmica"></a>
@@ -188,7 +190,7 @@
             </article>
           </li>
           <li><!-- A6 -->
-            <article class="blog__article ">
+            <article class="blog__article " data-aos="fade-left">
               <div class="blog__Div shadow-lg p-3 mb-5 bg-body rounded">
                 <div class="blog__img" >
                   <a href="#"><img src="../imgs/prueba.jpg" class="img-fluid"class="img-fluid"  alt="Compra repuestos para carros en Vanmica"></a>
@@ -330,6 +332,12 @@
       </div>
     </footer>
   </div>
+  <!-- aos -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- bootstrap script -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script> 
 </body>
