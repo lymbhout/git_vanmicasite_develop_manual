@@ -488,10 +488,6 @@ padding: 30px;
     margin: 10px 0;
     padding: 10px 0;
 }
-.publicidadInferior img{
-    width: 140px;
-}
-
 /* index @media */
 @media screen and (max-width:1020px) {
     .gridFormularioPublicidad{
@@ -902,7 +898,7 @@ margin: auto;
     height: 2px;
     display: block;
     background:#102026;
-    transition:400ms;
+    transition:600ms;
 }
 .productosP__article:hover::after {
     width: 100%;
