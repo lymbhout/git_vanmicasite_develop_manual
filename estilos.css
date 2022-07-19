@@ -716,11 +716,11 @@ margin: auto;
     text-align: center;
     padding: 30px;
     font-size: 1.9em;
-    margin: 10px 0;
 }
 .divEmpresa p{
-    padding: 20px 20px;
+    padding: 10px 10px;
     text-align:justify;
+    margin: 0;
 }
 /* Equipo */
 .equipoSection{
@@ -968,7 +968,7 @@ display: block;
         gap: 10px 10px;
 }
 .productosP__article div img{
-    width: 180px;
+    width: 100px;
 }
 .productosP__article {
     display: flex;
