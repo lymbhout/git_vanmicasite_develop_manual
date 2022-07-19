@@ -32,6 +32,7 @@ header a{
          /* header superior */
 #headerNavSuperior{
 width: 100%;
+height: auto;
 }
 ul{
     padding: 0;
@@ -41,7 +42,6 @@ ul{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: end;
-    width: 100%;
     margin: 0;
 }
 .header__navsuperior__li {
@@ -49,7 +49,7 @@ ul{
 }
 .header__navsuperior__li a{
     color: rgb(158, 158, 158);
-transition: all 0.5s;
+    transition: all 0.5s;
 }
 .header__navsuperior__li a:hover{
     color:aliceblue;
@@ -58,11 +58,12 @@ transition: all 0.5s;
            /* div h3 */
 .header__divSuperior{
     background-color:#F20505;
-    padding: 5px;
+    width: 100%;
 }
 .header__divSuperior h3{
 font-weight: bold;
 line-height: normal;
+padding: 5px;
 }
 .divSuperior__Titulo{
     margin: auto;
@@ -75,30 +76,41 @@ line-height: normal;
 .gridLogoCarrito{
     display: flex;
     flex-direction: row;
-    justify-content:end; 
+    justify-content: center;
 }
 .headerLogo{
-    width:10%;
-    margin: auto;
+    width: 50%;
+    align-self: center;
 }
 .header__logo__img{
-    margin:auto;
-    padding: 20px; 
-    width: 300px;
+    max-width:17em;
+    height: auto;
+    display: block;
+    margin: auto;
+    position: relative;
+    left: 4em; 
 }
 /* carrito */
 .carrito{
-padding:70px 20px;
+padding:70px 0px;
 display:flex;
 flex-direction: row;
-justify-content: center;
+justify-content: end;
+justify-self:start;
 }
 .carrito p{
 font-size: 30px;
 margin-right: 20px;
 }
-.carrito__a img{
-width: 100px;
+.carrito i{
+font-size: 3em;
+}
+.carrito a{
+    color:rgb(158, 158, 158);
+    transition: all 700ms;
+}
+.carrito a:hover{
+    color: aliceblue;
 }
              /* barra y boton */
 .barraBusquedaBoton{
@@ -133,8 +145,9 @@ width: 100px;
     margin: 0 10px;
 }
 .logoTipo{
-    width: 20px;
     padding: 0px 10px;
+    width: 25px;
+    display: inline;
 }
 .nav-item a{
     color:rgb(158, 158, 158) ;
@@ -145,7 +158,37 @@ width: 100px;
 }
 /* -----------@MEDIA header----------- */
 /* header superior */
+@media screen and (max-width:765px){
+    .header__navSuperiro{
+        justify-content: start;
+    }
+    .barraborrar{
+        display: none;
+    }
+    .carrito p{
+        display: none;
+        }
+        .header__logo__img{
+            position:static;
+            max-width: 12em;
+            margin: none;
+        }
+        .carrito i{
+            font-size: 1em;
+            text-align: end;
+            }
+    .header__425{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .gridLogoCarrito{
+        justify-content: space-evenly;
+        width: 100%;
+    }
 
+}
 @media screen and (max-width:320px) {
     .gridHeader{
         width:320px;
@@ -155,10 +198,6 @@ width: 100px;
         justify-content:start;
         flex-wrap: nowrap;
         font-size: 0.8em;
-    }
-    .header__divSuperior{
-        width: 310px;
-        font-size: 1em;
     }
     /* logo @media */
     .header__logo__img{
@@ -250,7 +289,7 @@ font-size: 0.9em;
 }
 
 .articulos__img{
-    width: 150px;
+    width: 90px;
     margin: auto; 
 }
 .enviosLogo h3{
@@ -273,30 +312,36 @@ font-size: 0.9em;
     text-align:center;
     padding: 20px 5px ;
     font-size: 14px;
-    color: aliceblue;
+    color: rgb(158, 158, 158);
 }
 .horarios{
     text-align:center;
     padding: 20px 0px ;
     font-size: 14px;
     border-left: 1px;
-    color: aliceblue;
-    border-left-color: aliceblue;
+    color: rgb(158, 158, 158);
+    border-left-color: rgb(158, 158, 158);
 }
 .redesSociales{
-    color: aliceblue;
+    color: rgb(158, 158, 158);
     font-size: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    width: 80%;
 }
 .redesSociales img{
-    width: 70px;
+    width: 45px;
+    padding: 5px;
+    transition: all 400ms;
+}
+.redesSociales img:hover{
+    transform: scale(1.1);
 }
 .copy{ /* copyright */
     background-color:#102026 ;
-    color: aliceblue;
+    color: rgb(158, 158, 158);
 }
 .copy p{
     width: fit-content;
@@ -304,7 +349,7 @@ font-size: 0.9em;
 }
 /* bootstrap */
 #carouselExampleCaptions{
-    display: none;
+    display:none;
 }
 /* ----------@media footer---------- */
 @media screen and (max-width:850px){
@@ -330,7 +375,6 @@ font-size: 0.9em;
     .articulos li{
         padding: 10px;
     }
-
     .informacionContenedor{
         display: flex;
         flex-direction: row;
@@ -355,7 +399,6 @@ font-size: 0.9em;
     grid-template-columns: 1fr 1fr;
     margin: 10px;
     gap: 10px;
-
 }
 .gridPLinks{
     display: grid;
@@ -377,16 +420,15 @@ main{
 main   a{
     text-decoration:none;
 }
-
-
 /* formulario */
 .formularioUnico{
     padding: 15px;
     border-top:solid 2px #0476D9;
     background-color: whitesmoke;
 }
-.formularioUnico__div img{
-    width: 50px;
+.formularioUnico__div i{
+    font-size: 1.5em;
+    color: #0476D9;
 }
 .formularioUnico__div h3{
     font-size: 15px;
@@ -418,12 +460,12 @@ main   a{
 }
 
 /* img publicitario */
-#carouselExampleControls{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.carousel-item img{
+    max-width: 100%;
+    height: 450px;
 }
-/* galeria de producto */
+
+/* nav galeria de producto */
 .galeriaProducto__h3 h3{
     text-align: center;
     padding: 10px 0;
@@ -441,14 +483,13 @@ main   a{
 
 /* img producto con enlaces */
 .galeriaProducto__links a{
-width: 150px;
-text-align: center;
+    width: 150px;
+    text-align: center;
+    margin: auto;
 }
 .galeriaProducto__links a img{
     width: 150px;
-    margin: auto;
 }
-
 /* Blog Vanmica */
 .blogVanmica__div h2{
 text-align: center;
@@ -470,6 +511,7 @@ padding: 30px;
 }
 .card img{
     width: 100%;
+    max-height: 266px;
     transition: all 1s;
 }
 .card img:hover{
@@ -479,26 +521,33 @@ padding: 30px;
 .publicidadInferior div{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-}
-.publicidadInferior img{
-    width: 140px;
-}
-.publicidadInferior div{
-width: 100%;
-border-top: solid 1px #102026;
-border-bottom: solid 1px #102026;
-margin: 10px 0;
-padding: 10px 0;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    border-top: solid 1px #102026;
+    border-bottom: solid 1px #102026;
+    margin: 10px 0;
+    padding: 10px 0;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 /* index @media */
+@media screen and (max-width:1020px) {
+    .gridFormularioPublicidad{
+        display: grid;
+        grid-template-columns: 1fr ;
+        margin: 10px;
+        gap: 10px;
+    }
+    .carousel-item img{
+        height: 350px;
+    }
+}
 @media screen and (max-width:320px) {
     main{
         padding: 0;
-    }
-    .gridFormularioPublicidad{
-        grid-template-columns: 1fr;
-        gap: 10px 0;
     }
     .formularioUnico{
         padding: 10px 0;
@@ -558,10 +607,13 @@ padding: 10px 0;
 .blog__Div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    max-width: 60%;
+    margin: auto;
 }
 .blog__img{
 order: 2;
+width: fit-content;
+margin: auto;
 }
 .blog__subtitulo{
     order: 1;
@@ -571,9 +623,12 @@ order: 2;
 }
 .blog__subtitulo h2{
     margin: 80px 0 20px 0;
+    width: fit-content;
+    margin: auto;
 }
 .blog__pYa{
     order: 3;
+    text-align:justify;
 }
 .blog__pYa div a{
     display: block;
@@ -592,8 +647,25 @@ order: 2;
     z-index: 3;
     background-color: #0476D9;
 }
-
 /* @media blog */
+@media screen and (max-width:800px) {
+    .blog__Div {
+        min-width: 100%;
+    }
+    .blog ul{
+    width: 90%;
+    }
+    .blog__Div {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    main{
+        padding: 0;
+    }
+}
 @media screen and (max-width:320px) {
     .blog__img a img{
         width: 320px;
@@ -631,9 +703,11 @@ order: 2;
     width: 100%;
     background-color: whitesmoke;
     margin: 15px 0;
+    align-items: center;
 }
 .divEmpresa{
     max-width: 50%;
+    margin-right: 20px;
 }
 .divEmpresa h3{
     text-align: center;
@@ -678,6 +752,7 @@ order: 2;
 }
 .divEmpresa{
     max-width: 100%;
+    margin: 0;
 }
 .equipoArticuloImg{
     display: flex;
@@ -719,14 +794,16 @@ order: 2;
 }
 .carritoLogo a img{
     width: 200px;
+    padding-top: 20px;
 }
 .carrito__img{
-    width:700px;
+    width:100%;
 }
-.carrito__img img{
-    width: 50%;
-    padding:0px 175px ;
-
+.carrito__img i{
+width: fit-content;
+margin: auto;
+font-size: 10em;
+display: block;
 }
 .carrito__h1{
     font-size: 20px;
@@ -737,6 +814,7 @@ order: 2;
     flex-direction: row;
     justify-content: space-evenly;
     margin: 60px 0;
+    flex-wrap: wrap;
 }
 .botonCarrito a h2 {
     display: block;
@@ -865,9 +943,20 @@ order: 2;
 
 /* ----------producto imgs---------- */
 /* ----------grid productos -------*/
-.productosPImg{
-    border-bottom:solid #0476D9 1px ;
-    padding: 30px 0px;
+/* animacion border botton-left */
+.productosP__article {
+    display: inline-block;
+}
+.productosP__article::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background:#102026;
+    transition:600ms;
+}
+.productosP__article:hover::after {
+    width: 100%;
 }
 .gridULContainer{
         display: grid;
