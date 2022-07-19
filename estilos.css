@@ -42,6 +42,7 @@ ul{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: end;
+    margin: 0;
 }
 .header__navsuperior__li {
     margin: 0px 15px; 
@@ -75,28 +76,34 @@ padding: 5px;
 .gridLogoCarrito{
     display: flex;
     flex-direction: row;
-    justify-content:center; 
+    justify-content: center;
 }
 .headerLogo{
-    width: 100%;
-    margin: auto;
+    width: 50%;
+    align-self: center;
+}
+.header__logo__a{
+
 }
 .header__logo__img{
-    width: 30%;
+    max-width:17em;
+    display: block;
+    margin: auto;
 }
 /* carrito */
 .carrito{
-padding:70px 20px;
+padding:70px 0px;
 display:flex;
 flex-direction: row;
-justify-content: center;
+justify-content: end;
+justify-self:start;
 }
 .carrito p{
 font-size: 30px;
 margin-right: 20px;
 }
-.carrito__a img{
-width: 100px;
+.carrito i{
+font-size: 3em;
 }
              /* barra y boton */
 .barraBusquedaBoton{
@@ -131,8 +138,9 @@ width: 100px;
     margin: 0 10px;
 }
 .logoTipo{
-    width: 20px;
     padding: 0px 10px;
+    width: 25px;
+    display: inline;
 }
 .nav-item a{
     color:rgb(158, 158, 158) ;
@@ -254,7 +262,7 @@ font-size: 0.9em;
 }
 
 .articulos__img{
-    width: 150px;
+    width: 90px;
     margin: auto; 
 }
 .enviosLogo h3{
@@ -740,15 +748,16 @@ margin: auto;
 }
 .carritoLogo a img{
     width: 200px;
+    padding-top: 20px;
 }
 .carrito__img{
     width:100%;
 }
-.carrito__img img{
-    max-width: 50%;
-    display: block;
-    margin: auto;
-
+.carrito__img i{
+width: fit-content;
+margin: auto;
+font-size: 10em;
+display: block;
 }
 .carrito__h1{
     font-size: 20px;
