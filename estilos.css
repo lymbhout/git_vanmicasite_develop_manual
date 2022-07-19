@@ -364,7 +364,7 @@ font-size: 0.9em;
         bottom:-20px ;
     }
     .articulos__img{
-        width: 60px;
+        width: 75px;
     }
 }
 @media screen and (max-width:320px){
@@ -374,6 +374,9 @@ font-size: 0.9em;
     .articulos{
     display: flex;
     flex-wrap: wrap;
+    }
+    .articulos__img{
+        width: 60px;
     }
     .articulos li{
         padding: 10px;
@@ -738,7 +741,7 @@ margin: auto;
     text-align:justify;
 }
 .equipoArticuloImg img{
-    width: 20%;
+    width: 15%;
     padding: 15px;
     margin: auto;
 } 
@@ -764,6 +767,7 @@ margin: auto;
 }
 .equipoArticuloImg img{
     width: 50%;
+    height: 50%;
 } 
 .equipoSection ul{
     display: none;
