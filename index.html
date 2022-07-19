@@ -7,6 +7,7 @@
   <!-- flation -->
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
   <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
   <!-- estilos letras -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,64 +34,67 @@
       <div class="header__divSuperior"> <!-- Publicidad envio -->
         <h3 class="divSuperior__Titulo">Precio de envio 2.99 $$</h3>
       </div>
-      <div class="gridLogoCarrito"><!-- logo y carrito-->
-        <section class="headerLogo"> <!-- logo -->
-          <a class="header__logo__a" href="#"><img src="./imgs/lgo vanmica rojo.png" alt="Logo" class="header__logo__img"></a>
+      <div class="header__425">
+        <div class="gridLogoCarrito"><!-- logo y carrito-->
+          <section class="headerLogo"> <!-- logo -->
+            <a class="header__logo__a" href="#"><img src="./imgs/lgo vanmica rojo.png" alt="Logo" class="header__logo__img"></a>
+          </section>
+          <section class="carrito"><!-- carrito -->
+            <a href="html/carrito.html" class="carrito__a"><i class="fi fi-rs-shopping-cart-add"></i>0 Productos</a>
+            <p class="carrito__p">0,00$</p>
+          </section>
+        </div>
+        <section class="barraborrar"> <!--barra de busqueda y boton-->
+          <form class="barraBusquedaBoton">
+            <label for="busqueda"></label>
+            <input type="search" placeholder="Introdusca el numero o el nombre de la pieza" id="busqueda">
+            <label for="enviar"></label>
+            <input type="submit" id="enviar" value="Buscar">
+          </form>
         </section>
-        <section class="carrito"><!-- carrito -->
-          <a href="html/carrito.html" class="carrito__a"><i class="fi fi-rs-shopping-cart-add"></i>0 Productos</a>
-          <p class="carrito__p">0,00$</p>
+        <section> <!-- profuctos nav inferior --> <!--navegador inferior-->
+          <nav class="navbar navbar-expand-lg bg">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="./html/productos.html">Neumaticos <img src="./imgs/logotipos/rueda.png" alt="" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/productos.html">Aceites <img src="./imgs/logotipos/aceite.png" alt="" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/productos.html">Refrigeracion <img src="./imgs/logotipos/sistema-de-refrigeracion.png" alt="" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/productos.html">Filtros <img src="./imgs/logotipos/filtro.png" alt="" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/productos.html">frenos <img src="./imgs/logotipos/freno.png" alt="" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/productos.html">Accesorios de auto <img src="./imgs/logotipos/accesorio.png" alt="" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="./html/productos.html">Electrico <img src="./imgs/logotipos/electrico.png" alt="" class="logoTipo"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </section>
       </div>
-      <section class="barraborrar"> <!--barra de busqueda y boton-->
-        <form class="barraBusquedaBoton">
-          <label for="busqueda"></label>
-          <input type="search" placeholder="Introdusca el numero o el nombre de la pieza" id="busqueda">
-          <label for="enviar"></label>
-          <input type="submit" id="enviar" value="Buscar">
-        </form>
-      </section>
-      <section> <!-- profuctos nav inferior --> <!--navegador inferior-->
-        <nav class="navbar navbar-expand-lg bg">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ">
-                <li class="nav-item">
-                  <a class="nav-link " aria-current="page" href="./html/productos.html">Neumaticos <img src="./imgs/logotipos/rueda.png" alt="" class="logoTipo"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./html/productos.html">Aceites <img src="./imgs/logotipos/aceite.png" alt="" class="logoTipo"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./html/productos.html">Refrigeracion <img src="./imgs/logotipos/sistema-de-refrigeracion.png" alt="" class="logoTipo"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./html/productos.html">Filtros <img src="./imgs/logotipos/filtro.png" alt="" class="logoTipo"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./html/productos.html">frenos <img src="./imgs/logotipos/freno.png" alt="" class="logoTipo"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./html/productos.html">Accesorios de auto <img src="./imgs/logotipos/accesorio.png" alt="" class="logoTipo"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="./html/productos.html">Electrico <img src="./imgs/logotipos/electrico.png" alt="" class="logoTipo"></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </section>
+
     </header> 
             <!--main-->
     <main class="gridMain"> 
       <div class="gridFormularioPublicidad "> <!-- grid de formulario y publicidad -->
         <section class="formularioUnico gridFormulario  " > <!--formulario-->
           <div class="formularioUnico__div">
-            <img src="imgs/prueba.jpg" alt="logo carro">
+            <i class="bi bi-car-front-fill"></i>
             <h3>Seleccione su coche para buscar pieza de recambio</h3>
           </div>
           <div class="formularioSelect"> <!-- frmulario selector -->
@@ -120,20 +124,20 @@
             </select>
           </div>
           <div class="botonBuscarSuperior">  <!-- boton buscar -->
-            <a href="#"><img src="./imgs/prueba.jpg" alt="logo"> Buscar</a>
+            <a href="#"><i class="bi bi-search"></i> Buscar</a>
           </div>
         </section> 
         <!-- img publicitario-->
         <div id="carouselExampleControlsNoTouching" class="carousel carousel-dark slide" data-bs-touch="false" data-bs-interval="false">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./imgs/prueba.jpg" class="d-block w-100" alt="publicidad">
+              <img src="./imgs//publicidad.png" class="d-block w-100" alt="publicidad">
             </div>
             <div class="carousel-item">
-              <img src="./imgs/prueba.jpg" class="d-block w-100" alt="publicidad">
+              <img src="./imgs/publicidad 2.png" class="d-block w-100" alt="publicidad">
             </div>
             <div class="carousel-item">
-              <img src="./imgs/prueba.jpg" class="d-block w-100" alt="publicidad">
+              <img src="./imgs/PUBLICIDAD3.png" class="d-block w-100" alt="publicidad">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
