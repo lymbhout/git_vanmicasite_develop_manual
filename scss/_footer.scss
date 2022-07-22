@@ -1,0 +1,142 @@
+/* -------------footer -------------*/
+/* ---------grid footer--------- */
+.gridFooter{
+    display: grid;
+    grid-template-rows: auto 1.5fr auto;
+    grid-column: span 3;
+}
+    /* articulo informativa  */
+    .informativa{
+        background-color:map-get($backgroud,fondoAO );
+        .articulos{
+            display: grid;
+            grid-template-columns: repeat(4,25%);
+            margin: 20px;
+        }
+    } 
+    .enviosLogo{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        height: 200px;
+        text-align: center;
+        color: $clrPrimordial;
+        .articulos__img{
+            width: 70px;
+            margin: auto; 
+        }
+        & h3{
+            padding: 10px;
+            font-size: 15px;
+        }
+    }
+    /* bootstrap */
+#carouselExampleCaptions{
+    display:none;
+}
+
+    /*articulo termino y copi  */
+.informacion{
+    background-color:map-get($backgroud,fondoAO2 );
+    &Contenedor{
+        display: grid;
+        grid-template-columns: repeat(3,33%) ;
+        grid-column-gap: 5px;
+        height: 100%;
+        align-content: center;
+        .terminos{
+            text-align:center;
+            padding: 20px 5px ;
+            font-size: 14px;
+            color: $clrSecundario;
+        }
+        .horarios{
+            text-align:center;
+            padding: 20px 0px ;
+            font-size: 14px;
+            border-left: 1px;
+            color: $clrSecundario;
+            border-left-color: $clrSecundario;
+        }
+        .redesSociales{
+            color: $clrSecundario;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            & img{
+                width: 45px;
+                padding: 5px;
+                transition: all 400ms;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+/* copyright */
+.copy{ 
+    background-color:map-get($backgroud,fondoAO ) ;
+    color:$clrSecundario;
+    p{
+        width: fit-content;
+        margin: auto;
+    }
+}
+/* ----------@media footer---------- */
+@media screen and (max-width:850px){
+    .informativa .articulos{
+        display: none;
+    }
+    #carouselExampleCaptions{
+        display:block;
+        margin-top: 10px;
+    }
+    .carousel-indicators {
+        bottom:-20px;
+    }
+    .articulos__img{
+        width: 75px;
+    }
+}
+@media screen and (max-width:500px) {
+    .informacionContenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);; 
+        .terminos{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width:320px){
+    .gridFooter{
+        width: 320px;
+    }
+    .articulos{
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .articulos__img{
+        width: 60px;
+    }
+    .articulos li{
+        padding: 10px;
+    }
+    .informacionContenedor{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .terminos{
+        display: none;
+    }
+    .redesSociales{
+        padding: 10px 0;
+    }
+    .copy{
+        font-size: 0.6em;
+    }
+}

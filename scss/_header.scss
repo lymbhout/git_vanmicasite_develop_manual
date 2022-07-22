@@ -1,0 +1,253 @@
+
+/* header */
+/*------- grid body--------  */
+.gridBody{
+    display: grid;
+    grid-template-columns: 1fr auto  1fr;
+}
+
+/* --------grid header-------- */
+.gridHeader{
+    display: grid;
+    grid-template-rows: repeat(5,auto);
+} 
+header{
+    grid-column: span 3;
+    background-color: map-get($backgroud, 'fondoAO');
+    width: 100%;
+
+        a{
+            text-decoration: none;
+            color:$clrSecundario;
+        }
+}
+ul{
+    padding: 0;
+}
+         /* header superior */
+#headerNavSuperior{
+width: 100%;
+height: auto;
+}
+.header__navSuperior{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: end;
+    margin: 0;
+        &__li{
+            margin: 0px 15px; 
+            & a{
+                color:$clrSecundario;
+                transition: all 0.5s;
+                &:hover{
+                    color:$clrPrimordial;
+                }
+            }
+        }
+}
+
+           /* div h3 */
+.header__divSuperior{
+    background-color:map-get($backgroud, 'fondoR');
+    width: 100%;
+        & h3{
+            font-weight: bold;
+            line-height: normal;
+            padding: 5px;
+            margin: auto;
+            width:fit-content;
+            color:$clrPrimordial;
+            font-size: 1em;
+        }
+}
+
+         /* header medio */
+.gridLogoCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .headerLogo{
+        width: 50%;
+        align-self: center;
+        .header__logo__img{
+            max-width:17em;
+            height: auto;
+            display: block;
+            margin: auto;
+            position: relative;
+            left: 4em; 
+        }
+    }
+    /* carrito */
+    .carrito{
+        padding:70px 0px;
+        display:flex;
+        flex-direction: row;
+        justify-content: end;
+        justify-self:start;
+            & p{
+                font-size: 30px;
+                margin-right: 20px;
+                }
+            & a{
+                color:$clrSecundario;
+                transition: all 700ms;
+                &:hover{
+                    color:$clrPrimordial;
+                    transition: all 700ms;
+                }
+            }   
+        }
+    }
+    .carrito i{
+        font-size: 3em;
+        }
+
+             /* barra y boton */
+.barraBusquedaBoton{
+    width: fit-content;
+    margin: auto;
+    & input{
+        display: inline-block;
+        border: 1px solid $clrblack;
+        border-radius: 5px;
+        padding: 2px;
+        margin: 10px;
+        background-color: map-get($backgroud,fondoSmoke );
+    }
+}
+#busqueda{
+    width: 400px;
+    height: 50px;
+}
+#enviar{
+    width: 100px;
+    height: 50px;
+    background-color:map-get($backgroud,fondoAC);
+    color:$clrPrimordial
+}
+
+              /* header inferior */
+.navbar-nav{
+    margin: auto;
+    .nav-item{
+        padding: 10px;
+        margin: 0 10px;
+        a{
+            color:$clrSecundario ;
+            transition: all 0.5s;
+            &:hover{
+                color:map-get($backgroud, 'fondoR' );
+            }
+            .logoTipo{
+                padding: 0px 0px;
+                width: 25px;
+                display: inline;
+            }
+        }
+    }
+}
+
+/* -----------@MEDIA header----------- */
+@media screen and (max-width:768px){
+    .header__navSuperiro{
+        justify-content: start;
+    }
+    .barraborrar{
+        display: none;
+    }
+    .header__425{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .gridLogoCarrito{
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .carrito p{
+        display: none;
+        }
+        .gridLogoCarrito .headerLogo .header__logo__img{
+        position:static;
+        max-width: 12em;
+        margin: none;
+    }
+    .carrito i{
+        font-size: 2em;
+        text-align: end;
+        }
+}
+
+@media screen and (max-width:320px) {
+    .gridHeader{
+        width:100%;
+        height: fit-content;
+    }
+    .header__navSuperiro{
+        justify-content:start;
+        flex-wrap: nowrap;
+        font-size: 0.8em;
+    }
+        /* logo @media */
+    .gridLogoCarrito .headerLogo .header__logo__img{
+        width:150px;
+        padding: 10px;
+    } 
+    .gridLogoCarrito .headerLogo {
+        width:fit-content;
+    }
+    /* carrito @media */
+    .gridLogoCarrito .carrito{
+        padding:20px 10px 0 0;
+        font-size: 0.5em;
+    }
+    .carrito p{
+    display: none;
+    }
+                     /* barra y boton @media */
+.barraBusquedaBoton{
+    width: 320px;
+}
+.barraBusquedaBoton input{
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 2px;
+    margin: 10px;
+    background-color: whitesmoke;
+    width: 320px;
+}
+#busqueda{
+    width: 250px;
+    height: 50px;
+    font-size: 0.7em;
+    margin:  10px 30px;
+}
+#enviar{
+    width: 250px;
+    height: 50px;
+    background-color:#0476D9;
+    color: aliceblue;
+    margin: 10px 30px;
+}
+/* nav inferior @media */
+.header__navInferior{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.logoTipo{
+    width: 20px;
+    padding: 0px 5px;
+}
+.nav__inferior__li a {
+font-size: 0.9em;
+}
+.nav__inferior__li{
+    margin: 7px;
+}
+}
