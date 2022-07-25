@@ -32,7 +32,7 @@ height: auto;
 .header__navSuperior{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: end;
     margin: 0;
         &__li{
@@ -203,9 +203,9 @@ height: auto;
     .gridLogoCarrito .carrito{
         padding:20px 10px 0 0;
         font-size: 0.5em;
-    }
-    .carrito p{
-    display: none;
+        .carrito p{
+        display: none;
+        }
     }
                      /* barra y boton @media */
 .barraBusquedaBoton{

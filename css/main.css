@@ -37,7 +37,7 @@ ul {
 .header__navSuperior {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: end;
   margin: 0; }
   .header__navSuperior__li {
@@ -176,8 +176,8 @@ ul {
   .gridLogoCarrito .carrito {
     padding: 20px 10px 0 0;
     font-size: 0.5em; }
-  .carrito p {
-    display: none; }
+    .gridLogoCarrito .carrito .carrito p {
+      display: none; }
   /* barra y boton @media */
   .barraBusquedaBoton {
     width: 320px; }
@@ -298,8 +298,8 @@ ul {
   #carouselExampleCaptions {
     display: block;
     margin-top: 10px; }
-  .carousel-indicators {
-    bottom: -20px; }
+    #carouselExampleCaptions .carousel-indicators {
+      bottom: -20px; }
   .articulos__img {
     width: 75px; } }
 
@@ -324,8 +324,8 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around; }
-  .terminos {
-    display: none; }
+    .informacionContenedor .terminos {
+      display: none; }
   .redesSociales {
     padding: 10px 0; }
   .copy {
@@ -458,8 +458,6 @@ main {
     grid-template-columns: 1fr;
     margin: 10px;
     gap: 10px; }
-  .carousel-item img {
-    height: 350px; }
   main {
     padding: 0; } }
 
