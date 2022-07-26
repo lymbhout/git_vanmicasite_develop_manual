@@ -25,7 +25,7 @@
                 width: fit-content;
                 margin: auto;
                 a{
-                    color: #0476D9;
+                    color:map-get($backgroud, fondoAC);
                 }
             }
         }
@@ -34,9 +34,9 @@
             text-align:justify;
             & div a{
                 display: block;
-                color: #0476D9;
+                color: map-get($backgroud, fondoAC);
                 font-size: 17px;
-                border: 1px solid #0476D9 ;
+                border: 1px solid map-get($backgroud, fondoAC);
                 border-radius: 5px;
                 padding: 10px;
                 width: 90px;
@@ -44,9 +44,9 @@
                 transition: all 1s;
                 &:hover{
                     font-size: 20px;
-                    color:aliceblue;
+                    color:$clrPrimordial;
                     z-index: 3;
-                    background-color: #0476D9;
+                    background-color:map-get($backgroud, fondoAC);
                 }
             }
         }
