@@ -655,3 +655,96 @@ main {
       width: 150x;
       padding: 10px;
       margin: auto; } }
+
+/* ---------------main carrito--------------- */
+.carritoLogo a img {
+  width: 200px;
+  padding-top: 20px; }
+
+.carrito__article {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .carrito__article .carrito__img {
+    width: 100%; }
+    .carrito__article .carrito__img i {
+      width: fit-content;
+      margin: auto;
+      font-size: 10em;
+      display: block; }
+  .carrito__article .carrito__h1 {
+    font-size: 20px;
+    padding: 20px 0; }
+
+.carrito__botton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 60px 0;
+  flex-wrap: wrap; }
+
+.botonCarrito a h2 {
+  display: block;
+  color: #0476D9;
+  font-size: 20px;
+  border: 1px solid #0476D9;
+  border-radius: 40px;
+  padding: 10px 20px;
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+  transition: all 1s; }
+  .botonCarrito a h2:hover {
+    font-size: 25px;
+    color: aliceblue;
+    background-color: #0476D9; }
+
+.botonCarritoRojo a h2 {
+  display: block;
+  color: #F20505;
+  font-size: 20px;
+  border: 1px solid #F20505;
+  border-radius: 40px;
+  padding: 10px 20px;
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+  transition: all 1s; }
+  .botonCarritoRojo a h2:hover {
+    font-size: 25px;
+    color: aliceblue;
+    background-color: #F20505; }
+
+/* carrito @media */
+@media screen and (max-width: 320px) {
+  .carritoNav {
+    flex-wrap: nowrap;
+    font-size: 0.7em; }
+  .carritoLogo {
+    width: fit-content;
+    margin: auto; }
+  .carritoH2 {
+    text-align: center; }
+  .carrito__img {
+    width: fit-content; }
+  .carrito__img img {
+    width: 310px;
+    padding: 0; }
+  .carrito__h1 {
+    font-size: 1em;
+    text-align: center; }
+  .carrito__h3 {
+    text-align: center; }
+  .carrito__botton {
+    flex-direction: column;
+    margin: 0px; }
+  .botonCarrito a h2 {
+    padding: 10px 5px;
+    width: 300px;
+    margin: 10px 0; }
+  .botonCarritoRojo a h2 {
+    padding: 10px 5px;
+    width: 300px;
+    margin: 10px 0;
+    color: aliceblue;
+    background-color: #F20505; } }
