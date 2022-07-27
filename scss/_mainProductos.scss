@@ -1,0 +1,87 @@
+/* -----------main productos----------- */
+               /* productos seach */
+            .productos__divForm{
+                display: flex;
+                flex-direction: row;
+                border: 1px $clrSecundario solid ;
+                border-radius: 5px;
+                padding: 10px;
+                margin: 30px;
+                justify-content: center;
+                h3{
+                    color: map-get($backgroud,fondoAC );
+                    padding: 10px;
+                    font-size: 25px;
+                }
+            }
+            .productos__divForm2{
+                display: flex;
+                flex-direction: row;
+                border: 1px $clrSecundario solid ;
+                border-radius: 5px;
+                padding: 3 0px 20px 20px 20px;
+                margin: 30px;
+                justify-content: center;
+                width: fit-content;
+                a{
+                    margin: 0 30px;
+                }
+                h3{
+                    padding: 10px;
+                    font-size: 15px;
+                }
+            }
+            /* ----------producto imgs---------- */
+            /* ----------grid productos -------*/
+            .gridULContainer{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+                grid-auto-rows: 1fr;
+                gap: 10px 10px;
+            }
+            .productosP__article {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                &::after{
+                    content: '';
+                    width: 0px;
+                    height: 2px;
+                    display: block;
+                    background:map-get($backgroud,fondoAO );
+                    transition:600ms;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+            .productosP__article div img{
+                width: 100px;
+            }
+            /* producto @media */
+@media screen and (max-width:320px) {
+    .gridUl{
+        display: grid;
+        grid-template-columns:1fr; 
+    }
+    .productos__divForm{
+        flex-direction: column;
+        padding: 0px;
+    }
+    .productos__divForm img{
+        width: 50px;
+        margin:auto;
+        display: block;
+    }
+    .productos__divForm h3{
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .selec2 {
+        display: none;
+    }
+    .productos__divForm2{
+        display: none;
+    }
+}
