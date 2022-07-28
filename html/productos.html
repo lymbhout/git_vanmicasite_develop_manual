@@ -35,57 +35,101 @@
       <div class="header__divSuperior"> <!-- Publicidad envio -->
         <h3 class="divSuperior__Titulo">Precio de envio 2.99 $$</h3>
       </div>
-      <div class="gridLogoCarrito">
-        <section class="headerLogo"> <!-- logo y carrito-->
-          <a class="header__logo__a" href="../index.html"><img src="../imgs/lgo vanmica rojo.png" alt="Logo" class="header__logo__img"></a>
+      <div class="header__425">
+        <div class="gridLogoCarrito"><!-- logo y carrito-->
+          <section class="headerLogo"> <!-- logo -->
+            <a class="header__logo__a" href="#"><img src="../imgs/lgo vanmica rojo.png" alt="Logo" class="header__logo__img"></a>
+          </section>
+          <section class="carrito"><!-- carrito -->
+            <a href="carrito.html" class="carrito__a"><i class="fi fi-rs-shopping-cart-add"></i></a>
+            <p class="carrito__p">0,00$</p>
+          </section>
+        </div>
+        <section class="barraborrar"> <!--barra de busqueda y boton-->
+          <form class="barraBusquedaBoton">
+            <label for="busqueda"></label>
+            <input type="search" placeholder="Introdusca el numero o el nombre de la pieza" id="busqueda">
+            <label for="enviar"></label>
+            <input type="submit" id="enviar" value="Buscar">
+          </form>
         </section>
-        <section class="carrito"><!-- carrito -->
-          <a href="carrito.html" class="carrito__a"><i class="fi fi-rs-shopping-cart-add"></i>0 Productos</a>
-          <p class="carrito__p">0,00$</p>
+        <section class="colgate"> <!-- profuctos nav inferior --> <!--navegador inferior-->
+          <nav class="navbar navbar-expand-lg bg">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#">Neumaticos <img src="../imgs/logotipos/rueda.png" alt="rueda" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Aceites <img src="../imgs/logotipos/aceite.png" alt="aceite" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Refrigeracion <img src="../imgs/logotipos/sistema-de-refrigeracion.png" alt="refrigeracion" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Filtros <img src="../imgs/logotipos/filtro.png" alt="filtro" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">frenos <img src="../imgs/logotipos/freno.png" alt="freno" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Accesorios de auto <img src="../imgs/logotipos/accesorio.png" alt="accesorios" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#">Electrico <img src="../imgs/logotipos/electrico.png" alt="electrico" class="logoTipo"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </section>
-      </div>
-      <section class="barraborrar"> <!--barra de busqueda y boton-->
-        <form class="barraBusquedaBoton">
-          <label for="busqueda"></label>
-          <input type="search" placeholder="Introdusca el numero o el nombre de la pieza" id="busqueda">
-          <label for="enviar"></label>
-          <input type="submit" id="enviar" value="Buscar">
-        </form>
-      </section>
-      <section> <!-- profuctos nav inferior -->
-        <nav class="navbar navbar-expand-lg bg">
+        <section class="navbar navbar bg fixed-center oculto2">
           <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ">
-                <li class="nav-item">
-                  <a class="nav-link " aria-current="page" href="#">Neumaticos <img src="../imgs/logotipos/rueda.png" alt="" class="logoTipo"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Aceites <img src="../imgs/logotipos/aceite.png" alt="" class="logoTipo"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Refrigeracion <img src="../imgs/logotipos/sistema-de-refrigeracion.png" alt="" class="logoTipo"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Filtros <img src="../imgs/logotipos/filtro.png" alt="" class="logoTipo"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">frenos <img src="../imgs/logotipos/freno.png" alt="" class="logoTipo"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Accesorios de auto <img src="../imgs/logotipos/accesorio.png" alt="" class="logoTipo"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="#">Electrico <img src="../imgs/logotipos/electrico.png" alt="" class="logoTipo"></a>
-                </li>
-              </ul>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Productos</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#">Neumaticos <img src="../imgs/logotipos/rueda.png" alt="rueda" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Aceites <img src="../imgs/logotipos/aceite.png" alt="aceite" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Refrigeracion <img src="../imgs/logotipos/sistema-de-refrigeracion.png" alt="refrigeracion" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Filtros <img src="../imgs/logotipos/filtro.png" alt="filtro" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">frenos <img src="../imgs/logotipos/freno.png" alt="freno" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Accesorios de auto <img src="../imgs/logotipos/accesorio.png" alt="accesorios" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#">Electrico <img src="../imgs/logotipos/electrico.png" alt="electrico" class="logoTipo"></a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Introdusca el numero o el nombre de la pieza" aria-label="Search">
+                  <button class="btn btn-primary" type="submit" >Enviar</button>
+                </form>
+              </div>
             </div>
           </div>
-        </nav>
-      </section>
+        </section>
+      </div>
     </header> 
         <!-- Cuerpo -->
     <main>  
