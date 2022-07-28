@@ -28,38 +28,31 @@
     margin: 60px 0;
     flex-wrap: wrap;
 }
-.botonCarrito a h2 {
+/* extend */
+.botonBase{
     display: block;
-    color: map-get($backgroud,fondoAC );
     font-size: 20px;
-    border: 1px solid map-get($backgroud,fondoAC ) ;
     border-radius: 40px;
     padding: 10px 20px;
     width: 300px;
     margin: 10px;
     text-align: center;
     transition: all 1s;
+}
+.botonCarrito a h2 {
+    @extend .botonBase;
+    color: map-get($backgroud,fondoAC );
+    border: 1px solid map-get($backgroud,fondoAC ) ;
     &:hover{
-        font-size:25px;
-        color:$clrPrimordial;
-        background-color: map-get($backgroud,fondoAC );
+        @include hovercarrito(25px,$clrPrimordial,map-get($backgroud,fondoAC ));
     }
 }
 .botonCarritoRojo a h2{
-    display: block;
+    @extend .botonBase;
     color:map-get($backgroud,fondoR );
-    font-size: 20px;
     border: 1px solid  map-get($backgroud,fondoR );
-    border-radius: 40px;
-    padding: 10px 20px;
-    width: 300px;
-    margin: 10px;
-    text-align: center;
-    transition: all 1s;
     &:hover{
-        font-size:25px;
-        color:$clrPrimordial;
-        background-color:map-get($backgroud,fondoR );
+        @include hovercarrito(25px,$clrPrimordial,map-get($backgroud,fondoR ));
     }
 }
 /* carrito @media */

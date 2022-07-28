@@ -526,7 +526,8 @@ main {
   display: flex;
   flex-direction: column;
   max-width: 60%;
-  margin: auto; }
+  margin: auto;
+  /* boton */ }
   .blog__Div .blog__img {
     order: 2;
     width: fit-content;
@@ -699,33 +700,28 @@ main {
   margin: 60px 0;
   flex-wrap: wrap; }
 
-.botonCarrito a h2 {
+/* extend */
+.botonBase, .botonCarrito a h2, .botonCarritoRojo a h2 {
   display: block;
-  color: #0476D9;
   font-size: 20px;
-  border: 1px solid #0476D9;
   border-radius: 40px;
   padding: 10px 20px;
   width: 300px;
   margin: 10px;
   text-align: center;
   transition: all 1s; }
+
+.botonCarrito a h2 {
+  color: #0476D9;
+  border: 1px solid #0476D9; }
   .botonCarrito a h2:hover {
     font-size: 25px;
     color: aliceblue;
     background-color: #0476D9; }
 
 .botonCarritoRojo a h2 {
-  display: block;
   color: #F20505;
-  font-size: 20px;
-  border: 1px solid #F20505;
-  border-radius: 40px;
-  padding: 10px 20px;
-  width: 300px;
-  margin: 10px;
-  text-align: center;
-  transition: all 1s; }
+  border: 1px solid #F20505; }
   .botonCarritoRojo a h2:hover {
     font-size: 25px;
     color: aliceblue;

@@ -13,5 +13,10 @@
     justify-content: $jc;
 }
 
+@mixin hovercarrito($fZ,$color,$bColor) {
+    font-size:$fZ;
+    color:$color;
+    background-color:$bColor;
+}
 
 
