@@ -73,19 +73,17 @@ main{
 }
 .productosImg__nav ul {
     margin:50px 0px ;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    @include flexSimple(flex,row,space-evenly);
     list-style:none;
     font-size: 1em;
 }
 /* img producto con enlaces */
 .galeriaProducto__links a{
-    width: 150px;
+    width: $px150;
     text-align: center;
     margin: auto;
     & img{
-        width: 150px;
+        width:$px150;
     }
 }
 /* Blog Vanmica */
@@ -99,10 +97,7 @@ h2{
 }
 /* articulos blog img */
 .card-blog1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    @include allFlex (flex,wrap,row,space-evenly,none);
     .card {
         overflow:hidden;
         img{
@@ -116,9 +111,7 @@ h2{
     }
 }
 .publicidadInferior div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flexSimple (flex,row,space-between);
     width: 100%;
     height: auto;
     border-top: solid 1px map-get($backgroud,fondoAO);
@@ -148,9 +141,6 @@ h2{
     .formularioUnico{
         padding: 10px 0;
     }
-    .formularioUnico{
-        padding: 10px 0;
-    } 
     .botonBuscarSuperior{
         width: 50%;
         padding: 15px;

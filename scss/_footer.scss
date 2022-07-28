@@ -15,9 +15,7 @@
         }
     } 
     .enviosLogo{
-        display: flex;
-        flex-direction: column;
-        justify-content:space-around;
+        @include flexSimple (flex,column,space-around);
         height: 200px;
         text-align: center;
         color: $clrPrimordial;
@@ -98,7 +96,7 @@
             bottom:-20px;
         }
     }
-    .articulos__img{
+    .enviosLogo .articulos__img{
         width: 75px;
     }
 }
@@ -119,16 +117,14 @@
     display: flex;
     flex-wrap: wrap;
     }
-    .articulos__img{
-        width: 60px;
+    .enviosLogo .articulos__img{
+        width: 50px;
     }
     .articulos li{
         padding: 10px;
     }
     .informacionContenedor{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @include flexSimple (flex,row,space-around);
         .terminos{
             display: none;
         }

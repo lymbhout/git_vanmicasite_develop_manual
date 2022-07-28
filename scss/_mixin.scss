@@ -1,0 +1,17 @@
+/* mixin */
+
+@mixin allFlex ($display,$wrap,$direction,$jC,$aI){
+    display: $display;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    justify-content: $jC;
+    align-items: $aI;
+}
+@mixin flexSimple ($disp,$direc,$jc) {
+    display: $disp;
+    flex-direction: $direc;
+    justify-content: $jc;
+}
+
+
+

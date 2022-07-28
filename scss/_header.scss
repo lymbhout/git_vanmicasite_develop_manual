@@ -1,4 +1,4 @@
-
+@import 'mixin';
 /* header */
 /*------- grid body--------  */
 .gridBody{
@@ -30,10 +30,7 @@ width: 100%;
 height: auto;
 }
 .header__navSuperior{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    justify-content: end;
+    @include allFlex(flex,wrap,row-reverse,end,none);
     margin: 0;
         &__li{
             margin: 0px 15px; 
@@ -64,9 +61,7 @@ height: auto;
 
          /* header medio */
 .gridLogoCarrito{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @include flexSimple (flex,row,center);
     .headerLogo{
         width: 50%;
         align-self: center;
@@ -82,9 +77,7 @@ height: auto;
     /* carrito */
     .carrito{
         padding:70px 0px;
-        display:flex;
-        flex-direction: row;
-        justify-content: end;
+        @include flexSimple (flex,row,end);
         justify-self:start;
             & p{
                 font-size: 30px;
@@ -148,6 +141,9 @@ height: auto;
         }
     }
 }
+.oculto2{
+    display: none;
+}
 
 /* -----------@MEDIA header----------- */
 @media screen and (max-width:768px){
@@ -158,10 +154,12 @@ height: auto;
         display: none;
     }
     .header__425{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
         align-items: center;
+        @include flexSimple (flex,column,space-evenly);
+    }
+    .header__425{
+        align-items: center;
+        @include flexSimple (flex,row-reverse,space-evenly);
     }
     .gridLogoCarrito{
         justify-content: space-evenly;
@@ -169,8 +167,8 @@ height: auto;
     }
     .carrito p{
         display: none;
-        }
-        .gridLogoCarrito .headerLogo .header__logo__img{
+    }
+    .gridLogoCarrito .headerLogo .header__logo__img{
         position:static;
         max-width: 12em;
         margin: none;
@@ -178,8 +176,18 @@ height: auto;
     .carrito i{
         font-size: 2em;
         text-align: end;
-        }
+    }
+    .colgate{
+        display: none;
+    }
+    .oculto2{
+        display: block;
+    }
+    .text-bg-dark{
+        background-color: map-get($backgroud,fondoAO ) !important;
+    }
 }
+
 
 @media screen and (max-width:320px) {
     .gridHeader{
@@ -217,7 +225,7 @@ height: auto;
     border-radius: 5px;
     padding: 2px;
     margin: 10px;
-    background-color: whitesmoke;
+    background-color: map-get($backgroud,fondoSmoke );
     width: 320px;
 }
 #busqueda{
@@ -229,16 +237,13 @@ height: auto;
 #enviar{
     width: 250px;
     height: 50px;
-    background-color:#0476D9;
-    color: aliceblue;
+    background-color:map-get($backgroud,fondoAC );
+    color: $clrPrimordial;
     margin: 10px 30px;
 }
 /* nav inferior @media */
 .header__navInferior{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:center;
+    @include allFlex (flex,wrap,row,center,none);
 }
 .logoTipo{
     width: 20px;

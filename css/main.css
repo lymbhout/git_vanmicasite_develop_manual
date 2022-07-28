@@ -7,6 +7,7 @@
 *, ::after, ::before {
   box-sizing: content-box; }
 
+/* mixin */
 /* header */
 /*------- grid body--------  */
 .gridBody {
@@ -39,6 +40,7 @@ ul {
   flex-wrap: wrap;
   flex-direction: row-reverse;
   justify-content: end;
+  align-items: none;
   margin: 0; }
   .header__navSuperior__li {
     margin: 0px 15px; }
@@ -134,6 +136,9 @@ ul {
         width: 25px;
         display: inline; }
 
+.oculto2 {
+  display: none; }
+
 /* -----------@MEDIA header----------- */
 @media screen and (max-width: 768px) {
   .header__navSuperiro {
@@ -141,10 +146,15 @@ ul {
   .barraborrar {
     display: none; }
   .header__425 {
+    align-items: center;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center; }
+    flex-direction: column;
+    justify-content: space-evenly; }
+  .header__425 {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly; }
   .gridLogoCarrito {
     justify-content: space-evenly;
     width: 100%; }
@@ -156,7 +166,13 @@ ul {
     margin: none; }
   .carrito i {
     font-size: 2em;
-    text-align: end; } }
+    text-align: end; }
+  .colgate {
+    display: none; }
+  .oculto2 {
+    display: block; }
+  .text-bg-dark {
+    background-color: #102026 !important; } }
 
 @media screen and (max-width: 320px) {
   .gridHeader {
@@ -203,9 +219,10 @@ ul {
   /* nav inferior @media */
   .header__navInferior {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center; }
+    flex-direction: row;
+    justify-content: center;
+    align-items: none; }
   .logoTipo {
     width: 20px;
     padding: 0px 5px; }
@@ -300,7 +317,7 @@ ul {
     margin-top: 10px; }
     #carouselExampleCaptions .carousel-indicators {
       bottom: -20px; }
-  .articulos__img {
+  .enviosLogo .articulos__img {
     width: 75px; } }
 
 @media screen and (max-width: 500px) {
@@ -316,8 +333,8 @@ ul {
   .articulos {
     display: flex;
     flex-wrap: wrap; }
-  .articulos__img {
-    width: 60px; }
+  .enviosLogo .articulos__img {
+    width: 50px; }
   .articulos li {
     padding: 10px; }
   .informacionContenedor {
@@ -425,9 +442,10 @@ main {
 /* articulos blog img */
 .card-blog1 {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
-  flex-wrap: wrap; }
+  align-items: none; }
   .card-blog1 .card {
     overflow: hidden; }
     .card-blog1 .card img {
@@ -464,8 +482,6 @@ main {
 @media screen and (max-width: 320px) {
   main {
     padding: 0; }
-  .formularioUnico {
-    padding: 10px 0; }
   .formularioUnico {
     padding: 10px 0; }
   .botonBuscarSuperior {

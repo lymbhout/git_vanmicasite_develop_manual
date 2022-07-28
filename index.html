@@ -55,7 +55,7 @@
             <input type="submit" id="enviar" value="Buscar">
           </form>
         </section>
-        <section> <!-- profuctos nav inferior --> <!--navegador inferior-->
+        <section class="colgate"> <!-- profuctos nav inferior --> <!--navegador inferior-->
           <nav class="navbar navbar-expand-lg bg">
             <div class="container-fluid">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,6 +88,48 @@
               </div>
             </div>
           </nav>
+        </section>
+        <section class="navbar navbar bg fixed-center oculto2">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Productos</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="./html/productos.html">Neumaticos <img src="./imgs/logotipos/rueda.png" alt="rueda" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/productos.html">Aceites <img src="./imgs/logotipos/aceite.png" alt="aceite" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/productos.html">Refrigeracion <img src="./imgs/logotipos/sistema-de-refrigeracion.png" alt="refrigeracion" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/productos.html">Filtros <img src="./imgs/logotipos/filtro.png" alt="filtro" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/productos.html">frenos <img src="./imgs/logotipos/freno.png" alt="freno" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/productos.html">Accesorios de auto <img src="./imgs/logotipos/accesorio.png" alt="accesorios" class="logoTipo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="./html/productos.html">Electrico <img src="./imgs/logotipos/electrico.png" alt="electrico" class="logoTipo"></a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Introdusca el numero o el nombre de la pieza" aria-label="Search">
+                  <button class="btn btn-primary" type="submit" >Enviar</button>
+                </form>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </header> 
