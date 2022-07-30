@@ -139,6 +139,9 @@ ul {
 .oculto2 {
   display: none; }
 
+.header__logo__a2 {
+  display: none; }
+
 /* -----------@MEDIA header----------- */
 @media screen and (max-width: 768px) {
   .header__navSuperiro {
@@ -173,6 +176,12 @@ ul {
     display: block; }
   .text-bg-dark {
     background-color: #102026 !important; } }
+
+@media screen and (max-width: 420px) {
+  .header__logo__a {
+    display: none; }
+  .header__logo__a2 {
+    display: block; } }
 
 @media screen and (max-width: 320px) {
   .gridHeader {
@@ -379,23 +388,82 @@ main {
   border-top: solid 2px #0476D9;
   background-color: whitesmoke; }
   .formularioUnico__div i {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #0476D9; }
   .formularioUnico__div h3 {
-    font-size: 15px; }
+    font-size: 15px;
+    display: inline-block;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 1em; }
 
 /* formulario selector --> */
-.formularioSelect select {
-  display: block; }
+.formularioSelect {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: end;
+  align-items: none; }
+  .formularioSelect .select {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background: whitesmoke;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 25px 0; }
+    .formularioSelect .select::after {
+      content: '\25BC';
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 1em 1em;
+      background: #262626;
+      cursor: pointer;
+      pointer-events: none;
+      transition: .25s all ease;
+      color: #9e9e9e; }
+    .formularioSelect .select label {
+      width: 40px;
+      height: 50px;
+      border-radius: 5px 1px 1px 5px;
+      background-color: #0476D9;
+      color: whitesmoke;
+      text-align: center;
+      box-sizing: border-box;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .formularioSelect .select select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      outline: 0;
+      box-shadow: none;
+      border: 1 solid #262626;
+      background: whitesmoke;
+      flex: 1;
+      padding: 0 .5em;
+      color: black;
+      cursor: pointer;
+      font-size: 1em; }
+      .formularioSelect .select select::-ms-expand {
+        display: none; }
+
+.select:hover::after {
+  color: aliceblue; }
 
 /* boton formulario */
 .botonBuscarSuperior a {
   text-decoration: none;
   color: aliceblue;
   background-color: #0476D9;
-  width: 28%;
-  padding: 15px;
-  margin-top: 20px;
+  width: 88%;
+  padding: 10px;
+  margin: auto;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -468,6 +536,8 @@ main {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap; }
+  .publicidadInferior div img {
+    margin: 0 10px; }
 
 /* index @media */
 @media screen and (max-width: 800px) {
@@ -485,8 +555,7 @@ main {
   .formularioUnico {
     padding: 10px 0; }
   .botonBuscarSuperior {
-    width: 50%;
-    padding: 15px;
+    width: 88%;
     margin: auto; }
   .botonBuscarSuperior a {
     margin: auto; }
@@ -606,7 +675,7 @@ main {
   .empresaSection .divEmpresa {
     max-width: 50%;
     margin-right: 20px; }
-    .empresaSection .divEmpresa h3 {
+    .empresaSection .divEmpresa h1 {
       text-align: center;
       padding: 30px;
       font-size: 1.9em; }
@@ -775,21 +844,29 @@ main {
     color: #0476D9;
     padding: 10px;
     font-size: 25px; }
+  .productos__divForm i {
+    align-self: center;
+    font-size: 2em;
+    color: #0476D9; }
 
 .productos__divForm2 {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   border: 1px #9e9e9e solid;
   border-radius: 5px;
-  padding: 3 0px 20px 20px 20px;
-  margin: 30px;
-  justify-content: center;
-  width: fit-content; }
+  padding: 20px;
+  margin: auto;
+  justify-content: left;
+  width: 40%; }
   .productos__divForm2 a {
     margin: 0 30px; }
   .productos__divForm2 h3 {
     padding: 10px;
     font-size: 15px; }
+
+.selec2 {
+  width: 100%; }
 
 /* ----------producto imgs---------- */
 /* ----------grid productos -------*/

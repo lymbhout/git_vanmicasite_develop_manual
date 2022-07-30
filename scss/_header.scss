@@ -144,6 +144,9 @@ height: auto;
 .oculto2{
     display: none;
 }
+.header__logo__a2{
+    display: none;
+}
 
 /* -----------@MEDIA header----------- */
 @media screen and (max-width:768px){
@@ -186,6 +189,15 @@ height: auto;
     .text-bg-dark{
         background-color: map-get($backgroud,fondoAO ) !important;
     }
+}
+@media screen and (max-width:420px){
+.header__logo__a{
+    display:none;
+
+}
+.header__logo__a2{
+    display:block;
+}
 }
 
 

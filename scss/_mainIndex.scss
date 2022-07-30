@@ -32,25 +32,88 @@ main{
     border-top:solid 2px map-get($backgroud,fondoAC );
     background-color: map-get($backgroud, fondoSmoke );
     &__div i{
-        font-size: 1.5em;
+        font-size: 1.8em;
         color:map-get($backgroud,fondoAC );
     }
     &__div h3{
         font-size: 15px;
+        display: inline-block;
+        padding: 10px;
+        font: {
+            weight: bolder;
+            size: 1em;
+        }
     }
 }
     /* formulario selector --> */
-.formularioSelect select {
-    display: block;
+.formularioSelect {
+    @include allFlex (flex,nowrap,column,end,none);
+    .select{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        background:map-get($backgroud,fondoSmoke );
+        overflow: hidden;
+        border-radius: 5px;
+        margin: 25px 0;
+        &::after{
+            content: '\25BC';
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1em 1em;
+            background: $clrBlack2;
+            cursor:pointer;
+            pointer-events:none;
+            transition:.25s all ease;
+            color: $clrSecundario;
+        }
+        label {
+            width: 40px;
+            height: 50px;
+            border-radius: 5px 1px 1px 5px;
+            background-color: map-get($backgroud,fondoAC);
+            color: map-get($backgroud,fondoSmoke );
+            text-align: center;
+            box-sizing: border-box;
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            outline: 0;
+            box-shadow: none;
+            border: 1 solid $clrBlack2;
+            background:map-get($backgroud,fondoSmoke );
+            flex: 1;
+            padding: 0 .5em;
+            color:$clrblack;
+            cursor:pointer;
+            font-size: 1em;
+            &::-ms-expand {
+                display: none;
+            }
+        }
+    }
 }
+.select:hover::after{
+    color: $clrPrimordial;
+}
+
 /* boton formulario */
 .botonBuscarSuperior a{
     text-decoration: none;
     color: $clrPrimordial;
     background-color:map-get($backgroud,fondoAC );
-    width: 28%;
-    padding: 15px;
-    margin-top: 20px;
+    width: 88%;
+    padding: 10px;
+    margin: auto;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -121,6 +184,9 @@ h2{
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    img{
+        margin: 0 10px;
+    }
 }
 /* index @media */
 @media screen and (max-width:800px) {
@@ -142,8 +208,7 @@ h2{
         padding: 10px 0;
     }
     .botonBuscarSuperior{
-        width: 50%;
-        padding: 15px;
+        width: 88%;
         margin: auto;
     }
     .botonBuscarSuperior a{
