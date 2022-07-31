@@ -20,25 +20,41 @@
                 }
             }
             .productos__divForm2{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
                 border: 1px $clrSecundario solid ;
                 border-radius: 5px;
-                padding: 20px  ;
+                padding: 20px;
                 margin: auto;
-                justify-content:left;
-                width:40%;
-                a{
-                    margin: 0 30px;
+                width:30%;
+                position: relative;
+                .divForm2__icons{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    h3{
+                        padding: 10px;
+                        font-size: 15px;
+                        display: inline-block;
+                        font-weight: bolder;
+                    }
+                    i{
+                        font-size: 1.5em;
+                        align-self: center;
+                        color: map-get($backgroud,fondoAC);
+                    }
                 }
-                h3{
-                    padding: 10px;
-                    font-size: 15px;
+                &:hover{
+                    .selec2{
+                        display: block;
+                    }
                 }
             }
             .selec2{
                 width: 100%;
+                display: none;
+            }
+            .botonBuscarSuperior2 a{
+                margin: auto;
+                width: 90%;
             }
             /* ----------producto imgs---------- */
             /* ----------grid productos -------*/
