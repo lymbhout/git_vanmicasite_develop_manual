@@ -132,7 +132,7 @@ main{
     text-align: center;
     padding: 10px 0;
     font-size: 1.5em;
-    color:map-get($backgroud,fondoAC );
+    color:$clrblack;
 }
 .productosImg__nav ul {
     margin:50px 0px ;
@@ -145,16 +145,22 @@ main{
     width: $px150;
     text-align: center;
     margin: auto;
+    transition: all 800ms;
+    color: $clrblack;
     & img{
         width:$px150;
     }
+    &:hover{
+        transform: scale(1.2);
+        color: map-get($backgroud,fondoAC);
+}
 }
 /* Blog Vanmica */
 .blogVanmica__div {
 padding: 30px;
 h2{
     text-align: center;
-    color:map-get($backgroud,fondoAC );
+    color:$clrblack;;
     margin-top: 40px;
     }
 }
@@ -188,6 +194,9 @@ h2{
         margin: 0 10px;
     }
 }
+.carrouselProducto{
+    display: none;
+}
 /* index @media */
 @media screen and (max-width:800px) {
     .gridFormularioPublicidad{
@@ -198,6 +207,32 @@ h2{
     }
     main{
         padding: 0;
+    }
+}
+@media screen and (max-width: 425px) {
+    .carrouselProducto{
+        display: block;
+    }
+    .carrouselProducto__img  {
+        div{
+            display: inline-block;
+            margin: auto;
+            width: 48%;
+            a{
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+            img{
+                display: inline-block;
+                margin: auto;
+                width:150px;
+                height: 150px;
+            }
+        }
+    }
+    .gridPLinks{
+        display: none;
     }
 }
 @media screen and (max-width:320px) {

@@ -481,7 +481,7 @@ main {
   text-align: center;
   padding: 10px 0;
   font-size: 1.5em;
-  color: #0476D9; }
+  color: black; }
 
 .productosImg__nav ul {
   margin: 50px 0px;
@@ -495,16 +495,21 @@ main {
 .galeriaProducto__links a {
   width: 150px;
   text-align: center;
-  margin: auto; }
+  margin: auto;
+  transition: all 800ms;
+  color: black; }
   .galeriaProducto__links a img {
     width: 150px; }
+  .galeriaProducto__links a:hover {
+    transform: scale(1.2);
+    color: #0476D9; }
 
 /* Blog Vanmica */
 .blogVanmica__div {
   padding: 30px; }
   .blogVanmica__div h2 {
     text-align: center;
-    color: #0476D9;
+    color: black;
     margin-top: 40px; }
 
 /* articulos blog img */
@@ -539,6 +544,9 @@ main {
   .publicidadInferior div img {
     margin: 0 10px; }
 
+.carrouselProducto {
+  display: none; }
+
 /* index @media */
 @media screen and (max-width: 800px) {
   .gridFormularioPublicidad {
@@ -548,6 +556,25 @@ main {
     gap: 10px; }
   main {
     padding: 0; } }
+
+@media screen and (max-width: 425px) {
+  .carrouselProducto {
+    display: block; }
+  .carrouselProducto__img div {
+    display: inline-block;
+    margin: auto;
+    width: 48%; }
+    .carrouselProducto__img div a {
+      text-align: center;
+      display: flex;
+      flex-direction: column; }
+    .carrouselProducto__img div img {
+      display: inline-block;
+      margin: auto;
+      width: 150px;
+      height: 150px; }
+  .gridPLinks {
+    display: none; } }
 
 @media screen and (max-width: 320px) {
   main {
@@ -892,16 +919,12 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center; }
-  .productosP__article::after {
-    content: '';
-    width: 0px;
-    height: 2px;
-    display: block;
-    background: #102026;
-    transition: 600ms; }
-  .productosP__article:hover::after {
-    width: 100%; }
+  text-align: center;
+  transition: all 800ms;
+  margin: 50px 0; }
+  .productosP__article:hover {
+    transform: scale(1.2);
+    color: #0476D9; }
 
 .productosP__article div img {
   width: 100px; }

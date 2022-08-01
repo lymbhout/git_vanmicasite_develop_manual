@@ -69,16 +69,19 @@
                 flex-direction: column;
                 justify-content: center;
                 text-align: center;
-                &::after{
-                    content: '';
-                    width: 0px;
-                    height: 2px;
-                    display: block;
-                    background:map-get($backgroud,fondoAO );
-                    transition:600ms;
-                }
-                &:hover::after {
-                    width: 100%;
+                transition: all 800ms;
+                margin: 50px 0;
+                // &::after{
+                //     content: '';
+                //     width: 0px;
+                //     height: 2px;
+                //     display: block;
+                //     background:map-get($backgroud,fondoAO );
+                //     transition:600ms;
+                // }
+                &:hover{
+                    transform: scale(1.2);
+                    color: map-get($backgroud,fondoAC );
                 }
             }
             .productosP__article div img{
