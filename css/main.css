@@ -545,7 +545,7 @@ main {
     margin: 0 10px; }
 
 .carrouselProducto {
-  display: none; }
+  display: none !important; }
 
 /* index @media */
 @media screen and (max-width: 800px) {
@@ -559,7 +559,8 @@ main {
 
 @media screen and (max-width: 425px) {
   .carrouselProducto {
-    display: block; }
+    display: block !important;
+    margin: 50px 0; }
   .carrouselProducto__img div {
     display: inline-block;
     margin: auto;
@@ -876,32 +877,40 @@ main {
     font-size: 2em;
     color: #0476D9; }
 
-.productos__divForm2 {
-  border: 1px #9e9e9e solid;
-  border-radius: 5px;
-  padding: 20px;
-  margin: auto;
-  width: 30%;
-  position: relative; }
-  .productos__divForm2 .divForm2__icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    .productos__divForm2 .divForm2__icons h3 {
-      padding: 10px;
-      font-size: 15px;
-      display: inline-block;
-      font-weight: bolder; }
-    .productos__divForm2 .divForm2__icons i {
-      font-size: 1.5em;
-      align-self: center;
-      color: #0476D9; }
-  .productos__divForm2:hover .selec2 {
-    display: block; }
+.accordion {
+  width: 50%;
+  margin: auto; }
+
+.accordion-button {
+  width: 91%; }
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: whitesmoke !important;
+  outline: 0;
+  box-shadow: none !important; }
+
+.accordion-button:not(.collapsed) {
+  color: none !important;
+  background-color: whitesmoke !important;
+  box-shadow: inset 0 calc(var(--bs-accordion-border-width) * -1) 0 var(--bs-accordion-border-color); }
+
+.divForm2__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .divForm2__icons h3 {
+    padding: 10px;
+    font-size: 15px;
+    display: inline-block;
+    font-weight: bolder; }
+  .divForm2__icons i {
+    font-size: 1.5em;
+    align-self: center;
+    color: #0476D9; }
 
 .selec2 {
-  width: 100%;
-  display: none; }
+  width: 100%; }
 
 .botonBuscarSuperior2 a {
   margin: auto;
@@ -929,7 +938,19 @@ main {
 .productosP__article div img {
   width: 100px; }
 
+.carrouselProducto {
+  display: none; }
+
 /* producto @media */
+@media screen and (max-width: 425px) {
+  .gridULContainer {
+    display: none; }
+  .accordion {
+    width: 98%;
+    margin: auto; }
+  .accordion-button {
+    width: 90%; } }
+
 @media screen and (max-width: 320px) {
   .gridUl {
     display: grid;

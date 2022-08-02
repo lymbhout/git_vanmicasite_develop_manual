@@ -19,38 +19,42 @@
                     color: map-get($backgroud,fondoAC);
                 }
             }
-            .productos__divForm2{
-                border: 1px $clrSecundario solid ;
-                border-radius: 5px;
-                padding: 20px;
+            .accordion{
+                width: 50%;
                 margin: auto;
-                width:30%;
-                position: relative;
-                .divForm2__icons{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    h3{
-                        padding: 10px;
-                        font-size: 15px;
-                        display: inline-block;
-                        font-weight: bolder;
-                    }
-                    i{
-                        font-size: 1.5em;
-                        align-self: center;
-                        color: map-get($backgroud,fondoAC);
-                    }
+            }
+            .accordion-button{
+                width:91%;
+            }
+            .accordion-button:focus {
+                z-index: 3;
+                border-color: map-get($backgroud,fondoSmoke ) !important;
+                outline: 0;
+                box-shadow: none !important;
+            }
+            .accordion-button:not(.collapsed) {
+                color: none !important; 
+                background-color:map-get($backgroud,fondoSmoke ) !important;
+                box-shadow: inset 0 calc(var(--bs-accordion-border-width) * -1) 0 var(--bs-accordion-border-color);
+            }
+            .divForm2__icons{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                h3{
+                    padding: 10px;
+                    font-size: 15px;
+                    display: inline-block;
+                    font-weight: bolder;
                 }
-                &:hover{
-                    .selec2{
-                        display: block;
-                    }
+                i{
+                    font-size: 1.5em;
+                    align-self: center;
+                    color: map-get($backgroud,fondoAC);
                 }
             }
             .selec2{
                 width: 100%;
-                display: none;
             }
             .botonBuscarSuperior2 a{
                 margin: auto;
@@ -87,7 +91,22 @@
             .productosP__article div img{
                 width: 100px;
             }
+            .carrouselProducto{
+                display: none;
+            }
             /* producto @media */
+@media screen and (max-width:425px) {
+    .gridULContainer{
+        display: none;
+    }
+    .accordion{
+        width: 98%;
+        margin: auto;
+    }
+    .accordion-button{
+        width:90%;
+    }
+}
 @media screen and (max-width:320px) {
     .gridUl{
         display: grid;

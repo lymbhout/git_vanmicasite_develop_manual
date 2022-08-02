@@ -139,44 +139,55 @@
           <i class="bi bi-car-front-fill"></i>
           <h3>Vanmica Catalogo de Repuestos Originales</h3>
         </div>
-        <div class="productos__divForm2">   <!-- formulario -->
-          <div class="divForm2__icons">
-            <i class="bi bi-search"></i> 
-            <h3>Elige coche</h3>
-          </div>
-          <div class="formularioSelect selec2"> 
-            <div class="select">
-              <label for="marca">1</label>
-              <select name="carro" id="marca">
-                <option value="Elige una marca">Elija una marca</option>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>
-            </div>
-            <div class="select">
-              <label for="modelo">2</label>
-              <select name="carro" id="modelo">
-                <option value="Elige una marca">Elija un modelo</option>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>
-            </div>
-            <div class="select">
-              <label for="año">3</label>
-              <select name="carro" id="año">
-                <option value="Elige una marca">Elija un año</option>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>
-            </div>
-            <div class="botonBuscarSuperior botonBuscarSuperior2">  <!-- boton buscar -->
-              <a href="#"><i class="bi bi-search"></i> Buscar</a>
+        <!-- bootstrap -->
+        <div class=" accordion " id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <div class="divForm2__icons">
+                  <i class="bi bi-search"></i> 
+                  <h3>Elige coche</h3>
+                </div>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" >
+              <div class="accordion-body">
+                <div class="formularioSelect selec2"> 
+                  <div class="select">
+                    <label for="marca">1</label>
+                    <select name="carro" id="marca">
+                      <option value="Elige una marca">Elija una marca</option>
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                  <div class="select">
+                    <label for="modelo">2</label>
+                    <select name="carro" id="modelo">
+                      <option value="Elige una marca">Elija un modelo</option>
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                  <div class="select">
+                    <label for="año">3</label>
+                    <select name="carro" id="año">
+                      <option value="Elige una marca">Elija un año</option>
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                  <div class="botonBuscarSuperior botonBuscarSuperior2">  <!-- boton buscar -->
+                    <a href="#"><i class="bi bi-search"></i> Buscar</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -298,24 +309,77 @@
         </li>
         <li class="productosPImg liTres">
           <article class="productosP__article">
-            <div><img src="../imgs/img products/herramientas.png" alt="Erramientas y Equipos"></div>
+            <div><img src="../imgs/img products/herramientas.png" alt="HErramientas y Equipos"></div>
             <p>Herramientas y Equipos</p>
           </article>
         </li>
         <li class="productosPImg liTres">
           <article class="productosP__article">
-            <div><img src="../imgs/img products/acsesorios de cche.png" alt="Erramientas y Equipos"></div>
+            <div><img src="../imgs/img products/acsesorios de cche.png" alt="accesorio"></div>
             <p>Accessorios</p>
           </article>
         </li>
         <li class="productosPImg liTres">
           <article class="productosP__article">
-            <div><img src="../imgs/img products/boquillas.png" alt="Erramientas y Equipos"></div>
+            <div><img src="../imgs/img products/boquillas.png" alt="Boquilla"></div>
             <p>Boquillas y mangueras</p>
           </article>
         </li>
       </ul>
     </section>
+    <!-- bootstrap -->
+    <div id="carouselExampleControls" class="carousel carousel-dark slide  carrouselProducto" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active carrouselProducto__img">
+          <div>
+            <a href="./html/productos.html"><img src="../imgs/img products/neumatico.png" alt="Neumáticos y productos relacionados">Neumáticos y productos relacionados</a>
+            <a href="./html/productos.html"><img src="../imgs/img products/aceites y liquidos.png" alt="Aceites y líquidos">Aceites y líquidos</a>
+          </div>
+          <div>
+            <a href="./html/productos.html"><img src="../imgs/img products/frenos.png" alt="Frenos">Frenos</a>
+            <a href="./html/productos.html"><img src="../imgs/img products/filtro de aceite.png" alt="Filtros">Filtros</a>
+          </div>
+        </div>
+        <div class="carousel-item   carrouselProducto__img">
+          <div>
+            <a href="./html/productos.html"><img src="../imgs/img products/suspencion.png" alt="Suspensión">Suspensión</a>
+            <a href="./html/productos.html"><img src="../imgs/img products/sistema electrico.png" alt="Sistema eléctrico">Sistema eléctrico</a>
+          </div>
+          <div>
+            <a href="./html/productos.html"><img src="../imgs/img products/correas cadenas.png" alt="Correas, cadenas, rodillos">Correas, cadenas, rodillos</a>
+            <a href="./html/productos.html"><img src="../imgs/img products/sistema refrijeracion.png" alt="Sistema de refrigeración de motor">refrigeración de motor</a>
+          </div>
+        </div>
+        <div class="carousel-item  carrouselProducto__img">
+          <div>
+            <a href="./html/productos.html"><img src="../imgs/img products/carroceria.png" alt="Carrocería">Carrocería</a>
+            <a href="./html/productos.html"><img src="../imgs/img products/direccion.png" alt="Dirección">Dirección</a>
+          </div>
+          <div>
+            <a href="./html/productos.html"><img src="../imgs/img products/boquillas.png" alt="Erramientas y Equipos">Boquilla</a>
+            <a href="./html/productos.html"><img src="../imgs/img products/acsesorios de cche.png" alt="accesorio">accesorio</a>
+          </div>
+        </div>
+        <div class="carousel-item  carrouselProducto__img">
+          <div>
+            <a href="./html/productos.html"><img src="../imgs/img products/kit de reparacion.png" alt="Kits de reparación">Kits de reparación</a>
+            <a href="./html/productos.html"><img src="../imgs/img products/palier.png" alt="Palier y junta homocinética">Palier</a>
+          </div>
+          <div>
+            <a href="./html/productos.html"><img src="../imgs/img products/sensores.png" alt="Sensores, relés, unidades de control">Sensores, relés</a>
+            <a href="./html/productos.html"><img src="../imgs/img products/sujecciones.png" alt="Sujeciones">Sujeciones</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
     </main>
   
         <!-- pie de pagina -->
