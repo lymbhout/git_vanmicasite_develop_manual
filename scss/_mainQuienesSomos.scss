@@ -42,6 +42,10 @@
         padding: 15px;
         margin: auto;
     } 
+    p{
+        display: flex;
+        align-items: center;
+    }
 }
 .segundoE{
     flex-direction: row-reverse;

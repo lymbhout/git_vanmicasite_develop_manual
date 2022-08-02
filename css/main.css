@@ -730,6 +730,9 @@ main {
     width: 15%;
     padding: 15px;
     margin: auto; }
+  .equipoArticuloImg p {
+    display: flex;
+    align-items: center; }
 
 .segundoE {
   flex-direction: row-reverse; }
