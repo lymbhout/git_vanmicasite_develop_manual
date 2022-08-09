@@ -490,19 +490,36 @@ main {
   justify-content: space-evenly;
   list-style: none;
   font-size: 1em; }
+  .productosImg__nav ul li {
+    display: inline-block;
+    position: relative;
+    color: #102026;
+    text-decoration: none; }
+    .productosImg__nav ul li:after {
+      content: "";
+      display: block;
+      margin: auto;
+      height: 2px;
+      width: 0px;
+      transition: all .4s; }
+    .productosImg__nav ul li:hover:after {
+      width: 100%;
+      background: #102026; }
 
 /* img producto con enlaces */
-.galeriaProducto__links a {
-  width: 150px;
-  text-align: center;
-  margin: auto;
-  transition: all 800ms;
-  color: black; }
-  .galeriaProducto__links a img {
-    width: 150px; }
-  .galeriaProducto__links a:hover {
-    transform: scale(1.2);
-    color: #0476D9; }
+.galeriaProducto__links {
+  background-color: whitesmoke; }
+  .galeriaProducto__links a {
+    width: 150px;
+    text-align: center;
+    margin: auto;
+    transition: all 800ms;
+    color: black; }
+    .galeriaProducto__links a img {
+      width: 150px; }
+    .galeriaProducto__links a:hover {
+      transform: scale(1.2);
+      color: #0476D9; }
 
 /* Blog Vanmica */
 .blogVanmica__div {

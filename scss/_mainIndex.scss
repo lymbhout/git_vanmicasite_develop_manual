@@ -140,21 +140,43 @@ main{
     @include flexSimple(flex,row,space-evenly);
     list-style:none;
     font-size: 1em;
-}
-/* img producto con enlaces */
-.galeriaProducto__links a{
-    width: $px150;
-    text-align: center;
-    margin: auto;
-    transition: all 800ms;
-    color: $clrblack;
-    & img{
-        width:$px150;
+    li{
+        display: inline-block;
+    position: relative;
+    color:map-get($backgroud,fondoAO);
+    text-decoration: none; 
+    &:after {
+        content: "";
+        display: block;
+        margin: auto;
+        height: 2px;
+        width: 0px;
+        transition: all .4s;
+        }
+        &:hover:after {
+            width: 100%;
+            background:map-get($backgroud,fondoAO );
+            }
     }
-    &:hover{
-        transform: scale(1.2);
-        color: map-get($backgroud,fondoAC);
 }
+
+/* img producto con enlaces */
+.galeriaProducto__links{
+    background-color: map-get($backgroud,fondoSmoke);
+    a{
+        width: $px150;
+        text-align: center;
+        margin: auto;
+        transition: all 800ms;
+        color: $clrblack;
+        & img{
+            width:$px150;
+        }
+        &:hover{
+            transform: scale(1.2);
+            color: map-get($backgroud,fondoAC);
+    }
+    }
 }
 /* Blog Vanmica */
 .blogVanmica__div {
