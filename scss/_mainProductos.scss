@@ -25,7 +25,8 @@
                 margin: auto;
             }
             .accordion-button{
-                width:91%;
+                width:98.3%;
+                padding: 5px !important;
             }
             .accordion-button:focus {
                 z-index: 3;
@@ -35,7 +36,7 @@
             }
             .accordion-button:not(.collapsed) {
                 color: none !important; 
-                background-color:map-get($backgroud,fondoSmoke ) !important;
+                background-color:map-get($backgroud,fondoAO ) !important;
                 box-shadow: inset 0 calc(var(--bs-accordion-border-width) * -1) 0 var(--bs-accordion-border-color);
             }
             /* fin bootstrap */
@@ -103,9 +104,6 @@
         width: 98%;
         margin: auto;
     }
-    .accordion-button{
-        width:90%;
-    }
 }
 @media screen and (max-width:320px) {
     .gridUl{
@@ -124,9 +122,6 @@
     .productos__divForm h3{
         font-size: 1.2em;
         text-align: center;
-    }
-    .selec2 {
-        display: none;
     }
     .productos__divForm2{
         display: none;
