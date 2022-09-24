@@ -45,7 +45,7 @@
 //    }else if (nombre === "aceites"){
 //       busca = producto4.estadoVendido();
 // }else{
-   
+
 //       busca = producto1.estadoVendido();
 // }
 // return busca;
@@ -55,7 +55,7 @@
 // let comprar = () =>{
 //    if (resuesta === "si"){
 //       productoCmpradas = Number(prompt(`Se le agregara el 2 % de su compra por impuesto pais. Cuantos desea `))
-      
+
 //    }else{
 //       alert("gracias por visitarnos!")
 //    }
@@ -78,5 +78,16 @@
 // productosGernales.forEach(item => console.log(item));
 
 
-let body = document.getElementsByClassName("bodyColor");
-document.body.className = "bodyColor"
+// let body = document.getElementsByClassName("bodyColor");
+// document.body.className = "bodyColor"
+
+let nombrePedido = prompt("nombre y apellido");
+
+let nombreTraido = document.getElementById("nombreTraido");
+
+// nombreTraido.innerHTML = `Bienvenido ${nombrePedido} a Vanmicasite`
+let bienvenida = document.createElement( "p")
+bienvenida.className = "carrito__p"
+bienvenida.innerHTML = `Bienvenido ${nombrePedido} a Vanmica site`;
+
+nombreTraido.append(bienvenida);

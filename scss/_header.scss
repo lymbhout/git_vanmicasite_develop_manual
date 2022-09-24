@@ -76,8 +76,8 @@ height: auto;
     }
     /* carrito */
     .carrito{
-        padding:70px 0px;
-        @include flexSimple (flex,row,end);
+        padding:20px 0px;
+        @include flexSimple (flex,column,end);
         justify-self:start;
             & p{
                 font-size: 30px;
@@ -91,6 +91,15 @@ height: auto;
                     transition: all 700ms;
                 }
             }   
+        }
+    }
+    .carrito__p{
+        color: $clrSecundario;
+        font-size: 25px !important; 
+        margin-right: 0 !important ;
+        &:hover{
+            color: $clrPrimordial;
+            transition: all 700ms;
         }
     }
     .carrito i{
