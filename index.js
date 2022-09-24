@@ -83,9 +83,8 @@
 
 let nombrePedido = prompt("nombre y apellido");
 
-let nombreTraido = document.getElementById("nombreTraido");
+let nombreTraido = document.getElementById("carritoP");
 
-// nombreTraido.innerHTML = `Bienvenido ${nombrePedido} a Vanmicasite`
 let bienvenida = document.createElement( "p")
 bienvenida.className = "carrito__p"
 bienvenida.innerHTML = `Bienvenido ${nombrePedido} a Vanmica site`;
