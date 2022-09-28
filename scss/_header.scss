@@ -76,8 +76,8 @@ height: auto;
     }
     /* carrito */
     .carrito{
-        padding:20px 0px;
-        @include flexSimple (flex,column,end);
+        padding: 50px 0px;
+        @include flexSimple (flex,row,end);
         justify-self:start;
             & p{
                 font-size: 30px;

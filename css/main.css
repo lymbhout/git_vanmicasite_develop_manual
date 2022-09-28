@@ -80,9 +80,9 @@ ul {
       position: relative;
       left: 4em; }
   .gridLogoCarrito .carrito {
-    padding: 20px 0px;
+    padding: 50px 0px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: end;
     justify-self: start; }
     .gridLogoCarrito .carrito p {

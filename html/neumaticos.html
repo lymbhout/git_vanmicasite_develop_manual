@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- flation -->
+		<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css" />
+		<!-- estilos letras -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet" />
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+		<link rel="stylesheet" href="../css/main.css" />
+		<title>Vanmica | Neumaticos</title>
+	</head>
+	<body>
+		<header class="gridHeader">
+			<nav id="headerNavSuperior">
+				<!-- nav superior-->
+				<ul class="header__navSuperior">
+					<li class="header__navSuperior__li"><a href="../index.html">Vende con nosotros</a></li>
+					<li class="header__navSuperior__li">
+						<a href="quienessomos.html" target="_blank">Quienes somos</a>
+					</li>
+					<li class="header__navSuperior__li"><a href="blog.html" target="_blank">Blog</a></li>
+				</ul>
+			</nav>
+			<div class="header__divSuperior">
+				<!-- Publicidad envio -->
+				<h3 class="divSuperior__Titulo">Precio de envio 2.99 $$</h3>
+			</div>
+			<div class="header__425">
+				<div class="gridLogoCarrito">
+					<!-- logo y carrito-->
+					<section class="headerLogo">
+						<!-- logo -->
+						<a class="header__logo__a" href="../index.html"><img src="../imgs/lgo vanmica rojo.png" alt="Logo" class="header__logo__img" /></a>
+						<a class="header__logo__a2" href="../index.html"><img src="../imgs/logopequeño.png" alt="Logo" class="header__logo__img" /></a>
+					</section>
+					<section class="carrito" id="nombreTraido">
+						<!-- carrito -->
+						<a href="carrito.html" class="carrito__a" target="_blank"><i class="fi fi-rs-shopping-cart-add"></i></a>
+						<p id="carritoP">0,00$</p>
+					</section>
+				</div>
+				<section class="barraborrar">
+					<!--barra de busqueda y boton-->
+					<form class="barraBusquedaBoton">
+						<label for="busqueda"></label>
+						<input type="search" placeholder="     Introdusca el numero o el nombre de la pieza" id="busqueda" />
+						<label for="enviar"></label>
+						<input type="submit" id="enviar" value="Buscar" />
+					</form>
+				</section>
+				<section class="colgate">
+					<!-- profuctos nav inferior -->
+					<!--navegador inferior-->
+					<nav class="navbar navbar-expand-lg bg">
+						<div class="container-fluid">
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarNav">
+								<ul class="navbar-nav">
+									<li class="nav-item">
+										<a class="nav-link" aria-current="page" href="./html/productos.html">Neumaticos <img src="../imgs/logotipos/rueda.png" alt="rueda" class="logoTipo" /></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./html/productos.html">Aceites <img src="../imgs/logotipos/aceite.png" alt="aceite" class="logoTipo" /></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./html/productos.html">Refrigeracion <img src="../imgs/logotipos/sistema-de-refrigeracion.png" alt="refrigeracion" class="logoTipo" /></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./html/productos.html">Filtros <img src="../imgs/logotipos/filtro.png" alt="filtro" class="logoTipo" /></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./html/productos.html">frenos <img src="../imgs/logotipos/freno.png" alt="freno" class="logoTipo" /></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./html/productos.html">Accesorios de auto <img src="../imgs/logotipos/accesorio.png" alt="accesorios" class="logoTipo" /></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./html/productos.html">Electrico <img src="../imgs/logotipos/electrico.png" alt="electrico" class="logoTipo" /></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</section>
+				<section class="navbar navbar bg fixed-center oculto2">
+					<div class="container-fluid">
+						<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+							<div class="offcanvas-header">
+								<h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Productos</h5>
+								<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+									<li class="nav-item">
+										<a class="nav-link" aria-current="page" href="./html/productos.html">Neumaticos <img src="../imgs/logotipos/rueda.png" alt="rueda" class="logoTipo" /></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./html/productos.html">Aceites <img src="../imgs/logotipos/aceite.png" alt="aceite" class="logoTipo" /></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./html/productos.html">Refrigeracion <img src="../imgs/logotipos/sistema-de-refrigeracion.png" alt="refrigeracion" class="logoTipo" /></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./html/productos.html">Filtros <img src="../imgs/logotipos/filtro.png" alt="filtro" class="logoTipo" /></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./html/productos.html">frenos <img src="../imgs/logotipos/freno.png" alt="freno" class="logoTipo" /></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./html/productos.html">Accesorios de auto <img src="../imgs/logotipos/accesorio.png" alt="accesorios" class="logoTipo" /></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="./html/productos.html">Electrico <img src="../imgs/logotipos/electrico.png" alt="electrico" class="logoTipo" /></a>
+									</li>
+								</ul>
+								<form class="d-flex" role="search">
+									<input class="form-control me-2" type="search" placeholder="Introdusca el numero o el nombre de la pieza" aria-label="Search" />
+									<button class="btn btn-primary" type="submit">Enviar</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</header>
+
+    <main>
+      
+    </main>
+
+    <footer class="gridFooter">
+      <section class="informativa"> <!-- Informativa -->
+        <ul class="articulos">
+          <li>
+            <article class="articulo">
+              <div class="articulo__envios enviosLogo">
+                <img  class="articulos__img" src="../imgs/logotipos/entrega-rapida.png"  alt="imagen">
+                <h3 class="articulos__envio__h3">Envios Nacionales</h3>
+                <p class="">Realizamos envíos a nivel nacional a través de zoom o retiras en la sede</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="articulo">
+              <div class="articulo__pago enviosLogo">
+                <img class="articulos__img" src="../imgs/logotipos/tarjeta-de-credito.png"  alt="imagen">
+                <h3>Opciones de Pago</h3>
+                <p>Zelle, Paypal, tarjetas de crédito extranjeras, transferencias bancarias a cuentas en divisas y efectivo</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="articulo ">
+              <div class="articulo__compra enviosLogo">
+                <img class="articulos__img" src="../imgs/logotipos/escudo-de-seguridad.png"  alt="imagen">
+                <h3>Compra Con Confianza</h3>
+                <p>Somos una plataforma moderna y segura diseñada para brindarte total tranquilidad y confianza </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="articulo ">
+              <div class="articulo__productos enviosLogo">
+                <img class="articulos__img" src="../imgs/logotipos/producto.png"  alt="imagen">
+                <h3>Amplia gama de productos</h3>
+                <p>Contamos con un equipo técnico y de soporte que te asesora y acompaña en todo el proceso de compra</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+                <!-- bootstrap -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <article class="articulo">
+                <div class="articulo__envios enviosLogo">
+                  <img  class="articulos__img" src="../imgs/logotipos/entrega-rapida.png"  alt="imagen" >
+                  <h3 class="articulos__envio__h3">Envios Nacionales</h3>
+                  <p class="">Realizamos envíos a nivel nacional a través de zoom o retirar en la sede</p>
+                </div>
+              </article>
+            </div>
+            <div class="carousel-item">
+              <article class="articulo">
+                <div class="articulo__pago enviosLogo">
+                  <img class="articulos__img" src="../imgs/logotipos/tarjeta-de-credito.png"  alt="imagen">
+                  <h3>Opciones de Pago</h3>
+                  <p>Zelle, Paypal, tarjetas de crédito extranjeras, transferencias bancarias a cuentas en divisas y efectivo</p>
+                </div>
+              </article>
+            </div>
+            <div class="carousel-item">
+              <article class="articulo ">
+                <div class="articulo__compra enviosLogo">
+                  <img class="articulos__img" src="../imgs/logotipos/escudo-de-seguridad.png"  alt="imagen">
+                  <h3>Compra Con Confianza</h3>
+                  <p>Somos una plataforma moderna y segura diseñada para brindarte total tranquilidad y confianza </p>
+                </div>
+              </article>
+            </div>
+            <div class="carousel-item">
+              <article class="articulo ">
+                <div class="articulo__productos enviosLogo">
+                  <img class="articulos__img" src="../imgs/logotipos/producto.png"  alt="imagen">
+                  <h3>Amplia gama de productos</h3>
+                  <p>Contamos con un equipo técnico y de soporte que te asesora y acompaña en todo el proceso de compra </p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section class="informacion"> <!-- Informacion -->
+        <article class="informacionContenedor">
+          <div class="terminos">
+            <p>Está prohibida la copia de los datos aquí presentados, en particular la base de datos completa. Igualmente, se prohíbe la duplicación o difusión de los datos o de la base de datos completa y/o encomendar a terceros la realización de tales actividades, sin el consentimiento previo de TecDoc. Cualquier infracción constituye una violación de los derechos de propiedad intelectual y será objeto de acciones judiciales.</p>
+          </div>
+          <div class="horarios">
+            <p>Horario del servicio de atención al cliente Para :Venezuela</p>
+            <p>De lunes a viernes de 8:00 a 23:00 </p>
+            <p>Sábado y domingo de 8:00 a 18:00 h</p>
+            <p> cel: 04126390326 | 02123441601 | 04126127903</p>
+          </div>
+          <div class="redesSociales">
+            <a href=""><img src="../imgs/logotipos/logo-de-facebook.png" alt="facebook"></a>
+            <a href=""><img src="../imgs/logotipos/instagram.png" alt="instagram"></a>
+            <a href=""><img src="../imgs/logotipos/youtube.png" alt="youtube"></a>  
+            <p>© 2022 www.vanmica.com: VANMICA Tienda online</p>
+          </div>
+        </article>
+      </section>
+      <div class="copy">
+        <p>© 2022 Vanmica .c.a Todos los derechos reservados | RIF: J-0000000000</p>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script> 
+	</body>
+</html>
