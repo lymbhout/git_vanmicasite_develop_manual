@@ -96,8 +96,8 @@ const usuarios = []
 let nombreTraido = document.getElementById("iSesion");
 let botonSesion = document.createElement("div");
 botonSesion.innerHTML =  `<div class="dropdown">
-<a class="btn  primordial dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    inicio sesion
+<a class="btn btn-primary primordial dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <i class="fi fi-rs-user"></i>
 </a>
 <form class="col gx-3 gy-2 align-items-center dropdown-menu" id = "formularioP">
   <div class="col-sm-10">
@@ -112,7 +112,7 @@ botonSesion.innerHTML =  `<div class="dropdown">
     </div>
   </div>
   <div class="col-auto">
-    <button id = "enviarDatosPersona" type="submit" class="btn primordial">Submit</button>
+    <button id = "enviarDatosPersona" type="submit" class="btn btn-primary primordial">Submit</button>
   </div>
 </form>
 </div>`; 

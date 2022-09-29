@@ -8,8 +8,8 @@
   box-sizing: content-box; }
 
 .primordial {
-  background-color: #0476D9;
-  color: aliceblue; }
+  margin-top: 4em;
+  margin-right: 3em; }
 
 /* mixin */
 /* header */
