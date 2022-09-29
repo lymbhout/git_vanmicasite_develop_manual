@@ -1,16 +1,25 @@
-
-// class Productos  {
-// constructor(nombre,precio,id,){
-//    this.nombre = nombre;
-//    this.precio = precio;
-//    this.id = id;
-//    this.vendido = false;
-// }
-// estadoVendido () {
-//    this.vendido =  true
-// }
-// }
-
+// constructores----
+/*class Productos  {
+constructor(nombre,precio,id,){
+    this.nombre = nombre;
+    this.precio = precio;
+    this.id = id;
+    this.vendido = false;
+}
+estadoVendido () {
+    this.vendido =  true
+}
+}*/
+class Personas {
+    constructor(nombre,email,numeroId = 0 ){
+        this.nombre = nombre;
+        this.email = email;
+        this.numeroId = numeroId
+    }
+    nuevoN (){
+        this.numeroId = numeroId + 1;
+    }
+}
 
 // let producto1 = new Productos("pastillas de frenos", 100,"#1")
 // let producto2 = new Productos("neumaticos",50,"#2",false)
@@ -24,7 +33,7 @@
 // productosGernales.forEach(item => console.log(item));
 
 // alert(` se encuentra en la tienda de vanmica. Actulmente tenemos 4 tipos de productos.
-// productos en stock: 
+// productos en stock:
 // ${producto1.nombre}
 // ${producto2.nombre}
 // ${producto3.nombre}
@@ -77,16 +86,54 @@
 // nuevo(busca)
 // productosGernales.forEach(item => console.log(item));
 
-
 // let body = document.getElementsByClassName("bodyColor");
 // document.body.className = "bodyColor"
 
-let nombrePedido = prompt("nombre y apellido");
+// saludo personalizado ----
 
-let nombreTraido = document.getElementById("carritoP");
 
-let bienvenida = document.createElement( "p")
-bienvenida.className = "carrito__p"
-bienvenida.innerHTML = `Bienvenido ${nombrePedido} a Vanmica site`;
+const usuarios = []
+let nombreTraido = document.getElementById("iSesion");
+let botonSesion = document.createElement("div");
+botonSesion.innerHTML =  `<div class="dropdown">
+<a class="btn  primordial dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    inicio sesion
+</a>
+<form class="col gx-3 gy-2 align-items-center dropdown-menu" id = "formularioP">
+  <div class="col-sm-10">
+    <label class="visually-hidden" for="specificSizeInputName">Name</label>
+    <input type="text" class="form-control" id="specificSizeInputName  inputName" placeholder="Nombre">
+  </div>
+  <div class="col-md">
+    <label class="visually-hidden" for="specificSizeInputGroupUsername">Correo</label>
+    <div class="input-group">
+      <div class="input-group-text">@</div>
+      <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Correo">
+    </div>
+  </div>
+  <div class="col-auto">
+    <button id = "enviarDatosPersona" type="submit" class="btn primordial">Submit</button>
+  </div>
+</form>
+</div>`; 
+nombreTraido.append(botonSesion);
 
-nombreTraido.append(bienvenida);
+const formularioPersonas = document.getElementById("formularioP");
+formularioPersonas.addEventListener('submit', validacion);
+
+function validacion (e){
+    e.preventDefault();
+    let formulario = e.target;
+    usuarios.push(new Personas(formulario[0].value, formulario[1].value));
+    console.log(usuarios);
+
+    let bienvenida = document.createElement("p");
+    bienvenida.className = "carrito__p";
+    bienvenida.innerHTML = `Bienvenido ${formulario[0].value} a Vanmica site`;
+    nombreTraido.append(bienvenida);
+
+    botonSesion.innerHTML = ` `
+}
+
+
+
