@@ -82,7 +82,7 @@ height: auto;
             height: auto;
             display: block;
             position: relative;
-            left: 4em; 
+            left: 11em; 
         }
     }
     /* carrito */
@@ -104,9 +104,9 @@ height: auto;
             }   
         }
     }
-    .carrito i{
+    .carrito__a i{
         font-size: 3em;
-        }
+    }
 
              /* barra y boton */
 .barraBusquedaBoton{
@@ -190,7 +190,7 @@ height: auto;
         max-width: 12em;
         margin: none;
     }
-    .carrito i{
+    .carrito__a i{
         font-size: 2em;
         text-align: end;
     }

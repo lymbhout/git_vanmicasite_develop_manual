@@ -1,6 +1,6 @@
 // constructores----
-/*class Productos  {
-constructor(nombre,precio,id,){
+class Productos  {
+constructor(nombre,precio,id){
     this.nombre = nombre;
     this.precio = precio;
     this.id = id;
@@ -9,7 +9,7 @@ constructor(nombre,precio,id,){
 estadoVendido () {
     this.vendido =  true
 }
-}*/
+}
 class Personas {
     constructor(nombre,email,numeroId = 0 ){
         this.nombre = nombre;
@@ -17,7 +17,7 @@ class Personas {
         this.numeroId = numeroId
     }
     nuevoN (){
-        this.numeroId = numeroId + 1;
+        this.numeroId = numeroId ++;
     }
 }
 
@@ -89,15 +89,15 @@ class Personas {
 // let body = document.getElementsByClassName("bodyColor");
 // document.body.className = "bodyColor"
 
+
+
 // saludo personalizado ----
-
-
 const usuarios = []
 let nombreTraido = document.getElementById("iSesion");
 let botonSesion = document.createElement("div");
 botonSesion.innerHTML =  `<div class="dropdown">
-<a class="btn btn-primary primordial dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-  <i class="fi fi-rs-user"></i>
+<a class="btn btn-primary  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <i class="fi fi-rs-user carritoI"></i>
 </a>
 <form class="col gx-3 gy-2 align-items-center dropdown-menu" id = "formularioP">
   <div class="col-sm-10">
@@ -112,10 +112,11 @@ botonSesion.innerHTML =  `<div class="dropdown">
     </div>
   </div>
   <div class="col-auto">
-    <button id = "enviarDatosPersona" type="submit" class="btn btn-primary primordial">Submit</button>
+    <button id = "enviarDatosPersona" type="submit" class="btn btn-primary ">Submit</button>
   </div>
 </form>
 </div>`; 
+botonSesion.className = "carrito"
 nombreTraido.append(botonSesion);
 
 const formularioPersonas = document.getElementById("formularioP");
@@ -133,7 +134,7 @@ function validacion (e){
     nombreTraido.append(bienvenida);
 
     botonSesion.innerHTML = ` `
-}
-
-
+    const guardarlocal = (clave,valor)=> {localStorage.setItem(clave,valor)}
+    guardarlocal("usuario",JSON.stringify(usuarios))
+  }
 
