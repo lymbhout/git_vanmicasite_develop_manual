@@ -22,40 +22,6 @@ class Personas {
     }
 }
 
-// arrays
-const productosCauchosT = []
-
-
-
-//  Definiciones y declaracion de funciones
-function productoNeumaticosCargados() {
-  productosCauchosT.push(new Productos("Atlas 175/70 R14", 47.90, 11, "https://cdn.autoteiledirekt.de/uploads/tyres/img_small/PKW/5420068652297_AF105.jpg?rev=94077835"));
-  productosCauchosT.push(new Productos("Fortuna 185/65 R15", 53.95, 12, "https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/5420068642700_FF112.jpg?rev=94077835"));
-  productosCauchosT.push(new Productos("Nankan 215/60 R17", 93.50, 13, "https://cdn.autoteiledirekt.de/uploads/tyres/full/OFF/4718022000460_JD184.jpg?rev=94077835"));
-  productosCauchosT.push(new Productos("Federl 215/40 R17", 50.20, 14, "https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/4713959007131_B3AL7AFE.jpg?rev=94077835"));
-  productosCauchosT.push(new Productos("Federal 205/45 R16", 84.40, 15, "https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/4713959007421_B30K6AFE.jpg?rev=94077835"));
-  productosCauchosT.push(new Productos("Ceat 205/60 R16", 60.90, 16, "https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/8904288102499_106552.jpg?rev=94077835"));
-  productosCauchosT.push(new Productos("Nakang 225/40 R18", 68.50, 17, "https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/4717622047264_JC758.jpg?rev=94077835"));
-  productosCauchosT.push(new Productos("Michelin 225/40 R18", 124.02, 18, "https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/3528706746192_674619.jpg?rev=94077835"));
-}
-productoNeumaticosCargados()
-
-// rendizando productos
-let neumaticos = document.getElementById("objetosPNeumaticos")
-
-productosCauchosT.forEach((producto) =>{
-  let neumaticosCauchoT = document.createElement("div");
-
-  neumaticosCauchoT.innerHTML =`
-  <ul>
-    <li><img src="${producto.img}" alt=""></li>
-    <li><h4>${producto.nombre}</h4></li>
-    <li><h5>${producto.precio}$</h5></li>
-    <li><p>ID:${producto.id}</p></li>
-  </ul>
-  <button>Comprar</button>`;
-  neumaticos.append(neumaticosCauchoT);
-});
 
 
 
