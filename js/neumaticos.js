@@ -1,3 +1,5 @@
+// import { guardarLocal} from "../index.js"
+
 // constructores----
 class Productos {
 	constructor(nombre, precio, id, img) {
@@ -21,7 +23,9 @@ class Personas {
 		this.numeroId = numeroId++;
 	}
 }
-
+// variables
+let localStrsProductos;
+let productosDUsuario;
 // arrays
 const productosCauchosT = [];
 let carrito = []
@@ -59,8 +63,9 @@ productosCauchosT.forEach((producto) => {
 	// evento click boton
 	let iDS = document.getElementById(`botonDCompra${producto.id}`);
 	iDS.addEventListener("click", () => mandarAlCarrito(producto));
+	
 });
-
+// carrito boton
 let mandarAlCarrito = (producto) => {
 	let mandarCarrito = carrito.find(item => item.id === producto.id)
 	if (mandarCarrito === undefined){
@@ -78,8 +83,45 @@ let mandarAlCarrito = (producto) => {
 		mandarCarrito.precio = mandarCarrito.precio + producto.precio
         mandarCarrito.cantidad = mandarCarrito.cantidad + 1
 	}
+	Swal.fire({
+		position: 'center-start',
+		icon: 'success',
+		title: 'Has agregado un nuevo producto',
+		showConfirmButton: false,
+		timer: 1700,
+		background:"#102026",
+		color:"aliceblue",
+	})
+	
+	productosDUsuario = JSON.stringify(carrito)
+    localStorage.setItem("productos", productosDUsuario)
 };
 
+//  resultado del carrito 
 let carritoEntradas = document.getElementById("carritoEntradas")
-carritoEntradas.addEventListener("click",() => console.log(carrito))
+carritoEntradas.addEventListener("click", () =>  {
+	let pdp = JSON.parse(localStorage.getItem("productos"));
+
+		Swal.fire({
+			title: 'Carrito',
+			text: `"Nombre:${pdp[0].nombre}"
+					"Precio: ${pdp[0].precio}"
+					"Cantidad: ${pdp[0].cantidad}"`,
+			showCancelButton: true,
+			confirmButtonColor: '#3085d6',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'Aceptar!'
+		}).then((result) => {
+			if (result.isConfirmed) {
+			Swal.fire(
+				'Comprar?',
+				'Seguro?',
+				'success'
+			)
+			}
+		})
+	console.log(carrito);
+	console.log(pop[0].nombre);
+})
+
 

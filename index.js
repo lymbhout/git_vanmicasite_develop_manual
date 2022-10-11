@@ -138,7 +138,10 @@ function validacion (e){
     nombreTraido.append(bienvenida);
 
     botonSesion.innerHTML = ` `
-    const guardarlocal = (clave,valor)=> {localStorage.setItem(clave,valor)}
-    guardarlocal("usuario",JSON.stringify(usuarios))
+    
+    function guardarLocal (clave,valor) {localStorage.setItem(clave,valor)}
+    guardarLocal("usuario",JSON.stringify(usuarios))
   }
+
+
 
