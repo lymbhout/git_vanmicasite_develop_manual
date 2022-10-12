@@ -13,16 +13,7 @@ class Productos {
 		this.vendido = true;
 	}
 }
-class Personas {
-	constructor(nombre, email, numeroId = 0) {
-		this.nombre = nombre;
-		this.email = email;
-		this.numeroId = numeroId;
-	}
-	nuevoN() {
-		this.numeroId = numeroId++;
-	}
-}
+
 // variables
 let localStrsProductos;
 let productosDUsuario;
@@ -101,12 +92,12 @@ let mandarAlCarrito = (producto) => {
 let carritoEntradas = document.getElementById("carritoEntradas")
 carritoEntradas.addEventListener("click", () =>  {
 	let pdp = JSON.parse(localStorage.getItem("productos"));
-
+    const { nombre,precio,cantidad } = pdp[0]       /* destructuracion de objeto*/
 		Swal.fire({
 			title: 'Carrito',
-			text: `"Nombre:${pdp[0].nombre}"
-					"Precio: ${pdp[0].precio}"
-					"Cantidad: ${pdp[0].cantidad}"`,
+			text: `"Nombre:${nombre}"
+					"Precio: ${precio}"
+					"Cantidad: ${cantidad}"`,
 			showCancelButton: true,
 			confirmButtonColor: '#3085d6',
 			cancelButtonColor: '#d33',
