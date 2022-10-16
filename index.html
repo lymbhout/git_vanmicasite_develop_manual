@@ -44,8 +44,8 @@
             <a class="header__logo__a2" href="#"><img src="./imgs/logopequeño.png" alt="Logo" class="header__logo__img"></a>
           </section>
           <section class="carrito" id="nombreTraido"><!-- carrito -->
-            <a href="html/carrito.html" class="carrito__a" target="_blank"><i class="fi fi-rs-shopping-cart-add carritoI"></i>
-              <div class="carrito__a__Desclosado"></div>
+            <a href="html/carrito.html" class="carrito__a" target="_blank">
+              <i class="fi fi-rs-shopping-cart-add carritoI" id="carrito__a__Desglosado"></i>
             </a>
             <p id="carritoP">0,00$</p>
           </section>
@@ -142,20 +142,23 @@
         <section class="formularioUnico gridFormulario  " > <!--formulario-->
           <div class="formularioUnico__div">
             <i class="bi bi-car-front-fill"></i>
-            <h3>Seleccione su coche para buscar pieza de recambio</h3>
+            <h3>Seleccione su pieza de recambio</h3>
           </div>
           <div class="formularioSelect"> <!-- frmulario selector -->
             <div class="select">
               <label for="marca">1</label>
               <select name="carro" id="marca">
-                <option value="Elige una marca">Elija una marca</option>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+                <option value="Elige una marca">Elija Su Producto</option>
+                <option value="Neumaticos">Neumaticos</option>
+                <option value="aceites">aceites</option>
+                <option value="Refrigeracion">Refrigeracion</option>
+                <option value="Frenos">Frenos</option>
+                <option value="Filtros">Filtros</option>
+                <option value="Accesorios de auto">Accesorios de auto</option>
+                <option value="Electrico">Electrico</option>
               </select>
             </div>
-            <div class="select">
+            <!-- <div class="select">
               <label for="modelo">2</label>
               <select name="carro" id="modelo">
                 <option value="Elige una marca">Elija un modelo</option>
@@ -174,7 +177,7 @@
                 <option value="mercedes">Mercedes</option>
                 <option value="audi">Audi</option>
               </select>
-            </div>
+            </div> -->
           </div>
           <div class="botonBuscarSuperior">  <!-- boton buscar -->
             <a href="#"><i class="bi bi-search"></i> Buscar</a>

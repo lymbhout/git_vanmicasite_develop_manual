@@ -1,4 +1,4 @@
-// import { guardarLocal} from "../index.js"
+
 
 // constructores----
 class Productos {
@@ -89,30 +89,37 @@ let mandarAlCarrito = (producto) => {
 };
 
 //  resultado del carrito 
-let carritoEntradas = document.getElementById("carritoEntradas")
-carritoEntradas.addEventListener("click", () =>  {
-	let pdp = JSON.parse(localStorage.getItem("productos"));
-    const { nombre,precio,cantidad } = pdp[0]       /* destructuracion de objeto*/
-		Swal.fire({
-			title: 'Carrito',
-			text: `"Nombre:${nombre}"
-					"Precio: ${precio}"
-					"Cantidad: ${cantidad}"`,
-			showCancelButton: true,
-			confirmButtonColor: '#3085d6',
-			cancelButtonColor: '#d33',
-			confirmButtonText: 'Aceptar!'
-		}).then((result) => {
-			if (result.isConfirmed) {
-			Swal.fire(
-				'Comprar?',
-				'Seguro?',
-				'success'
-			)
-			}
-		})
-	console.log(carrito);
-	console.log(pop[0].nombre);
+
+// carrito
+let carritoEntradas = document.getElementById("entradaDeLosProductos")
+let pdp = JSON.parse(localStorage.getItem("productos"));
+let carritoDesglosadoDivHeader = document.getElementById("carrito__unico__Desglosado__divHeader");
+let carritoDesglosadoDivFooter = document.getElementById("carrito__unico__Desglosado__divFooter");
+let cantidades = [] 
+let cantidadTotal;
+let precios = []
+let precioTotal;
+for ( const i of pdp){
+	cantidades.push(i.cantidad)
+	cantidadTotal = cantidades.reduce((a,e)=> a + e)
+	precios.push(i.precio)
+	precioTotal = precios.reduce((e,a) => e + a)
+} 
+
+carritoEntradas.addEventListener("mouseenter", () =>  {
+	carritoDesglosadoDivHeader.innerHTML=`<h5> <strong>Su carrito - ${cantidadTotal} productos</strong></h5>`;
+
+	carritoDesglosadoDivFooter.innerHTML=`<p>Gastos de envio</p>
+	<p>2.5$</p>
+	<div class= "carrito__unico__Desglosado__div__divFooter__h4">
+	<h4>Total del pedido</h4>
+	<h4>${precioTotal}$</h4>
+	</div>
+	<p>IVA incluido 21%</p>
+	<button>EJECUTAR EL PAGO</button>
+	<a href=""><i></i></a>`
 })
-
-
+carritoEntradas.addEventListener("mouseleave",() => {
+	carritoDesglosadoDivHeader.innerHTML =""
+	carritoDesglosadoDivFooter.innerHTML=""
+})

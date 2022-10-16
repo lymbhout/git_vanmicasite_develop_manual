@@ -107,6 +107,38 @@ height: auto;
     .carrito__a i{
         font-size: 3em;
     }
+    .carrito__unico__Desglosado{
+        position:relative;
+        &__div{
+            background-color: white;
+            position: absolute ;
+            z-index: 10;
+            &__divHeader{
+                h5{
+                    color:map-get($backgroud,fondoAO2 );
+                    text-align: center;
+                    padding: 2px;
+                    font-size: 20px;
+                }
+            }
+            &__divFooter{
+                p{
+                    font-size: 16px !important;
+                    color: $clrSecundario;
+                    padding: 5px;
+                    display: inline-block;
+                }
+                &__h4{
+                    h4{
+                        color:map-get($backgroud,fondoAO2 );
+                        padding: 5px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+    }
 
              /* barra y boton */
 .barraBusquedaBoton{
