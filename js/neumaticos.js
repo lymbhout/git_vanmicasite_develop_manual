@@ -105,8 +105,9 @@ for ( const i of pdp){
 	precios.push(i.precio)
 	precioTotal = precios.reduce((e,a) => e + a)
 } 
-
-carritoEntradas.addEventListener("mouseenter", () =>  {
+carritoEntradas.addEventListener("click", () =>  {
+	console.log(cantidades);
+	console.log(precios);
 	carritoDesglosadoDivHeader.innerHTML=`<h5> <strong>Su carrito - ${cantidadTotal} productos</strong></h5>`;
 
 	carritoDesglosadoDivFooter.innerHTML=`<p>Gastos de envio</p>
@@ -117,8 +118,9 @@ carritoEntradas.addEventListener("mouseenter", () =>  {
 	</div>
 	<p>IVA incluido 21%</p>
 	<button>EJECUTAR EL PAGO</button>
-	<a href=""><i></i></a>`
+	<a href="carrito.html" target= "_blank"><i><i class="fi fi-ss-shopping-cart"></i></i>Carrito</a>`
 })
+
 carritoEntradas.addEventListener("mouseleave",() => {
 	carritoDesglosadoDivHeader.innerHTML =""
 	carritoDesglosadoDivFooter.innerHTML=""

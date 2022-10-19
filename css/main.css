@@ -150,6 +150,24 @@ ul {
       color: #9e9e9e;
       padding: 5px;
       display: inline-block; }
+    .carrito__unico__Desglosado__div__divFooter button {
+      font-size: 20px;
+      border: 1px solid #F20505;
+      border-radius: 40px;
+      background-color: #F20505;
+      color: aliceblue;
+      display: block;
+      padding: 10px 30px;
+      margin: auto; }
+    .carrito__unico__Desglosado__div__divFooter a {
+      font-size: 15px;
+      display: inline-block !important;
+      margin: 0 120px;
+      color: #1F3441 !important; }
+      .carrito__unico__Desglosado__div__divFooter a i {
+        font-size: 15px; }
+      .carrito__unico__Desglosado__div__divFooter a:hover {
+        color: #0476D9 !important; }
     .carrito__unico__Desglosado__div__divFooter__h4 h4 {
       color: #1F3441;
       padding: 5px;
