@@ -1,16 +1,5 @@
 // constructores----
-class Productos  {
-constructor(nombre,precio,id,img){
-  this.nombre = nombre;
-  this.precio = precio;
-  this.id = id;
-  this.img = img
-  this.vendido = false;
-}
-estadoVendido () {
-    this.vendido =  true
-}
-}
+
 class Personas {
     constructor(nombre,email,numeroId = 0 ){
         this.nombre = nombre;
@@ -106,13 +95,13 @@ botonSesion.innerHTML =  `<div class="dropdown">
 <form class="col gx-3 gy-2 align-items-center dropdown-menu" id = "formularioP">
   <div class="col-sm-10">
     <label class="visually-hidden" for="specificSizeInputName">Name</label>
-    <input type="text" class="form-control" id="specificSizeInputName  inputName" placeholder="Nombre">
+    <input type="name" name="name" class="form-control" id="specificSizeInputName  inputName" placeholder="Nombre">
   </div>
   <div class="col-md">
     <label class="visually-hidden" for="specificSizeInputGroupUsername">Correo</label>
     <div class="input-group">
       <div class="input-group-text">@</div>
-      <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Correo">
+      <input type="email" class="form-control" id="specificSizeInputGroupUsername" placeholder="Correo">
     </div>
   </div>
   <div class="col-auto">

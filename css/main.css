@@ -1085,3 +1085,11 @@ main {
     text-align: center; }
   .productos__divForm2 {
     display: none; } }
+
+.objetosNeumaticos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .objetosNeumaticos div img {
+    width: 100px; }
