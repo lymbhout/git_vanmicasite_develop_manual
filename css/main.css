@@ -158,7 +158,7 @@ ul {
         font-size: 15px !important;
         color: black !important; }
       .carrito__unico__Desglosado__div__divMain img {
-        width: 50px; }
+        width: 40px; }
       .carrito__unico__Desglosado__div__divMain h5 {
         color: black !important;
         padding-left: 10px; }
@@ -1109,4 +1109,4 @@ main {
   justify-content: space-between;
   flex-wrap: wrap; }
   .objetosNeumaticos div img {
-    width: 100px; }
+    width: 90px; }

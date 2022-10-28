@@ -79,8 +79,8 @@ let mandarAlCarrito = (producto) => {
 			}
 		)
 	}else{
-		mandarCarrito.precio = mandarCarrito.precio + producto.precio
-        mandarCarrito.cantidad = mandarCarrito.cantidad + 1
+		mandarCarrito.precio += producto.precio
+        mandarCarrito.cantidad +=  1
 	}
 	Swal.fire({
 		position: 'center',
@@ -100,22 +100,22 @@ let mandarAlCarrito = (producto) => {
 		let cantidadTotal;
 		let precios = []
 		let precioTotal;
+		let elemento;
 		for ( const i of carrito){
 			cantidades.push(i.cantidad)
 			cantidadTotal = cantidades.reduce((a,e)=> a + e)
 			precios.push(i.precio)
 			precioTotal = precios.reduce((e,a) => e + a)
 		} 
-		carrito.forEach((elementos) =>{
+		carrito.forEach((elemento) =>{
 			carritoEntradas.addEventListener("click", () =>  {
 				carritoDesglosadoDivHeader.innerHTML=`<h5> <strong>Su carrito - ${cantidadTotal} productos</strong></h5>`;
 
-			    carritoDesglosadoDivMain.innerHTML =`
-				<img src="${elementos.img}" alt="">
-				<p><a href=""></a>${elementos.nombre}</p>
-				<p></p>
-				<p>x${elementos.cantidad}</p>
-				<h5>${elementos.precio}$</h5>`;
+					carritoDesglosadoDivMain.innerHTML =`
+					<img src="${elemento.img}" alt="">
+					<p><a href=""></a>${elemento.nombre}</p>
+					<p>x${elemento.cantidad}</p>
+					<h5>${elemento.precio}$</h5>`;
 
 				carritoDesglosadoDivFooter.innerHTML=`<p>Gastos de envio</p>
 				<p>2.5$</p>
@@ -134,7 +134,7 @@ let mandarAlCarrito = (producto) => {
 				carritoDesglosadoDivFooter.innerHTML=""
 			})
 		})
-	    // total allado del carrito
+	    // total al lado del carrito
 		const carritoP = () =>{
 			let carritoP = document.getElementById("carritoP")
 			carritoP.innerHTML =`<p>${precioTotal}$</p>`
@@ -149,8 +149,12 @@ let mandarAlCarrito = (producto) => {
 console.log(carrito);
 // carrito
 let carritoEntradas = document.getElementById("entradaDeLosProductos")
+let carritoUnicoDesglosado = document.getElementById ("carrito__unico__Desglosado")
 let pdp = JSON.parse(localStorage.getItem("productos"));
+
 let carritoDesglosadoDivMain = document.getElementById("carrito__unico__Desglosado__divMain")
 let carritoDesglosadoDivHeader = document.getElementById("carrito__unico__Desglosado__divHeader");
 let carritoDesglosadoDivFooter = document.getElementById("carrito__unico__Desglosado__divFooter");
+
+
 
