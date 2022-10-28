@@ -92,7 +92,13 @@ height: auto;
         justify-self:start;
             & p{
                 font-size: 30px;
-                margin-right: 20px;
+                margin-left: 10px;
+                color:$clrSecundario;
+                transition: all 700ms;
+                &:hover{
+                    color:$clrPrimordial;
+                    transition: all 700ms;
+                }
                 }
             & a{
                 color:$clrSecundario;
@@ -119,6 +125,22 @@ height: auto;
                     text-align: center;
                     padding: 2px;
                     font-size: 20px;
+                }
+            }
+            &__divMain{
+                display: flex;
+                flex-direction: row;
+                background-color: $clrSecundario;
+                p{
+                    font-size: 15px !important;
+                    color: $clrblack !important;
+                }
+                img{
+                    width: 50px;
+                }
+                h5{
+                    color: $clrblack !important;
+                    padding-left: 10px;
                 }
             }
             &__divFooter{

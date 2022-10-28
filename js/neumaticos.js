@@ -30,7 +30,6 @@ productoNeumaticosCargados();*/
 let localStrsProductos;
 let productosDUsuario;
 // arrays
-// const productosCauchosT = [];
 let carrito = []
 
 // fetch de productos
@@ -40,25 +39,19 @@ const productoNeumaticosCargados = async () =>{
 	try{
 		const response = await fetch("https://raw.githubusercontent.com/lymbhout/git_vanmicasite_develop_manual/master/json/neumaticos.json")
 		const data =  await response.json();
-		const dataUno = data.filter((dataUno) => dataUno.id <= 15 ) 
-		const dataDos = data.filter((dataDos) => dataDos.id > 15 ) 
-		const datasAll = [dataUno,dataDos]
 	// rendizando productos
-        console.log(datasAll);
 		data.forEach((producto) => {
 			let neumaticosCauchoT = document.createElement("div");
-		    
 			neumaticosCauchoT.innerHTML = `
 				<ul>
 				<li><img src="${producto.img}" alt=""></li>
 				<li><h4>${producto.nombre}</h4></li>
 				<li><h5>${producto.precio}$</h5></li>
 				<li><p>ID:${producto.id}</p></li>
+				<li><p> 21% IVA incluido</p></li>
 				</ul>
 				<button id ="botonDCompra${producto.id}">Comprar</button>`;
-		
 				neumaticos.append(neumaticosCauchoT);
-		
 			// evento click boton
 			let iDS = document.getElementById(`botonDCompra${producto.id}`);
 			iDS.addEventListener("click", () => mandarAlCarrito(producto));
@@ -90,7 +83,7 @@ let mandarAlCarrito = (producto) => {
         mandarCarrito.cantidad = mandarCarrito.cantidad + 1
 	}
 	Swal.fire({
-		position: 'center-start',
+		position: 'center',
 		icon: 'success',
 		title: 'Has agregado un nuevo producto',
 		showConfirmButton: false,
@@ -98,48 +91,66 @@ let mandarAlCarrito = (producto) => {
 		background:"#102026",
 		color:"aliceblue",
 	})
-	
 	productosDUsuario = JSON.stringify(carrito)
     localStorage.setItem("productos", productosDUsuario)
+
+// renderizando carrito
+	const renderizadoDCarrito = () => {
+		let cantidades = [] 
+		let cantidadTotal;
+		let precios = []
+		let precioTotal;
+		for ( const i of carrito){
+			cantidades.push(i.cantidad)
+			cantidadTotal = cantidades.reduce((a,e)=> a + e)
+			precios.push(i.precio)
+			precioTotal = precios.reduce((e,a) => e + a)
+		} 
+		carrito.forEach((elementos) =>{
+			carritoEntradas.addEventListener("click", () =>  {
+				carritoDesglosadoDivHeader.innerHTML=`<h5> <strong>Su carrito - ${cantidadTotal} productos</strong></h5>`;
+
+			    carritoDesglosadoDivMain.innerHTML =`
+				<img src="${elementos.img}" alt="">
+				<p><a href=""></a>${elementos.nombre}</p>
+				<p></p>
+				<p>x${elementos.cantidad}</p>
+				<h5>${elementos.precio}$</h5>`;
+
+				carritoDesglosadoDivFooter.innerHTML=`<p>Gastos de envio</p>
+				<p>2.5$</p>
+				<div class= "carrito__unico__Desglosado__div__divFooter__h4">
+				<h4>Total del pedido</h4>
+				<h4>${precioTotal}$</h4>
+				</div>
+				<p>IVA incluido 21%</p>
+				<button>EJECUTAR EL PAGO</button>
+				<a href="carrito.html" target= "_blank"><i><i class="fi fi-ss-shopping-cart"></i></i>Carrito</a>`
+			})
+			
+			carritoEntradas.addEventListener("mouseleave",() => {
+				carritoDesglosadoDivHeader.innerHTML =""
+				carritoDesglosadoDivMain.innerHTML =""
+				carritoDesglosadoDivFooter.innerHTML=""
+			})
+		})
+	    // total allado del carrito
+		const carritoP = () =>{
+			let carritoP = document.getElementById("carritoP")
+			carritoP.innerHTML =`<p>${precioTotal}$</p>`
+		}
+		carritoP()
+	}
+	renderizadoDCarrito()
 };
 
-//  resultado del carrito 
 
+//  resultado del carrito 
+console.log(carrito);
 // carrito
 let carritoEntradas = document.getElementById("entradaDeLosProductos")
 let pdp = JSON.parse(localStorage.getItem("productos"));
+let carritoDesglosadoDivMain = document.getElementById("carrito__unico__Desglosado__divMain")
 let carritoDesglosadoDivHeader = document.getElementById("carrito__unico__Desglosado__divHeader");
 let carritoDesglosadoDivFooter = document.getElementById("carrito__unico__Desglosado__divFooter");
-let cantidades = [] 
-let cantidadTotal;
-let precios = []
-let precioTotal;
-for ( const i of pdp){
-	cantidades.push(i.cantidad)
-	cantidadTotal = cantidades.reduce((a,e)=> a + e)
-	precios.push(i.precio)
-	precioTotal = precios.reduce((e,a) => e + a)
-	
-} 
-carritoEntradas.addEventListener("click", () =>  {
-	console.log(cantidades);
-	console.log(precios);
-	carritoDesglosadoDivHeader.innerHTML=`<h5> <strong>Su carrito - ${cantidadTotal} productos</strong></h5>`;
 
-	carritoDesglosadoDivFooter.innerHTML=`<p>Gastos de envio</p>
-	<p>2.5$</p>
-	<div class= "carrito__unico__Desglosado__div__divFooter__h4">
-	<h4>Total del pedido</h4>
-	<h4>${precioTotal}$</h4>
-	</div>
-	<p>IVA incluido 21%</p>
-	<button>EJECUTAR EL PAGO</button>
-	<a href="carrito.html" target= "_blank"><i><i class="fi fi-ss-shopping-cart"></i></i>Carrito</a>`
-	
-	
-})
-
-carritoEntradas.addEventListener("mouseleave",() => {
-	carritoDesglosadoDivHeader.innerHTML =""
-	carritoDesglosadoDivFooter.innerHTML=""
-})
