@@ -4,8 +4,23 @@
     justify-content:space-between;
     flex-wrap: wrap;
     & div{
-        & img{
-            width: 90px;
+        padding: 20px;
+        margin: 30px 0;
+        ul :nth-child(5){
+            font-size: 12px;
+        }
+        img{
+            width: 220px;
+        }
+        
+        button{
+            display: block;
+            margin: auto;
+            width: 200px;
+            background-color: map-get($backgroud,fondoR );
+            border: 1px solid map-get($backgroud,fondoR );
+            border-radius: 40px;
+            color: $clrPrimordial;
         }
     }
     

@@ -38,21 +38,35 @@
         "nombre": "Ceat 205/60 R16",
         "precio":60.9,
         "id": 16,
-        "img" :"https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/8904288102499_106552.jpg?rev=94077835",
+        "img" :"https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/8808563377940_1017555.jpg?rev=94077835",
         "vendido" : false
     },
     {
         "nombre": "Nakang 225/40 R18",
         "precio":68.9,
         "id": 17,
-        "img" :"https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/4717622047264_JC758.jpg?rev=94077835",
+        "img" :"https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/6938112630591_3059.jpg?rev=94077835",
         "vendido" : false
     },
     {
         "nombre": "Michelin 225/40 R18",
         "precio":124.02,
         "id": 18,
-        "img" :"https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/3528706746192_674619.jpg?rev=94077835",
+        "img" :"https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/6938112630591_3059.jpg?rev=94077835",
+        "vendido" : false
+    },
+    {
+        "nombre": "Toyo 175/60 R14",
+        "precio":90.02,
+        "id": 19,
+        "img" :"https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/6938112630591_3059.jpg?rev=94077835",
+        "vendido" : false
+    },
+    {
+        "nombre": "Westlake 245/40 R19",
+        "precio":79.02,
+        "id": 20,
+        "img" :"https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/6938112630591_3059.jpg?rev=94077835",
         "vendido" : false
     }
 ]

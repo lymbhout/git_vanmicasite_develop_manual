@@ -1108,5 +1108,18 @@ main {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap; }
-  .objetosNeumaticos div img {
-    width: 90px; }
+  .objetosNeumaticos div {
+    padding: 20px;
+    margin: 30px 0; }
+    .objetosNeumaticos div ul :nth-child(5) {
+      font-size: 12px; }
+    .objetosNeumaticos div img {
+      width: 220px; }
+    .objetosNeumaticos div button {
+      display: block;
+      margin: auto;
+      width: 200px;
+      background-color: #F20505;
+      border: 1px solid #F20505;
+      border-radius: 40px;
+      color: aliceblue; }

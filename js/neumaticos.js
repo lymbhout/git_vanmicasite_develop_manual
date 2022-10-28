@@ -100,7 +100,6 @@ let mandarAlCarrito = (producto) => {
 		let cantidadTotal;
 		let precios = []
 		let precioTotal;
-		let elemento;
 		for ( const i of carrito){
 			cantidades.push(i.cantidad)
 			cantidadTotal = cantidades.reduce((a,e)=> a + e)
@@ -108,14 +107,15 @@ let mandarAlCarrito = (producto) => {
 			precioTotal = precios.reduce((e,a) => e + a)
 		} 
 		carrito.forEach((elemento) =>{
+			
 			carritoEntradas.addEventListener("click", () =>  {
 				carritoDesglosadoDivHeader.innerHTML=`<h5> <strong>Su carrito - ${cantidadTotal} productos</strong></h5>`;
-
-					carritoDesglosadoDivMain.innerHTML =`
-					<img src="${elemento.img}" alt="">
-					<p><a href=""></a>${elemento.nombre}</p>
-					<p>x${elemento.cantidad}</p>
-					<h5>${elemento.precio}$</h5>`;
+				
+						carritoDesglosadoDivMain.innerHTML =`
+						<img src="${elemento.img}" alt="">
+						<p><a href=""></a>${elemento.nombre}</p>
+						<p>x${elemento.cantidad}</p>
+						<h5>${elemento.precio}$</h5>`;
 
 				carritoDesglosadoDivFooter.innerHTML=`<p>Gastos de envio</p>
 				<p>2.5$</p>
