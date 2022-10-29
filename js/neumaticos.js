@@ -34,13 +34,15 @@ let carrito = []
 
 // fetch de productos
 let neumaticos = document.getElementById("objetosPNeumaticos");
-
+let neumaticos2 =document.getElementById("objetosPNeumaticos2");
 const productoNeumaticosCargados = async () =>{
 	try{
 		const response = await fetch("https://raw.githubusercontent.com/lymbhout/git_vanmicasite_develop_manual/master/json/neumaticos.json")
 		const data =  await response.json();
+		const data1 = data.filter((el) =>  el.id <= 15 )
+		const data2 = data.filter((el)=> el.id > 15 )
 	// rendizando productos
-		data.forEach((producto) => {
+		data1.forEach((producto) => {
 			let neumaticosCauchoT = document.createElement("div");
 			neumaticosCauchoT.innerHTML = `
 				<ul>
@@ -55,6 +57,23 @@ const productoNeumaticosCargados = async () =>{
 			// evento click boton
 			let iDS = document.getElementById(`botonDCompra${producto.id}`);
 			iDS.addEventListener("click", () => mandarAlCarrito(producto));
+			
+		});
+		data2.forEach((producto) => {
+			let neumaticosCauchoT2 = document.createElement("div");
+			neumaticosCauchoT2.innerHTML = `
+				<ul>
+				<li><img src="${producto.img}" alt=""></li>
+				<li><h4>${producto.nombre}</h4></li>
+				<li><h5>${producto.precio}$</h5></li>
+				<li><p>ID:${producto.id}</p></li>
+				<li><p> 21% IVA incluido</p></li>
+				</ul>
+				<button id ="botonDCompra${producto.id}">Comprar</button>`;
+				neumaticos2.append(neumaticosCauchoT2);
+			// evento click boton
+			let iDS2 = document.getElementById(`botonDCompra${producto.id}`);
+			iDS2.addEventListener("click", () => mandarAlCarrito(producto));
 			
 		});
 	}catch (error){
