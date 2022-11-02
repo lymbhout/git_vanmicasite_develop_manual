@@ -13,6 +13,8 @@ class Productos {
 		this.vendido = true;
 	}
 }
+
+
 //  Definiciones y declaracion de funciones
 /*function productoNeumaticosCargados() {
 	productosCauchosT.push(new Productos("Atlas 175/70 R14", 47.9, 11, "https://cdn.autoteiledirekt.de/uploads/tyres/img_small/PKW/5420068652297_AF105.jpg?rev=94077835"));
@@ -28,16 +30,16 @@ productoNeumaticosCargados();*/
 
 // variables
 let localStrsProductos;
-let productosDUsuario;
+export let productosDUsuario;
 // arrays
-let carrito = []
+export let carrito = []
 
 // fetch de productos
-let neumaticos = document.getElementById("objetosPNeumaticos");
-let neumaticos2 =document.getElementById("objetosPNeumaticos2");
-const productoNeumaticosCargados = async () =>{
+export const productoNeumaticosCargados = async (api) =>{
+	let neumaticos = document.getElementById("objetosPNeumaticos");
+	let neumaticos2 =document.getElementById("objetosPNeumaticos2");
 	try{
-		const response = await fetch("https://raw.githubusercontent.com/lymbhout/git_vanmicasite_develop_manual/master/json/neumaticos.json")
+		const response = await fetch(api)
 		const data =  await response.json();
 		const data1 = data.filter((el) =>  el.id <= 15 )
 		const data2 = data.filter((el)=> el.id > 15 )
@@ -80,11 +82,11 @@ const productoNeumaticosCargados = async () =>{
             console.log(error);
 	}
 }
-productoNeumaticosCargados();
+productoNeumaticosCargados("https://raw.githubusercontent.com/lymbhout/git_vanmicasite_develop_manual/master/json/neumaticos.json");
 
 
 // carrito boton
-let mandarAlCarrito = (producto) => {
+export let mandarAlCarrito = (producto) => {
 	let mandarCarrito = carrito.find(item => item.id === producto.id)
 	if (mandarCarrito === undefined){
 		carrito.push(
@@ -106,7 +108,7 @@ let mandarAlCarrito = (producto) => {
 		icon: 'success',
 		title: 'Has agregado un nuevo producto',
 		showConfirmButton: false,
-		timer: 1700,
+		timer: 900,
 		background:"#102026",
 		color:"aliceblue",
 	})
@@ -115,26 +117,33 @@ let mandarAlCarrito = (producto) => {
 
 // renderizando carrito
 	const renderizadoDCarrito = () => {
+		let carritoEntradas = document.getElementById("entradaDeLosProductos")
+        let carritoDesglosadoDivMain = document.getElementById("carrito__unico__Desglosado__divMain")
+        let carritoDesglosadoDivHeader = document.getElementById("carrito__unico__Desglosado__divHeader");
+        let carritoDesglosadoDivFooter = document.getElementById("carrito__unico__Desglosado__divFooter");
+		let pdp = JSON.parse(localStorage.getItem("productos"));
 		let cantidades = [] 
 		let cantidadTotal;
 		let precios = []
 		let precioTotal;
-		for ( const i of carrito){
+		for ( const i of pdp){
 			cantidades.push(i.cantidad)
 			cantidadTotal = cantidades.reduce((a,e)=> a + e)
 			precios.push(i.precio)
 			precioTotal = precios.reduce((e,a) => e + a)
 		} 
-		carrito.forEach((elemento) =>{
-			
+        pdp.forEach((elemento) =>{
 			carritoEntradas.addEventListener("click", () =>  {
 				carritoDesglosadoDivHeader.innerHTML=`<h5> <strong>Su carrito - ${cantidadTotal} productos</strong></h5>`;
-				
-						carritoDesglosadoDivMain.innerHTML =`
-						<img src="${elemento.img}" alt="">
-						<p><a href=""></a>${elemento.nombre}</p>
-						<p>x${elemento.cantidad}</p>
-						<h5>${elemento.precio}$</h5>`;
+				console.log(elemento);
+				// siMandarCarritoEsIgual()
+				carritoDesglosadoDivMain.innerHTML +=`
+				<div>
+				<img src="${elemento.img}" alt="">
+				<p><a href=""></a>${elemento.nombre}</p>
+				<p>x${elemento.cantidad}</p>
+				<h5>${elemento.precio}$</h5>
+				</div>`;
 
 				carritoDesglosadoDivFooter.innerHTML=`<p>Gastos de envio</p>
 				<p>2.5$</p>
@@ -143,11 +152,11 @@ let mandarAlCarrito = (producto) => {
 				<h4>${precioTotal}$</h4>
 				</div>
 				<p>IVA incluido 21%</p>
-				<button>EJECUTAR EL PAGO</button>
+				<button id="ejecutarPago">EJECUTAR EL PAGO</button>
 				<a href="carrito.html" target= "_blank"><i><i class="fi fi-ss-shopping-cart"></i></i>Carrito</a>`
 			})
 			
-			carritoEntradas.addEventListener("mouseleave",() => {
+			carritoEntradas.addEventListener("mouseleave", () => {
 				carritoDesglosadoDivHeader.innerHTML =""
 				carritoDesglosadoDivMain.innerHTML =""
 				carritoDesglosadoDivFooter.innerHTML=""
@@ -162,18 +171,16 @@ let mandarAlCarrito = (producto) => {
 	}
 	renderizadoDCarrito()
 };
-
-
 //  resultado del carrito 
 console.log(carrito);
 // carrito
 let carritoEntradas = document.getElementById("entradaDeLosProductos")
 let carritoUnicoDesglosado = document.getElementById ("carrito__unico__Desglosado")
-let pdp = JSON.parse(localStorage.getItem("productos"));
+// let pdp = JSON.parse(localStorage.getItem("productos"));
 
-let carritoDesglosadoDivMain = document.getElementById("carrito__unico__Desglosado__divMain")
-let carritoDesglosadoDivHeader = document.getElementById("carrito__unico__Desglosado__divHeader");
-let carritoDesglosadoDivFooter = document.getElementById("carrito__unico__Desglosado__divFooter");
+// let carritoDesglosadoDivMain = document.getElementById("carrito__unico__Desglosado__divMain")
+// let carritoDesglosadoDivHeader = document.getElementById("carrito__unico__Desglosado__divHeader");
+// let carritoDesglosadoDivFooter = document.getElementById("carrito__unico__Desglosado__divFooter");
 
 
 

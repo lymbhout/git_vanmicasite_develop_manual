@@ -129,8 +129,13 @@ height: auto;
             }
             &__divMain{
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 background-color: $clrSecundario;
+                overflow-y: scroll;
+                div{
+                    display: flex;
+                    flex-direction: row;
+                }
                 p{
                     font-size: 15px !important;
                     color: $clrblack !important;

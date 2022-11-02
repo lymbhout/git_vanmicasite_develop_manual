@@ -11,9 +11,16 @@ class Personas {
     }
 }
 
+Swal.fire({
+  title: 'Proyecto Vanmica',
+  icon: 'info',
+  titleText:'Bienvenidos mi nombre es Jose Angel Coronado, estudiante de programacion. Esta en un proyecto aun en produccion, pueden acceder a las opciones del nav de abajo y de arriba',
+  showCloseButton: true,
+  showCancelButton: true,
+  focusConfirm: false,
+})
 
-
-
+// -----------------------------------------------------------------------------------------------------------------
 // let producto1 = new Productos("pastillas de frenos", 100,"#1")
 // let producto2 = new Productos("neumaticos",50,"#2",false)
 // let producto3 = new Productos("filtros", 20,"#3",false)
@@ -81,13 +88,13 @@ class Personas {
 
 // let body = document.getElementsByClassName("bodyColor");
 // document.body.className = "bodyColor"
-
+// ----------------------------------------------------------------------------------
 
 
 // saludo personalizado ----
 const usuarios = []
-let nombreTraido = document.getElementById("iSesion");
-let botonSesion = document.createElement("div");
+export let nombreTraido = document.getElementById("iSesion");
+export let botonSesion = document.createElement("div");
 botonSesion.innerHTML =  `<div class="dropdown">
 <a class="btn btn-primary  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
   <i class="fi fi-rs-user carritoI"></i>
@@ -132,5 +139,7 @@ function validacion (e){
     guardarLocal("usuario",JSON.stringify(usuarios))
   }
 
+import {productoNeumaticosCargados,mandarAlCarrito,carrito} from './js/neumaticos.js'
 
+mandarAlCarrito()
 

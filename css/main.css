@@ -152,8 +152,12 @@ ul {
       font-size: 20px; }
     .carrito__unico__Desglosado__div__divMain {
       display: flex;
-      flex-direction: row;
-      background-color: #9e9e9e; }
+      flex-direction: column;
+      background-color: #9e9e9e;
+      overflow-y: scroll; }
+      .carrito__unico__Desglosado__div__divMain div {
+        display: flex;
+        flex-direction: row; }
       .carrito__unico__Desglosado__div__divMain p {
         font-size: 15px !important;
         color: black !important; }
