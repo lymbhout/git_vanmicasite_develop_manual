@@ -14,25 +14,55 @@ class Productos {
 	}
 }
 
-
-//  Definiciones y declaracion de funciones
-/*function productoNeumaticosCargados() {
-	productosCauchosT.push(new Productos("Atlas 175/70 R14", 47.9, 11, "https://cdn.autoteiledirekt.de/uploads/tyres/img_small/PKW/5420068652297_AF105.jpg?rev=94077835"));
-	productosCauchosT.push(new Productos("Fortuna 185/65 R15", 53.95, 12, "https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/5420068642700_FF112.jpg?rev=94077835"));
-	productosCauchosT.push(new Productos("Nankan 215/60 R17", 93.5, 13, "https://cdn.autoteiledirekt.de/uploads/tyres/full/OFF/4718022000460_JD184.jpg?rev=94077835"));
-	productosCauchosT.push(new Productos("Federl 215/40 R17", 50.2, 14, "https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/4713959007131_B3AL7AFE.jpg?rev=94077835"));
-	productosCauchosT.push(new Productos("Federal 205/45 R16", 84.4, 15, "https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/4713959007421_B30K6AFE.jpg?rev=94077835"));
-	productosCauchosT.push(new Productos("Ceat 205/60 R16", 60.9, 16, "https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/8904288102499_106552.jpg?rev=94077835"));
-	productosCauchosT.push(new Productos("Nakang 225/40 R18", 68.5, 17, "https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/4717622047264_JC758.jpg?rev=94077835"));
-	productosCauchosT.push(new Productos("Michelin 225/40 R18", 124.02, 18, "https://cdn.autoteiledirekt.de/uploads/tyres/full/PKW/3528706746192_674619.jpg?rev=94077835"));
+export class Marcas {
+	constructor(nombre,img){
+		this.nombre = nombre;
+		this.img = img;
+	}
 }
-productoNeumaticosCargados();*/
 
+let y;
+
+export let marcas = (t,e) => {
+	for( let i = 0; i < t.length; i++){
+		marcasDCauchos.push(new Marcas(e[i],t[i]))
+	};
+	// marcas productos:
+	y =`
+	<div><img src="https://www.recambioscoche.es/assets/6feb4b/images/html/index/main-tyres.png" alt=""></div>
+	<div>
+	<h1>COMPRE NEUMATICOS ONLINE</h1>
+	<h3>Las mejores marcas</h3>
+	<div id="marcasMainMarcasID"></div>
+	</div>`;
+let marcasMainMarcas = document.getElementById("neumatico__main");
+        marcasMainMarcas.innerHTML = y;
+let marcasMainMarcasID = document.getElementById("marcasMainMarcasID");
+marcasDCauchos.forEach((item) => {
+		
+		marcasMainMarcasID.innerHTML +=`<img src= "${item.img}">`;
+	});
+};
 // variables
 let localStrsProductos;
 export let productosDUsuario;
 // arrays
-export let carrito = []
+export let carrito = [];
+let nombreMarcasCauchos =["michelin","continental","hankook","bridgestone","kumho","kormoran","nexen","pirelli","falken","maxxis"]
+let imgMarcasDCauchos= [
+	"https://cdn.autoteiledirekt.de/tyres-brands/thumbs/michelin.png?m=2&rev=94077835",
+    "https://cdn.autoteiledirekt.de/tyres-brands/thumbs/continental.png?m=2&rev=94077835",
+	"https://cdn.autoteiledirekt.de/tyres-brands/thumbs/hankook.png?m=2&rev=94077835",
+	"https://cdn.autoteiledirekt.de/tyres-brands/thumbs/bridgestone.png?m=2&rev=94077835",
+	"https://cdn.autoteiledirekt.de/tyres-brands/thumbs/kumho.png?m=2&rev=94077835",
+	"https://cdn.autoteiledirekt.de/tyres-brands/thumbs/kormoran.png?m=2&rev=94077835",
+	"https://cdn.autoteiledirekt.de/tyres-brands/thumbs/nexen.png?m=2&rev=94077835",
+	"https://cdn.autoteiledirekt.de/tyres-brands/thumbs/pirelli.png?m=2&rev=94077835",
+	"https://cdn.autoteiledirekt.de/tyres-brands/thumbs/falken.png?m=2&rev=94077835",
+	"https://cdn.autoteiledirekt.de/tyres-brands/thumbs/maxxis.png?m=2&rev=94077835",
+];
+let marcasDCauchos= [];
+
 
 // fetch de productos
 export const productoNeumaticosCargados = async (api) =>{
@@ -135,8 +165,7 @@ export let mandarAlCarrito = (producto) => {
         pdp.forEach((elemento) =>{
 			carritoEntradas.addEventListener("click", () =>  {
 				carritoDesglosadoDivHeader.innerHTML=`<h5> <strong>Su carrito - ${cantidadTotal} productos</strong></h5>`;
-				console.log(elemento);
-				// siMandarCarritoEsIgual()
+				
 				carritoDesglosadoDivMain.innerHTML +=`
 				<div>
 				<img src="${elemento.img}" alt="">
@@ -183,4 +212,13 @@ let carritoUnicoDesglosado = document.getElementById ("carrito__unico__Desglosad
 // let carritoDesglosadoDivFooter = document.getElementById("carrito__unico__Desglosado__divFooter");
 
 
-
+// marcas productos:
+// let neumaticosMainMarcas = document.getElementById("neumatico__main");
+// neumaticosMainMarcas.innerHTML =`
+// <div><img src="https://www.recambioscoche.es/assets/6feb4b/images/html/index/main-tyres.png" alt=""></div>
+// <div>
+// <h1>COMPRE NEUMATICOS ONLINE</h1>
+// <h3>Las mejores marcas</h3>
+// <div id="marcasMainMarcasID"></div>
+// </div>`;
+marcas(imgMarcasDCauchos,nombreMarcasCauchos);

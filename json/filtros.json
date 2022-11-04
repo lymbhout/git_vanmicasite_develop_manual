@@ -1,0 +1,38 @@
+[
+    {"nombre": "filtros de aceite RIDEX",
+    "precio":4.9,
+    "id": 11,
+    "img" :"https://media.autoteiledirekt.de/360_photos/8097390/preview.jpg",
+    "vendido" : false
+    },
+    {"nombre": "filtros de aceite BOSCH 042",
+    "precio":8.9,
+    "id": 12,
+    "img" :"https://media.autoteiledirekt.de/360_photos/1156102/preview.jpg",
+    "vendido" : false
+    },
+    {"nombre": "filtros de aceite FEBI BILSTEIN",
+    "precio":10.9,
+    "id": 13,
+    "img" :"https://media.autoteiledirekt.de/360_photos/1880171/preview.jpg",
+    "vendido" : false
+    },
+    {"nombre": "filtros de aceite VAICO V10-030",
+    "precio":10.45,
+    "id": 14,
+    "img" :"https://media.autoteiledirekt.de/360_photos/2213986/preview.jpg",
+    "vendido" : false
+    },
+    {"nombre": "filtros de aceite MAHLE 556",
+    "precio":6.45,
+    "id": 15,
+    "img" :"https://media.autoteiledirekt.de/360_photos/2680972/preview.jpg",
+    "vendido" : false
+    },
+    {"nombre": "filtros de aceite BLUE  PRINT 556",
+    "precio":14.45,
+    "id": 16,
+    "img" :"https://cdn.autoteiledirekt.de/thumb?id=7738505&m=2&n=0&lng=es&rev=94077835",
+    "vendido" : false
+    }
+]
