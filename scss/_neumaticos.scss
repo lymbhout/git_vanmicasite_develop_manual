@@ -1,8 +1,53 @@
+.marcas__main{
+@include flexSimple(flex,row,space-between);
+background-color:map-get($backgroud,fondoSmoke );
+padding:10px;
+margin: 20px 0;
+div{
+    padding: 10px;
+    h1{
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid map-get($backgroud,fondoAO2 );
+            height:0;
+            color: $clrPrimordial;
+            text-align: center;
+            font-size: 2.5em;
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            align-items:flex-start;
+        }
+        h3{
+            color: map-get($backgroud,fondoAO2 );
+            font-size: 2.5em !important;
+        }
+        img{
+            display: inline-block;
+        }
+        div{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            gap: 5px;
+            img{
+                display: inline-block;
+                width: 100%;
+            }
+            :nth-child(7){
+                width: 110px;
+            }
+        }
+    }
+}
+
+
+
 .objetosNeumaticos {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     & div{
         padding: 20px;
         margin: 30px 0;
@@ -25,4 +70,10 @@
         }
     }
     
+}
+
+@media screen and (max-width:768px) {
+    .marcas__main{
+        flex-direction: column;
+    }
 }

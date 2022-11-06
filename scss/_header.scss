@@ -61,13 +61,12 @@ height: auto;
 
          /* header medio */
 .gridLogoCarrito{
-    @include flexSimple (flex,row,center);
+    @include flexSimple (flex,row,end);
     #iSesion{
         @include flexSimple (flex,row,center);
         .carrito__p{
             color: $clrSecundario;
             font-size: 25px !important; 
-            margin-top :4em;
             &:hover{
                 color: $clrPrimordial;
                 transition: all 700ms;
@@ -75,20 +74,21 @@ height: auto;
         }
     }
     .headerLogo{
-        width: 50%;
+
         align-self: center;
+        margin: 0 250px;
         .header__logo__img{
             max-width:17em;
             height: auto;
             display: block;
-            position: relative;
-            left: 11em; 
+            // position: relative;
+            // left: 19em; 
         }
     }
     /* carrito */
     .carrito{
-        padding: 50px 0px;
-        @include flexSimple (flex,row,end);
+        padding: 10px 0px;
+        @include flexSimple (flex,column,end);
         justify-self:start;
             & p{
                 font-size: 30px;
@@ -131,7 +131,8 @@ height: auto;
                 display: flex;
                 flex-direction: column;
                 background-color: $clrSecundario;
-                overflow-y: scroll;
+                // height: 1.2em;
+                overflow: auto;
                 div{
                     display: flex;
                     flex-direction: row;
@@ -257,7 +258,7 @@ height: auto;
         @include flexSimple (flex,row-reverse,space-evenly);
     }
     .gridLogoCarrito{
-        justify-content: space-evenly;
+        justify-content: center;
         width: 100%;
     }
     .carrito p{
@@ -284,6 +285,9 @@ height: auto;
     .text-bg-dark{
         background-color: map-get($backgroud,fondoAO ) !important;
     }
+    .headerLogo{
+        margin: 0 40px !important ;
+    }
 }
 @media screen and (max-width:420px){
 .header__logo__a{
@@ -292,6 +296,9 @@ height: auto;
 }
 .header__logo__a2{
     display:block;
+}
+.headerLogo{
+    margin:0px !important;
 }
 }
 
@@ -313,6 +320,7 @@ height: auto;
     } 
     .gridLogoCarrito .headerLogo {
         width:fit-content;
+        
     }
     /* carrito @media */
     .gridLogoCarrito .carrito{

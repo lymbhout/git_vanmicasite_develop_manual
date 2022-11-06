@@ -2,13 +2,13 @@
     {"nombre": "filtros de aceite RIDEX",
     "precio":4.9,
     "id": 11,
-    "img" :"https://media.autoteiledirekt.de/360_photos/8097390/preview.jpg",
+    "img" :"https://media.autoteiledirekt.de/360_photos/1156070/preview.jpg",
     "vendido" : false
     },
     {"nombre": "filtros de aceite BOSCH 042",
     "precio":8.9,
     "id": 12,
-    "img" :"https://media.autoteiledirekt.de/360_photos/1156102/preview.jpg",
+    "img" :"https://media.autoteiledirekt.de/360_photos/1156070/preview.jpg",
     "vendido" : false
     },
     {"nombre": "filtros de aceite FEBI BILSTEIN",

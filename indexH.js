@@ -11,7 +11,7 @@ class Personas {
     }
 }
 
-Swal.fire({
+export let alerta = Swal.fire({
   title: 'Proyecto Vanmica',
   icon: 'info',
   titleText:'Bienvenidos mi nombre es Jose Angel Coronado, estudiante de programacion. Esta en un proyecto aun en produccion, pueden acceder a las opciones del nav de abajo y de arriba',
@@ -92,7 +92,8 @@ Swal.fire({
 
 
 // saludo personalizado ----
-const usuarios = []
+const usuarios = [];
+let usuario;
 export let nombreTraido = document.getElementById("iSesion");
 export let botonSesion = document.createElement("div");
 botonSesion.innerHTML =  `<div class="dropdown">
@@ -122,24 +123,27 @@ nombreTraido.append(botonSesion);
 const formularioPersonas = document.getElementById("formularioP");
 formularioPersonas.addEventListener('submit', validacion);
 
+let formulario
+let srt;
+let traerLocal = JSON.parse(localStorage.getItem("usuario"))
 function validacion (e){
-    e.preventDefault();
-    let formulario = e.target;
-    usuarios.push(new Personas(formulario[0].value, formulario[1].value));
-    console.log(usuarios);
+  e.preventDefault();
+  formulario = e.target;
+  usuarios.push(new Personas(formulario[0].value, formulario[1].value));
+  localStorage.setItem("usuario",JSON.stringify(usuarios))
+  srt = setTimeout(() => {
+    location.reload()
+  },1000 )
+}
+if(traerLocal){
+  usuario = traerLocal
+  let bienvenida = document.createElement("p");
+  bienvenida.className = "carrito__p";
+  bienvenida.innerHTML = `Bienvenido ${usuario[0].nombre} a Vanmica`;
+  nombreTraido.append(bienvenida);
+  botonSesion.innerHTML = ` `
+}
+  // import {productoNeumaticosCargados,mandarAlCarrito,carrito} from './js/neumaticos.js'
 
-    let bienvenida = document.createElement("p");
-    bienvenida.className = "carrito__p";
-    bienvenida.innerHTML = `Bienvenido ${formulario[0].value} a Vanmica site`;
-    nombreTraido.append(bienvenida);
-
-    botonSesion.innerHTML = ` `
-    
-    function guardarLocal (clave,valor) {localStorage.setItem(clave,valor)}
-    guardarLocal("usuario",JSON.stringify(usuarios))
-  }
-
-import {productoNeumaticosCargados,mandarAlCarrito,carrito} from './js/neumaticos.js'
-
-mandarAlCarrito()
+// mandarAlCarrito()
 
