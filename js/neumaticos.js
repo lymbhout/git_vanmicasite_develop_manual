@@ -1,5 +1,5 @@
 
-import {alerta} from '../indexH.js'
+// import {alerta} from '../indexH.js'
 // constructores----
 class Productos {
 	constructor(nombre, precio, id, img) {
@@ -21,25 +21,22 @@ export class Marcas {
 	}
 }
 
-let y;
 
-export let marcas = (t,e) => {
+export let marcas = (t,e,g,m,n,y,d) => {
 	for( let i = 0; i < t.length; i++){
-		marcasDCauchos.push(new Marcas(e[i],t[i]))
+		g.push(new Marcas(e[i],t[i]))
 	};
 	// marcas productos:
-	y =`
-	<div><img src="https://www.recambioscoche.es/assets/6feb4b/images/html/index/main-tyres.png" alt=""></div>
+	let marcasMainMarcas = document.getElementById(`${y}`);
+	marcasMainMarcas.innerHTML = `
+	<div><img src="${m}" alt=""></div>
 	<div>
-	<h1>COMPRE NEUMATICOS ONLINE</h1>
+	<h1>COMPRE ${n} ONLINE</h1>
 	<h3>Las mejores marcas</h3>
-	<div id="marcasMainMarcasID"></div>
-	</div>`;
-let marcasMainMarcas = document.getElementById("neumatico__main");
-        marcasMainMarcas.innerHTML = y;
-let marcasMainMarcasID = document.getElementById("marcasMainMarcasID");
-marcasDCauchos.forEach((item) => {
-		
+	<div id="marcasMainMarcasID${d}"></div>
+	</div>`
+let marcasMainMarcasID = document.getElementById(`marcasMainMarcasID${d}`);
+g.forEach((item) => {
 		marcasMainMarcasID.innerHTML +=`<img src= "${item.img}">`;
 	});
 };
@@ -229,4 +226,4 @@ let carritoUnicoDesglosado = document.getElementById ("carrito__unico__Desglosad
 // <h3>Las mejores marcas</h3>
 // <div id="marcasMainMarcasID"></div>
 // </div>`;
-marcas(imgMarcasDCauchos,nombreMarcasCauchos);
+marcas(imgMarcasDCauchos,nombreMarcasCauchos,marcasDCauchos,"https://www.recambioscoche.es/assets/6feb4b/images/html/index/main-tyres.png","NEUMATICOS","neumatico__main","1" );

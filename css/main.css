@@ -1118,21 +1118,17 @@ main {
   .marcas__main div {
     padding: 10px; }
     .marcas__main div h1 {
-      border-right: 60px solid transparent;
-      border-bottom: 100px solid #1F3441;
-      height: 0;
+      background-color: #1F3441;
       color: aliceblue;
-      text-align: center;
       font-size: 2.5em;
       width: 80%;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start; }
+      padding: 10px; }
     .marcas__main div h3 {
       color: #1F3441;
       font-size: 2.5em !important; }
     .marcas__main div img {
-      display: inline-block; }
+      display: inline-block;
+      width: 400px; }
     .marcas__main div div {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1143,6 +1139,8 @@ main {
         display: inline-block;
         width: 100%; }
       .marcas__main div div :nth-child(7) {
+        width: 110px; }
+      .marcas__main div div :nth-child(5) {
         width: 110px; }
 
 .objetosNeumaticos {

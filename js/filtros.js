@@ -1,4 +1,4 @@
-// import {productoNeumaticosCargados} from './neumaticos.js'
+// import {marcas} from './neumaticos.js'
 
 // objetos
 class Marcas {
@@ -9,11 +9,28 @@ class Marcas {
 }
 
 // funciones
-
+export let marcas = (t,e,g,m,n,y,d) => {
+	for( let i = 0; i < t.length; i++){
+		g.push(new Marcas(e[i],t[i]))
+	};
+	// marcas productos:
+	let marcasMainMarcas = document.getElementById(`${y}`);
+	marcasMainMarcas.innerHTML = `
+	<div><img src="${m}" alt=""></div>
+	<div>
+	<h1>COMPRE ${n} ONLINE</h1>
+	<h3>Las mejores marcas</h3>
+	<div id="marcasMainMarcasID${d}"></div>
+	</div>`
+let marcasMainMarcasID = document.getElementById(`marcasMainMarcasID${d}`);
+g.forEach((item) => {
+		marcasMainMarcasID.innerHTML +=`<img src= "${item.img}">`;
+	});
+};
 // Array
 let nombreMarcasDFiltros=["bosch","mahle","ridex","purflux","febi"];
 let imgMarcasDFiltros=[
-    "https://cdn.autoteiledirekt.de/brands/thumbs/30.png?m=2&rev=94077835",
+	"https://cdn.autoteiledirekt.de/brands/thumbs/30.png?m=2&rev=94077835",
     "https://cdn.autoteiledirekt.de/brands/thumbs/10223.png?m=2&rev=94077835",
     "https://cdn.autoteiledirekt.de/brands/thumbs/100015.png?m=2&rev=94077835",
     "https://cdn.autoteiledirekt.de/brands/thumbs/38.png?m=2&rev=94077835",
@@ -21,6 +38,7 @@ let imgMarcasDFiltros=[
 ];
 let marcasDFiltros =[];
 // variables
+marcas(imgMarcasDFiltros,nombreMarcasDFiltros,marcasDFiltros,"https://scdn.autoteiledirekt.de/catalog/categories/500x500/55.png?rev=94077835","FILTROS","filtros__main",2);
 
 // marcas(imgMarcasDFiltros,nombreMarcasDFiltros)
 // fetch de productos
@@ -71,4 +89,4 @@ export const productoNeumaticosCargados = async (api,o,u) =>{
             console.log(error);
 	}
 }
-productoNeumaticosCargados("../../json/filtros.json","objetosPFiltros","objetosPFiltros2")
+productoNeumaticosCargados("../../json/filtros.json","objetosPFiltros","objetosPFiltros2");

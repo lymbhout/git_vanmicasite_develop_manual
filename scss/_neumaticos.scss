@@ -6,16 +6,11 @@ margin: 20px 0;
 div{
     padding: 10px;
     h1{
-            border-right: 60px solid transparent;
-            border-bottom: 100px solid map-get($backgroud,fondoAO2 );
-            height:0;
+        background-color:map-get($backgroud,fondoAO2 );
             color: $clrPrimordial;
-            text-align: center;
             font-size: 2.5em;
             width: 80%;
-            display: flex;
-            flex-direction: row;
-            align-items:flex-start;
+            padding: 10px;
         }
         h3{
             color: map-get($backgroud,fondoAO2 );
@@ -23,6 +18,7 @@ div{
         }
         img{
             display: inline-block;
+            width: 400px;
         }
         div{
             display: grid;
@@ -35,6 +31,9 @@ div{
                 width: 100%;
             }
             :nth-child(7){
+                width: 110px;
+            }
+            :nth-child(5){
                 width: 110px;
             }
         }
