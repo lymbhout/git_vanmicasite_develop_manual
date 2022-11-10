@@ -1,4 +1,4 @@
-// import {marcas} from './neumaticos.js'
+// import {carrito} from './neumaticos.js'
 
 // objetos
 class Marcas {
@@ -37,6 +37,7 @@ let imgMarcasDFiltros=[
     "https://cdn.autoteiledirekt.de/brands/thumbs/101.png?m=2&rev=94077835"
 ];
 let marcasDFiltros =[];
+let carrito = [];
 // variables
 marcas(imgMarcasDFiltros,nombreMarcasDFiltros,marcasDFiltros,"https://scdn.autoteiledirekt.de/catalog/categories/500x500/55.png?rev=94077835","FILTROS","filtros__main",2);
 
@@ -48,8 +49,8 @@ export const productoNeumaticosCargados = async (api,o,u) =>{
 	try{
 		const response = await fetch(api)
 		const data =  await response.json();
-		const data1 = data.filter((el) =>  el.id <= 15 )
-		const data2 = data.filter((el)=> el.id > 15 )
+		const data1 = data.filter((el) =>  el.id <= 25 )
+		const data2 = data.filter((el)=> el.id > 25 )
 	// rendizando productos
 		data1.forEach((producto) => {
 			let neumaticosCauchoT = document.createElement("div");
@@ -88,5 +89,37 @@ export const productoNeumaticosCargados = async (api,o,u) =>{
 	}catch (error){
             console.log(error);
 	}
-}
+};
+
 productoNeumaticosCargados("../../json/filtros.json","objetosPFiltros","objetosPFiltros2");
+// carrito boton
+export let mandarAlCarrito = (producto) => {
+	let mandarCarrito = carrito.find(item => item.id === producto.id)
+	if (mandarCarrito === undefined){
+		carrito.push(
+			{
+				id: producto.id,
+				nombre: producto.nombre,
+				precio: producto.precio,	
+				img: producto.img,
+				cantidad: 1,
+				vendido:true
+			}
+			)
+	}else{
+		mandarCarrito.precio += producto.precio
+        mandarCarrito.cantidad +=  1
+	}
+	Swal.fire({
+		position: 'center',
+		icon: 'success',
+		title: 'Has agregado un nuevo producto',
+		showConfirmButton: false,
+		timer: 900,
+		background:"#102026",
+		color:"aliceblue",
+	})
+	let productosDUsuario= JSON.stringify(carrito)
+    localStorage.setItem("productosDFiltros", productosDUsuario)
+}
+console.log(carrito);

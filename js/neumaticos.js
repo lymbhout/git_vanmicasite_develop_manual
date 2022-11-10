@@ -141,9 +141,8 @@ export let mandarAlCarrito = (producto) => {
 	})
 	productosDUsuario = JSON.stringify(carrito)
     localStorage.setItem("productos", productosDUsuario)
-
-
-
+}
+// renderizado carrito
 const renderizadoDCarrito = () => {
 	let carritoEntradas = document.getElementById("entradaDeLosProductos")
 	let carritoDesglosadoDivMain = document.getElementById("carrito__unico__Desglosado__divMain")
@@ -171,7 +170,7 @@ const renderizadoDCarrito = () => {
 				<p>x${elemento.cantidad}</p>
 				<h5>${elemento.precio}$</h5>
 				</div>`;
-				carritoDesglosadoDivMain.innerHTML =``
+				carritoDesglosadoDivMain.innerHTML +=``
 			}else{		
 				carritoDesglosadoDivMain.innerHTML =`
 				<div>
@@ -205,25 +204,6 @@ const renderizadoDCarrito = () => {
 	})
 }
 renderizadoDCarrito()
-}
-//  resultado del carrito 
-// carrito
-// let carritoEntradas = document.getElementById("entradaDeLosProductos")
-let carritoUnicoDesglosado = document.getElementById ("carrito__unico__Desglosado")
-// let pdp = JSON.parse(localStorage.getItem("productos"));
-
-// let carritoDesglosadoDivMain = document.getElementById("carrito__unico__Desglosado__divMain")
-// let carritoDesglosadoDivHeader = document.getElementById("carrito__unico__Desglosado__divHeader");
-// let carritoDesglosadoDivFooter = document.getElementById("carrito__unico__Desglosado__divFooter");
 
 
-// marcas productos:
-// let neumaticosMainMarcas = document.getElementById("neumatico__main");
-// neumaticosMainMarcas.innerHTML =`
-// <div><img src="https://www.recambioscoche.es/assets/6feb4b/images/html/index/main-tyres.png" alt=""></div>
-// <div>
-// <h1>COMPRE NEUMATICOS ONLINE</h1>
-// <h3>Las mejores marcas</h3>
-// <div id="marcasMainMarcasID"></div>
-// </div>`;
 marcas(imgMarcasDCauchos,nombreMarcasCauchos,marcasDCauchos,"https://www.recambioscoche.es/assets/6feb4b/images/html/index/main-tyres.png","NEUMATICOS","neumatico__main","1" );
